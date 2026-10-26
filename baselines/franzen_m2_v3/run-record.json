@@ -1,6 +1,6 @@
 {
-  "recorded_at_utc": "2026-10-26T13:37:00Z",
-  "status": "smoke_passed; one approved full validation RUNNING as 362506200; official submission not authorized",
+  "recorded_at_utc": "2026-10-26T22:09:59.751841+00:00",
+  "status": "full validation SUCCESS; 8h20m53.5s; core outputs validated; executed notebook export blocked; no competition submission",
   "kaggle": {
     "notebook": "panxiyuan/franzen-m2-v3-baseline",
     "editor_url": "https://www.kaggle.com/code/panxiyuan/franzen-m2-v3-baseline/edit",
@@ -157,9 +157,9 @@
   },
   "full_run": {
     "executed": true,
-    "completed": false,
+    "completed": true,
     "user_approval_received": true,
-    "status": "RUNNING",
+    "status": "SUCCESS",
     "version": 3,
     "script_version_id": 362506200,
     "url": "https://www.kaggle.com/code/panxiyuan/franzen-m2-v3-baseline?scriptVersionId=362506200",
@@ -167,8 +167,20 @@
     "created_at_sydney": "2026-10-27T00:25:08+11:00",
     "attempts_launched": 1,
     "retry_authorized": false,
-    "nine_hour_completion_verified": null,
-    "details_file": "full-validation-run.json"
+    "nine_hour_completion_verified": true,
+    "details_file": "full-validation-run.json",
+    "last_observed_elapsed_seconds": 29695.2,
+    "last_observed_at_utc": "2026-10-26T21:40:04.967Z",
+    "total_runtime_seconds": 30053.5,
+    "won_episodes": 33,
+    "games_won": 12,
+    "demo_score": 47.93969028340704,
+    "levels_completed_including_repeats": 417,
+    "submission_artifact_valid": true,
+    "submission_artifact_placeholder_only": true,
+    "remaining_gpu_quota_minutes": 1269,
+    "completion_heartbeat_deleted": true,
+    "report": "full-validation-report.md"
   },
   "competition_submission": {
     "submitted": false,

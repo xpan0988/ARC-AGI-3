@@ -1,6 +1,6 @@
 {
-  "recorded_at_utc": "2026-10-26T13:37:27.117533+00:00",
-  "status": "RUNNING",
+  "recorded_at_utc": "2026-10-26T22:09:59.751841+00:00",
+  "status": "SUCCESS",
   "authorization": {
     "scope": "One full Save & Run All validation of verified candidate 362495586; preserve the released baseline and configuration",
     "full_run_attempts_launched": 1,
@@ -21,10 +21,14 @@
     "created_at_sydney": "2026-10-27T00:25:08+11:00",
     "execution_start_at_utc": null,
     "execution_end_at_utc": null,
-    "total_runtime_seconds": null,
+    "total_runtime_seconds": 30053.5,
     "runtime_limit_seconds": 32400,
-    "completed_within_nine_hours": null,
-    "mode": "ordinary offline demo validation; TRUE_SUBMISSION=False"
+    "completed_within_nine_hours": true,
+    "mode": "ordinary offline demo validation; TRUE_SUBMISSION=False",
+    "benchmark_start_at_utc": "2026-10-26T13:34:39.383100Z",
+    "benchmark_end_at_utc": "2026-10-26T21:45:35.678106Z",
+    "benchmark_runtime_seconds": 29456.295006,
+    "runtime_limit_margin_seconds": 2346.5
   },
   "source_integrity": {
     "prelaunch_editor_export": "/Users/xiyuanpan/Downloads/franzen-m2-v3-baseline (1).ipynb",
@@ -35,7 +39,10 @@
     "baseline_code_or_configuration_modified": false,
     "executed_export_parity_verified": null,
     "released_reference_script_version_id": 354920985,
-    "released_source_sha256": "589eaf393f416effe925c6830fc00fcdc0d6da91193b29ff0029282cbd6ee96e"
+    "released_source_sha256": "589eaf393f416effe925c6830fc00fcdc0d6da91193b29ff0029282cbd6ee96e",
+    "executed_export_blocker": "Chrome explicitly blocks /kernels/scriptcontent/362506200/download with ERR_BLOCKED_BY_CLIENT; no protection was bypassed.",
+    "executed_input_identity_ui_rechecked": true,
+    "post_execution_exact_input_id_export_verified": false
   },
   "inputs": [
     {
@@ -69,7 +76,8 @@
     "torch": "2.13.0+cu130",
     "cuda_toolkit": "13.0.88",
     "gpu_capability": "12,0",
-    "server_random_seed": null
+    "server_random_seed": 549482420,
+    "executed_container_image": "gcr.io/kaggle-gpu-images/python@sha256:57e612b484cf3df5026ee4dcc3cb176974b22b2bc0937fb1e16132a8be4cb13c"
   },
   "checkpoints": [
     {
@@ -106,45 +114,477 @@
         "total": 176.9
       },
       "evidence_file": "generated/full_run_362506200/startup-logs.json"
+    },
+    {
+      "observed_at_utc": "2026-10-26T14:02:25.718Z",
+      "ui_elapsed_seconds": 2235.9,
+      "last_log_elapsed_seconds": 2128.1,
+      "stage": "benchmark in progress",
+      "gpu_memory_gib": {
+        "used": 93.4,
+        "total": 95.6
+      },
+      "host_ram_gib": {
+        "used": 112.6,
+        "total": 176.9
+      },
+      "interim_diagnostics": {
+        "as_of_elapsed_seconds": 1775.4,
+        "games": 25,
+        "passes": 4,
+        "scheduled_runs": 100,
+        "won": 0,
+        "mean_demo_score": 1.07,
+        "median_demo_score": 0.0,
+        "total_actions": 766,
+        "total_tokens": 772403,
+        "final": false,
+        "note": "Runs are scheduled slots; per-game levels are means over passes, not counts of finished episodes."
+      },
+      "evidence_file": "generated/full_run_362506200/checkpoint-20261026T1402Z.json"
+    },
+    {
+      "observed_at_utc": "2026-10-26T14:32:21.060Z",
+      "ui_elapsed_seconds": 4031.3,
+      "last_log_elapsed_seconds": 3928.6,
+      "stage": "benchmark in progress",
+      "gpu_memory_gib": {
+        "used": 93.4,
+        "total": 95.6
+      },
+      "host_ram_gib": {
+        "used": 113.1,
+        "total": 176.9
+      },
+      "interim_diagnostics": {
+        "as_of_elapsed_seconds": 3583.6,
+        "scheduled_runs": 100,
+        "won_episodes": 1,
+        "mean_demo_score": 4.15,
+        "total_actions": 2198,
+        "total_tokens": 1847339,
+        "final": false,
+        "note": "100 are scheduled slots; won counts episodes across passes, not necessarily distinct games. Final results remain pending."
+      },
+      "evidence_file": "generated/full_run_362506200/checkpoint-20261026T1432Z.json"
+    },
+    {
+      "observed_at_utc": "2026-10-26T15:02:23.215Z",
+      "ui_elapsed_seconds": 5833.5,
+      "last_log_elapsed_seconds": 5728.9,
+      "stage": "benchmark in progress",
+      "gpu_memory_gib": {
+        "used": 93.6,
+        "total": 95.6
+      },
+      "host_ram_gib": {
+        "used": 113.1,
+        "total": 176.9
+      },
+      "interim_diagnostics": {
+        "as_of_elapsed_seconds": 5391.1,
+        "scheduled_runs": 100,
+        "won_episodes": 1,
+        "mean_demo_score": 6.71,
+        "total_actions": 3555,
+        "total_tokens": 2982022,
+        "final": false
+      },
+      "evidence_file": "generated/full_run_362506200/checkpoint-20261026T1502Z.json"
+    },
+    {
+      "observed_at_utc": "2026-10-26T15:46:51.302Z",
+      "ui_elapsed_seconds": 8501.6,
+      "last_log_elapsed_seconds": 8489.6,
+      "stage": "benchmark in progress",
+      "gpu_memory_gib": {
+        "used": 93.8,
+        "total": 95.6
+      },
+      "host_ram_gib": {
+        "used": 115.0,
+        "total": 176.9
+      },
+      "interim_diagnostics": {
+        "as_of_elapsed_seconds": 8403.7,
+        "scheduled_runs": 100,
+        "won_episodes": 1,
+        "mean_demo_score": 11.01,
+        "total_actions": 5847,
+        "total_tokens": 4833489,
+        "final": false
+      },
+      "evidence_file": "generated/full_run_362506200/checkpoint-20261026T1546Z.json"
+    },
+    {
+      "observed_at_utc": "2026-10-26T16:24:31.808Z",
+      "ui_elapsed_seconds": 10762.1,
+      "last_log_elapsed_seconds": 10649.9,
+      "stage": "benchmark in progress",
+      "gpu_memory_gib": {
+        "used": 93.8,
+        "total": 95.6
+      },
+      "host_ram_gib": {
+        "used": 117.8,
+        "total": 176.9
+      },
+      "interim_diagnostics": {
+        "as_of_elapsed_seconds": 10212.3,
+        "scheduled_runs": 100,
+        "won_episodes": 1,
+        "mean_demo_score": 13.62,
+        "total_actions": 7134,
+        "total_tokens": 5917413,
+        "final": false
+      },
+      "subsequent_finished_episode": {
+        "log_elapsed_seconds": 10583.5,
+        "game_id": "ft09-0d8bbf25",
+        "state": "won",
+        "levels_completed": 6,
+        "levels_total": 6,
+        "score": 100.0,
+        "actions": 86,
+        "tokens": 78399,
+        "note": "After the last summary; do not equate interim summary wins with final distinct-game wins."
+      },
+      "evidence_file": "generated/full_run_362506200/checkpoint-20261026T1623Z.json"
+    },
+    {
+      "observed_at_utc": "2026-10-26T16:53:59.590Z",
+      "ui_elapsed_seconds": 12529.9,
+      "last_log_elapsed_seconds": 12495.7,
+      "stage": "benchmark in progress",
+      "gpu_memory_gib": {
+        "used": 93.8,
+        "total": 95.6
+      },
+      "host_ram_gib": {
+        "used": 117.0,
+        "total": 176.9
+      },
+      "interim_diagnostics": {
+        "won_episodes": 4,
+        "as_of_elapsed_seconds": 12020.3,
+        "mean_demo_score": 18.89,
+        "total_actions": 8632,
+        "total_tokens": 7023548,
+        "scheduled_runs": 100,
+        "final": false
+      },
+      "evidence_file": "generated/full_run_362506200/checkpoint-20261026T1653Z.json"
+    },
+    {
+      "observed_at_utc": "2026-10-26T17:23:59.169Z",
+      "ui_elapsed_seconds": 14329.4,
+      "last_log_elapsed_seconds": 14251.7,
+      "stage": "benchmark in progress",
+      "gpu_memory_gib": {
+        "used": 93.9,
+        "total": 95.6
+      },
+      "host_ram_gib": {
+        "used": 118.1,
+        "total": 176.9
+      },
+      "interim_diagnostics": {
+        "won_episodes": 6,
+        "as_of_elapsed_seconds": 13840.6,
+        "mean_demo_score": 22.58,
+        "total_actions": 9850,
+        "total_tokens": 8156745,
+        "scheduled_runs": 100,
+        "final": false
+      },
+      "evidence_file": "generated/full_run_362506200/checkpoint-20261026T1723Z.json"
+    },
+    {
+      "observed_at_utc": "2026-10-26T17:54:00.992Z",
+      "ui_elapsed_seconds": 16131.3,
+      "last_log_elapsed_seconds": 16052.3,
+      "stage": "benchmark in progress",
+      "gpu_memory_gib": {
+        "used": 93.9,
+        "total": 95.6
+      },
+      "host_ram_gib": {
+        "used": 117.9,
+        "total": 176.9
+      },
+      "interim_diagnostics": {
+        "won_episodes": 9,
+        "as_of_elapsed_seconds": 15653.6,
+        "mean_demo_score": 26.72,
+        "total_actions": 11240,
+        "total_tokens": 9313644,
+        "scheduled_runs": 100,
+        "final": false
+      },
+      "evidence_file": "generated/full_run_362506200/checkpoint-20261026T1753Z.json"
+    },
+    {
+      "observed_at_utc": "2026-10-26T18:24:00.423Z",
+      "ui_elapsed_seconds": 17930.7,
+      "last_log_elapsed_seconds": 17892.1,
+      "stage": "benchmark in progress",
+      "gpu_memory_gib": {
+        "used": 93.9,
+        "total": 95.6
+      },
+      "host_ram_gib": {
+        "used": 118.3,
+        "total": 176.9
+      },
+      "interim_diagnostics": {
+        "won_episodes": 13,
+        "as_of_elapsed_seconds": 17475.5,
+        "mean_demo_score": 30.12,
+        "total_actions": 12662,
+        "total_tokens": 10438593,
+        "scheduled_runs": 100,
+        "final": false
+      },
+      "observation": "Python tool emitted set-not-subscriptable SyntaxWarnings at elapsed 17892.1s; no terminal error visible. This is model-generated tool code, not evidence of notebook infrastructure failure.",
+      "evidence_file": "generated/full_run_362506200/checkpoint-20261026T1823Z.json"
+    },
+    {
+      "observed_at_utc": "2026-10-26T19:07:21.414Z",
+      "ui_elapsed_seconds": 20531.7,
+      "last_log_elapsed_seconds": 20508.0,
+      "stage": "benchmark in progress",
+      "gpu_memory_gib": {
+        "used": 94.1,
+        "total": 95.6
+      },
+      "host_ram_gib": {
+        "used": 120.4,
+        "total": 176.9
+      },
+      "interim_diagnostics": {
+        "won_episodes": 21,
+        "as_of_elapsed_seconds": 20508.0,
+        "mean_demo_score": 36.59,
+        "total_actions": 15121,
+        "total_tokens": 12294354,
+        "scheduled_runs": 100,
+        "final": false
+      },
+      "evidence_file": "generated/full_run_362506200/checkpoint-20261026T1907Z.json"
+    },
+    {
+      "observed_at_utc": "2026-10-26T19:37:19.440Z",
+      "ui_elapsed_seconds": 22329.7,
+      "last_log_elapsed_seconds": 22296.7,
+      "stage": "benchmark in progress",
+      "gpu_memory_gib": {
+        "used": 94.1,
+        "total": 95.6
+      },
+      "host_ram_gib": {
+        "used": 121.6,
+        "total": 176.9
+      },
+      "interim_diagnostics": {
+        "won_episodes": 21,
+        "as_of_elapsed_seconds": 21739.6,
+        "mean_demo_score": 38.09,
+        "total_actions": 15997,
+        "total_tokens": 13095253,
+        "scheduled_runs": 100,
+        "final": false
+      },
+      "evidence_file": "generated/full_run_362506200/checkpoint-20261026T1937Z.json"
+    },
+    {
+      "observed_at_utc": "2026-10-26T20:08:23.172Z",
+      "ui_elapsed_seconds": 24193.4,
+      "last_log_elapsed_seconds": 24174.0,
+      "stage": "benchmark in progress; released tail-fade scheduling active",
+      "gpu_memory_gib": {
+        "used": 94.1,
+        "total": 95.6
+      },
+      "host_ram_gib": {
+        "used": 119.3,
+        "total": 176.9
+      },
+      "interim_diagnostics": {
+        "won_episodes": 23,
+        "as_of_elapsed_seconds": 24174.0,
+        "mean_demo_score": 42.0,
+        "total_actions": 17521,
+        "total_tokens": 14392255,
+        "scheduled_runs": 100,
+        "final": false
+      },
+      "evidence_file": "generated/full_run_362506200/checkpoint-20261026T2007Z.json"
+    },
+    {
+      "observed_at_utc": "2026-10-26T20:53:33.079Z",
+      "ui_elapsed_seconds": 26902.7,
+      "last_log_elapsed_seconds": 26865.3,
+      "stage": "benchmark in progress; released tail-fade scheduling active",
+      "gpu_memory_gib": {
+        "used": 94.1,
+        "total": 95.6
+      },
+      "host_ram_gib": {
+        "used": 120.3,
+        "total": 176.9
+      },
+      "interim_diagnostics": {
+        "won_episodes": 28,
+        "as_of_elapsed_seconds": 26622.4,
+        "mean_demo_score": 44.49,
+        "total_actions": 19198,
+        "total_tokens": 15792560,
+        "scheduled_runs": 100,
+        "final": false
+      },
+      "evidence_file": "generated/full_run_362506200/checkpoint-20261026T2039Z.json"
+    },
+    {
+      "observed_at_utc": "2026-10-26T21:10:05.538Z",
+      "ui_elapsed_seconds": 27895.8,
+      "last_log_elapsed_seconds": 27844.7,
+      "stage": "benchmark in progress; released tail-fade scheduling active",
+      "gpu_memory_gib": {
+        "used": 94.1,
+        "total": 95.6
+      },
+      "host_ram_gib": {
+        "used": 122.0,
+        "total": 176.9
+      },
+      "interim_diagnostics": {
+        "won_episodes": 30,
+        "as_of_elapsed_seconds": 27844.7,
+        "mean_demo_score": 45.64,
+        "total_actions": 19909,
+        "total_tokens": 16508016,
+        "scheduled_runs": 100,
+        "final": false
+      },
+      "evidence_file": "generated/full_run_362506200/checkpoint-20261026T2109Z.json"
+    },
+    {
+      "observed_at_utc": "2026-10-26T21:40:04.967Z",
+      "ui_elapsed_seconds": 29695.2,
+      "last_log_elapsed_seconds": 29690.0,
+      "stage": "benchmark in progress; episodes finishing during deadline drain",
+      "gpu_memory_gib": {
+        "used": 94.1,
+        "total": 95.6
+      },
+      "host_ram_gib": {
+        "used": 119.9,
+        "total": 176.9
+      },
+      "interim_diagnostics": {
+        "won_episodes": 33,
+        "as_of_elapsed_seconds": 29674.4,
+        "mean_demo_score": 47.94,
+        "total_actions": 21078,
+        "total_tokens": 17506945,
+        "scheduled_runs": 100,
+        "final": false
+      },
+      "evidence_file": "generated/full_run_362506200/checkpoint-20261026T2139Z.json"
     }
   ],
   "quota": {
     "last_observed_available_minutes_before_run": 1769,
     "before_run_display": "29h29m available",
-    "observed_after_completion_available_minutes": null,
-    "note": "No post-run quota claim until the Kaggle display is inspected."
+    "observed_after_completion_available_minutes": 1269,
+    "note": "21h09m remaining is calculated from the displayed used 08:51 out of 30 hours; minute precision.",
+    "observed_quota_display": "Quota:08:51 / 30 hrs",
+    "observed_used_minutes": 531
   },
   "results": {
-    "completed_episodes": null,
-    "games_won": null,
-    "levels_completed": null,
-    "demo_score": null,
+    "completed_episodes": 100,
+    "games_won": 12,
+    "levels_completed": 417,
+    "demo_score": 47.94,
     "official_competition_score": null,
-    "submission_artifact_valid": null,
-    "submission_artifact_placeholder_only": null,
+    "submission_artifact_valid": true,
+    "submission_artifact_placeholder_only": true,
     "failure_stage": null,
-    "root_cause": null
+    "root_cause": null,
+    "won_episodes": 33,
+    "demo_score_from_rounded_episode_lines": 47.9395,
+    "demo_median_score": 46.05,
+    "total_actions": 21078,
+    "total_generated_tokens": 17506945,
+    "episode_states": {
+      "won": 33,
+      "gave_up": 67
+    },
+    "note": "Ordinary offline demo evaluation, 25 games x 4 passes. 33 won episodes cover 12 distinct games; 67 gave_up episodes are normal budget-limited results, not notebook failures.",
+    "demo_score_exact": 47.93969028340704,
+    "gpu_memory_max_gib": 94.1,
+    "ram_max_gib": 122.0,
+    "per_game_results": "generated/full_run_362506200/per-game-results.json"
   },
   "monitoring": {
     "heartbeat_id": "stage-3c-full-run-completion",
-    "status": "ACTIVE",
+    "status": "DELETED",
     "interval_minutes": 30,
-    "monitor_tab_id": "1483995830",
-    "editor_tab_id": "1483995810",
+    "monitor_tab_id": "1483995916",
+    "editor_tab_id": null,
     "output_directory": "baselines/franzen_m2_v3/generated/full_run_362506200",
-    "pending": "Capture final executed notebook, logs, game results, output files, hashes and remaining quota; validate source parity and runtime; disable heartbeat at terminal result.",
-    "capture_note": "CUA can save DOM log snapshots and screenshots using node:fs/promises to /private/tmp, then copy into this ignored evidence directory. No browser protection bypass is needed."
+    "pending": null,
+    "capture_note": "CUA may truncate returned arrays at 2000 items and strings at 200000 characters. Slice the last 450 rendered log rows inside DOM evaluation for current checkpoints. Save to /private/tmp with node:fs/promises, then copy into ignored evidence. Download complete logs at terminal status.",
+    "editor_tab_note": "Original editor tab is no longer present; the exact run viewer remains available. No run or configuration changes were made.",
+    "deleted_at_utc": "2026-10-26T22:09:59.751841+00:00"
   },
   "infrastructure_observations": [
     "Chrome blocked viewer notebook export navigation with ERR_BLOCKED_BY_CLIENT; protection was not bypassed. Editor prelaunch notebook download worked.",
     "Chrome download events can time out even when Downloads contains the file; inspect actual files before retrying.",
     "The checkout moved to /Users/xiyuanpan/ARC-AGI-3; the old sandbox workspace path is stale. Baseline reports and ignored evidence use the actual checkout.",
-    "Live log rows can duplicate stderr messages; duplicated rows alone do not indicate multiple executions."
+    "Live log rows can duplicate stderr messages; duplicated rows alone do not indicate multiple executions.",
+    "Kaggle notebook finished successfully; serve.log contains no CUDA out-of-memory or traceback.",
+    "Inline GCS artifacts opened as browser tabs; core files were archived using their exact Kaggle-generated temporary HTTPS links without changing browser security settings.",
+    "Parquet validation used temporary fastparquet 2024.11.0, cramjam 2.9.1 and fsspec 2025.3.0 (about 2.8 MB wheel downloads); no repository dependency or model changes.",
+    "benchmark.json final_generated_tokens fields are zero for every run. Reported generated-token totals come from finished execution-log rows, whose sum matches the harness summary.",
+    "Kaggle logs label the effective image Latest Container Image (digest recorded), while the editor retains original-environment pin 2026-05-27. Exact underlying image-to-pin mapping remains uncertain.",
+    "The UI summary badge says 500 output files, but fully expanded output tree contains 811 file paths. The manifest preserves all 811 visible paths."
   ],
   "competition_submitted": false,
   "artifacts_sha256": {
+    "benchmark.json": "2ae82ce8e4670da9f5690f83406b23d99d66867ea68d4e72b4d56cbcb2f0d0f0",
+    "checkpoint-20261026T1402Z.json": "aad05cc8717e786ee04f9f722bf1180347b627ad6dcb1ba9848e4915c69ba773",
+    "checkpoint-20261026T1432Z.json": "6695cad9a59422d9cbbfd7e027ea8ef3bb6063a4a52fe91d90b105688522a086",
+    "checkpoint-20261026T1502Z.json": "d591af156a5016295b73d61471305a04b0da374890d8ebff47b8d8a2a91f5a72",
+    "checkpoint-20261026T1546Z.json": "b5abaec1f898c494bc3d1de982a371e82f7b5050cbb6b495bff08cbfe926e81a",
+    "checkpoint-20261026T1623Z.json": "a50b6a423e8bbe07e87ce5933d517e7fc9cbdb159fb0314fab58e2a5411798af",
+    "checkpoint-20261026T1653Z.json": "ee785a99d3df263100697a3b9649d317477b113a8010c38e18c4dea2115a6479",
+    "checkpoint-20261026T1723Z.json": "55c4d7790ae161f8ec95c24afa12489076914e0bdb2b5368b6f8b1b05d640a48",
+    "checkpoint-20261026T1753Z.json": "9001c6dabe464c24f5c059cc1ffc0049a4dfe4cbbc1d095561a69f2e1471be2c",
+    "checkpoint-20261026T1823Z.json": "f1a94bdcaea3252d9821d0760640b5020c2d86dc78395139e4d5ef75002794b9",
+    "checkpoint-20261026T1907Z.json": "fe7676fcef604253685c001b3c16d139be1d7848151faf51dd820032d4b1af0a",
+    "checkpoint-20261026T1937Z.json": "d15f3f80cd101d2fe70aac1606660003ae3759763baa0beb0076b949b4b3b540",
+    "checkpoint-20261026T2007Z.json": "920fabcb9c09d8f204c2e4a085e443ecd2f85d46312272793e382a47f139da2c",
+    "checkpoint-20261026T2039Z.json": "16de46f2f40857f9c31c79ec2a6de9dd47449f8d9d627a8e5715d753cdf39cfa",
+    "checkpoint-20261026T2109Z.json": "9b5c3c81232c709ba754215b587706af66480db23fb308ee88106427eec88287",
+    "checkpoint-20261026T2139Z.json": "ea8457d2848009e04ff4920ddfbb5ca36191f24d716901632d96393566400891",
+    "diagnostics.html": "cff0fffb5ac20299aaeb46894ee1991467ff111b12eb836319b37851863c62ab",
+    "execution.log": "da770d374045e7a36ef6bacd1c852462f72da3b2fc56f123662e8f966698fc41",
+    "final-status.json": "82d702b3782738da2e19727485d85125462e32b09e5394cb073d9833c5c7144f",
+    "final-summary-from-log.txt": "0cabd9caaa403c253a3ec34afc5352232097eb0d180ed6d55065567976344ba6",
+    "full-validation.json": "760990860361c1b904f706433707f13a203f0f0d333c2ff178198b1d6760c5a8",
+    "input-audit.json": "23c8f214da1fbf081fe9dc8701505856de8500cea550ae47dfafa4ce2948b7d0",
+    "output-manifest.json": "3aeeedb562f4ac967f99cca15285337e18bad1ff87129db5cc6eea0c5fcdea90",
+    "output-tree.txt": "3d5069a3d6953b3740056e0bae53d570a2dae9896cfa3c09ae5ab5e8de715c53",
+    "parquet-validation.json": "5769ffbdcd54c12689238a639d6f83f0bc1b8f2e139bf4839df4af1a9f00e70a",
+    "per-game-results.json": "2e185f6eebd7cf1ac8f9c6845f07742e23d0e46160d453319c68c62462fb4b40",
     "prelaunch-candidate.ipynb": "f8e3bf0065a198e6508f738546941d67454eeac74236f244a4de9ee9dc51f4fc",
+    "quota.json": "eafa8ee8a18aaa6274282cb374eaaf56520a78dc556d1a51d8c901b76f18a51e",
+    "quota.png": "05f056b56f0d453587d7f31874aad936d7c9d160d7984f74fabbf3288a244ed0",
     "running.png": "02b51c54c04e4222c5ab6e5fd91a26363a15476b2ee1aaa1ef79331a57f6cee5",
-    "startup-logs.json": "bf386733f7cfe2dbafb5ab1041a5dcb270528cd90a4fa5e1640db84b705938da"
+    "serve.log": "8306e3eb56c68f159e3241535eaa82f22a0d6f4e5281365ddaedea3694f1606a",
+    "startup-logs.json": "bf386733f7cfe2dbafb5ab1041a5dcb270528cd90a4fa5e1640db84b705938da",
+    "submission.parquet": "71bfd543030e339d87bd9ff744d466218398a1259650b2c255626d27049c88bb",
+    "success.png": "a056817841958c69d52b9a415b3350c787bb98a30722a362a58065d454e14c8d"
   }
 }
