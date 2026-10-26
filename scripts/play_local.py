@@ -15,6 +15,7 @@ import argparse
 import importlib.util
 import logging
 import sys
+from contextlib import nullcontext
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -29,7 +30,7 @@ import arc_agi
 from arc_agi import OperationMode
 
 
-def load_my_agent_class():
+def load_my_agent_class(policy="original"):
     """Import MyAgent from agent/my_agent.py via importlib."""
     spec = importlib.util.spec_from_file_location(
         "user_agent_module", ROOT / "agent" / "my_agent.py"
@@ -40,7 +41,7 @@ def load_my_agent_class():
     spec.loader.exec_module(module)
     if not hasattr(module, "MyAgent"):
         raise SystemExit("agent/my_agent.py must define a class named `MyAgent`")
-    return module.MyAgent
+    return module.MyAgent if policy == "original" else module.POLICIES[policy]
 
 
 def main() -> None:
@@ -55,6 +56,12 @@ def main() -> None:
                    help="List available games and exit.")
     p.add_argument("--render", default=None, choices=[None, "terminal"],
                    help="Optional terminal rendering each step.")
+    p.add_argument("--trace", action="store_true",
+                   help="Write observation/action JSONL to gitignored local_output/traces/.")
+    p.add_argument("--seed", type=int, default=None,
+                   help="Optional reproducible local policy seed (per game).")
+    p.add_argument("--policy", choices=["original", "legal", "memory"], default="original",
+                   help="Exploration policy; original preserves the starter control.")
     args = p.parse_args()
 
     logging.basicConfig(level=logging.INFO, format="%(message)s")
@@ -85,9 +92,19 @@ def main() -> None:
         print(f"No --game specified; playing all {len(game_ids)} games "
               f"(this is what Kaggle does in competition rerun).\n")
 
-    MyAgentCls = load_my_agent_class()
+    MyAgentCls = load_my_agent_class(args.policy)
     if hasattr(MyAgentCls, "MAX_ACTIONS"):
         MyAgentCls.MAX_ACTIONS = min(MyAgentCls.MAX_ACTIONS, args.max_steps)
+
+    trace_dir = None
+    if args.trace:
+        import tempfile
+        from scripts.observation_trace import traced_agent_class
+
+        trace_root = ROOT / "local_output" / "traces"
+        trace_root.mkdir(parents=True, exist_ok=True)
+        trace_dir = Path(tempfile.mkdtemp(prefix="run-", dir=trace_root))
+        print(f"Trace directory: {trace_dir}")
 
     per_game = []
     for i, game_id in enumerate(game_ids, 1):
@@ -97,16 +114,24 @@ def main() -> None:
             print(f"  could not create env for {game_id!r}, skipping")
             continue
 
-        agent = MyAgentCls(
-            card_id="local-dev",
-            game_id=game_id,
-            agent_name=f"MyAgent.local.{game_id}",
-            ROOT_URL="http://localhost",
-            record=False,
-            arc_env=env,
-            tags=["local-dev"],
-        )
-        agent.main()
+        trace_context = ((trace_dir / f"{game_id}.jsonl").open("x")
+                         if trace_dir else nullcontext(None))
+        with trace_context as trace_file:
+            AgentCls = (traced_agent_class(MyAgentCls, trace_file, seed=args.seed)
+                        if trace_file else MyAgentCls)
+            agent = AgentCls(
+                card_id="local-dev",
+                game_id=game_id,
+                agent_name=f"MyAgent.local.{game_id}",
+                ROOT_URL="http://localhost",
+                record=False,
+                arc_env=env,
+                tags=["local-dev"],
+            )
+            if args.seed is not None:
+                import random
+                random.seed(f"{args.seed}:{game_id}")
+            agent.main()
 
         final = agent.frames[-1]
         per_game.append((game_id, final.state, final.levels_completed,

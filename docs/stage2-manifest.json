@@ -1,0 +1,58 @@
+{
+  "games": [
+    "ar25-0c556536",
+    "bp35-0a0ad940",
+    "cd82-fb555c5d",
+    "cn04-2fe56bfb",
+    "dc22-fdcac232",
+    "ft09-0d8bbf25",
+    "g50t-5849a774",
+    "ka59-38d34dbb",
+    "lf52-271a04aa",
+    "lp85-305b61c3",
+    "ls20-9607627b",
+    "m0r0-492f87ba",
+    "r11l-495a7899",
+    "re86-8af5384d",
+    "s5i5-18d95033",
+    "sb26-7fbdac44",
+    "sc25-635fd71a",
+    "sk48-d8078629",
+    "sp80-589a99af",
+    "su15-1944f8ab",
+    "tn36-ef4dde99",
+    "tr87-cd924810",
+    "tu93-0768757b",
+    "vc33-5430563c",
+    "wa30-ee6fef47"
+  ],
+  "policies": [
+    "original",
+    "legal",
+    "memory"
+  ],
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "actions": 256,
+  "environment_seed": 0,
+  "numpy_seed": 0,
+  "replicates": 2,
+  "python": "3.12.15",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "packages": {
+    "arc-agi": "0.9.9",
+    "arcengine": "0.9.3",
+    "numpy": "2.5.4",
+    "pillow": "13.0.0"
+  },
+  "source_sha256": {
+    "agent/my_agent.py": "5063778e1a02b2f4ef0cee49d8a6c50d6a29aa30db2121669d911415b20a18ae",
+    "scripts/evaluate_policies.py": "15283b519a8fecc883b7b31676f111cd42ad6df519fe8ee81ed4111459c895b9",
+    "scripts/observation_trace.py": "8f896caf590e0ed58adbac5f3cfbdf6a1e1616b93ebb2a19866048998f8fa0ea"
+  },
+  "vendor_revision": "4743e7d0aaae0ded0d98a89a7e282e63564cd58b",
+  "runtime_scope": "agent.main including policy, environment, tracing and gzip; excludes setup and trace analysis"
+}

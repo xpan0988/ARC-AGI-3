@@ -16,6 +16,7 @@ You don't normally need to call this directly — `make submit` runs it for you.
 from __future__ import annotations
 
 import json
+import argparse
 from pathlib import Path
 from textwrap import dedent
 
@@ -58,10 +59,15 @@ def markdown_cell(source: str) -> dict:
     return {"cell_type": "markdown", "metadata": {}, "source": source}
 
 
-def build() -> dict:
+def build(policy="original") -> dict:
     if not AGENT_SRC.exists():
         raise SystemExit(f"Could not find {AGENT_SRC}")
     agent_body = AGENT_SRC.read_text()
+    selected = {"original": None, "legal": "LegalRandomAgent", "memory": "MemoryAgent"}
+    if policy not in selected:
+        raise ValueError(f"Unknown policy: {policy}")
+    if selected[policy]:
+        agent_body += f"\n\n# Explicit notebook policy selection.\nclass MyAgent({selected[policy]}):\n    pass\n"
 
     install_cell = code_cell(
         "!pip install --no-index --find-links \\\n"
@@ -198,10 +204,13 @@ def build() -> dict:
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--policy", choices=["original", "legal", "memory"], default="original")
+    args = parser.parse_args()
     NOTEBOOK_PATH.parent.mkdir(parents=True, exist_ok=True)
-    NOTEBOOK_PATH.write_text(json.dumps(build(), indent=1))
+    NOTEBOOK_PATH.write_text(json.dumps(build(args.policy), indent=1))
     print(f"[build_notebook] Wrote {NOTEBOOK_PATH.relative_to(ROOT)}  "
-          f"(accelerator: {ACCELERATOR})")
+          f"(accelerator: {ACCELERATOR}, policy: {args.policy})")
 
     # Keep notebooks/kernel-metadata.json in sync so the user never has to
     # edit it just to flip CPU ↔ GPU.

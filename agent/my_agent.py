@@ -21,6 +21,10 @@ from __future__ import annotations
 
 import random
 import time
+import hashlib
+import json
+import math
+from collections import Counter, deque
 from typing import Any
 
 from arcengine import FrameData, GameAction, GameState
@@ -85,3 +89,181 @@ class MyAgent(Agent):
         else:
             action.reasoning = f"random simple action: {action.value}"
         return action
+
+
+# Stage 2 policies live in this same file because the notebook embeds only it.
+# MyAgent above remains the original control, including its LS20 weighting.
+def advertised_actions(frame: FrameData) -> list[GameAction]:
+    """Deduplicate known advertised actions; RESET is reserved for recovery."""
+    return [action for action in GameAction
+            if action is not GameAction.RESET and action.value in frame.available_actions]
+
+
+def prepare_action(action: GameAction, data: dict | None = None) -> GameAction:
+    """Avoid carrying mutable enum data/reasoning over from another decision."""
+    action.set_data(data or {})
+    action.reasoning = None
+    return action
+
+
+class LegalRandomAgent(MyAgent):
+    """Uniform advertised-action sampling, with uniform legal coordinates."""
+
+    def choose_action(self, frames, latest_frame):
+        if latest_frame.state in (GameState.NOT_PLAYED, GameState.GAME_OVER, GameState.WIN):
+            return prepare_action(GameAction.RESET)
+        choices = advertised_actions(latest_frame)
+        if not choices:
+            # RESET is the protocol recovery action even when not advertised.
+            return prepare_action(GameAction.RESET)
+        action = random.choice(choices)
+        data = ({"x": random.randint(0, 63), "y": random.randint(0, 63)}
+                if action.is_complex() else {})
+        return prepare_action(action, data)
+
+
+def observation_key(frame: FrameData, *, full_stack: bool = False) -> str:
+    """Observable identity, never hidden-state identity or a progress estimate.
+
+    Decisions use the final rendered grid, avoiding animation-path identity.
+    Full-stack identity separately detects transient observable responses.
+    GUID and the full-reset event flag do not identify a physical state.
+    """
+    payload = [frame.frame if full_stack else (frame.frame[-1] if frame.frame else []),
+               frame.state.value, frame.levels_completed, frame.win_levels,
+               sorted(frame.available_actions)]
+    return hashlib.sha256(json.dumps(payload, separators=(",", ":")).encode()).hexdigest()[:32]
+
+
+def action_bucket(action: GameAction, data: dict) -> tuple:
+    # Coordinates remain exact in transition records. Only exploration counts
+    # share an 8x8 spatial bin; this assumes no game-specific action semantics.
+    if action.is_complex():
+        return (action.value, data["x"] // 8, data["y"] // 8)
+    return (action.value,)
+
+
+class ExplorationMemory:
+    """Per-agent/per-game memory, retained across deaths but not across games."""
+
+    def __init__(self):
+        self.visits = Counter()
+        self.state_actions = {}
+        self.level_actions = {}
+        self.transitions = []
+        self.recent_states = deque(maxlen=12)
+        self.recent_pairs = deque(maxlen=12)
+        self.episode = 0
+        self.repeated_states = 0
+        self.cycles = 0
+
+    @staticmethod
+    def new_stats():
+        return {"attempts": 0, "unchanged": 0, "endpoint_unchanged": 0,
+                "outcomes": Counter()}
+
+    def start(self, frame):
+        key = observation_key(frame)
+        self.visits[key] += 1
+        self.recent_states.append(key)
+
+    def score(self, state, level, bucket):
+        local = self.state_actions.get((state, bucket), self.new_stats())
+        general = self.level_actions.get((level, bucket), self.new_stats())
+        # Under-tested local actions get priority; level-wide evidence remains
+        # useful when counters/animation make every exact grid look new.
+        evidence = local if local["attempts"] else general
+        count = evidence["attempts"]
+        novelty = sum(n / (1 + self.visits[d]) for d, n in evidence["outcomes"].items()) / max(1, count)
+        return (2 / math.sqrt(1 + local["attempts"])
+                + 1 / math.sqrt(1 + general["attempts"])
+                + novelty
+                - 2 * evidence["endpoint_unchanged"] / (1 + count)
+                - self.recent_pairs.count((state, bucket)))
+
+    def observe(self, before, action_id, data, after):
+        source, source_full, level = before
+        target = observation_key(after)
+        bucket = action_bucket(GameAction.from_id(action_id), data)
+        unchanged = source_full == observation_key(after, full_stack=True)
+        endpoint_unchanged = source == target
+        repeated = self.visits[target] > 0
+        cycle = target in self.recent_states
+        action_cycle = (source, bucket) in self.recent_pairs and cycle
+        self.repeated_states += repeated
+        self.cycles += cycle
+        self.visits[target] += 1
+        for table, key in ((self.state_actions, (source, bucket)),
+                           (self.level_actions, (level, bucket))):
+            stats = table.setdefault(key, self.new_stats())
+            stats["attempts"] += 1
+            stats["unchanged"] += unchanged
+            stats["endpoint_unchanged"] += endpoint_unchanged
+            stats["outcomes"][target] += 1
+        self.transitions.append({
+            "episode": self.episode, "source": source, "target": target,
+            "action_id": action_id, "data": dict(data), "bucket": bucket,
+            "unchanged": unchanged, "endpoint_unchanged": endpoint_unchanged,
+            "repeated": repeated, "cycle": cycle, "action_cycle": action_cycle,
+            "frame_count": len(after.frame), "levels_delta": after.levels_completed - level,
+            "state": after.state.value, "full_reset": after.full_reset,
+        })
+        boundary = (action_id == GameAction.RESET.value or after.full_reset
+                    or after.levels_completed != level or after.state == GameState.GAME_OVER)
+        if boundary:
+            self.episode += 1
+            self.recent_states.clear()
+            self.recent_pairs.clear()
+        else:
+            self.recent_pairs.append((source, bucket))
+        self.recent_states.append(target)
+
+
+class MemoryAgent(LegalRandomAgent):
+    """Small action-coverage heuristic; novelty is evidence, not game reward."""
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.memory = ExplorationMemory()
+
+    def choose_action(self, frames, latest_frame):
+        key = observation_key(latest_frame)
+        if not self.memory.visits:
+            self.memory.start(latest_frame)
+        self._memory_before = (key, observation_key(latest_frame, full_stack=True),
+                               latest_frame.levels_completed)
+        choices = advertised_actions(latest_frame)
+        if latest_frame.state != GameState.NOT_FINISHED or not choices:
+            return prepare_action(GameAction.RESET)
+        # Fixed 10% legal-random exploration prevents learned penalties from
+        # permanently excluding actions with delayed or context-specific effects.
+        if random.random() < 0.1:
+            return super().choose_action(frames, latest_frame)
+        candidates = []
+        for action in choices:
+            buckets = [(action.value, x, y) for x in range(8) for y in range(8)] if action.is_complex() else [(action.value,)]
+            for bucket in buckets:
+                score = self.memory.score(key, latest_frame.levels_completed, bucket)
+                candidates.append((score, action, bucket))
+        best = max(item[0] for item in candidates)
+        tied = [item for item in candidates if item[0] == best]
+        # Equal scores break ties by action family first; ACTION6 having 64
+        # coordinate bins must not give it 64 lottery tickets at initialization.
+        action = random.choice(list(dict.fromkeys(item[1] for item in tied)))
+        _, _, bucket = random.choice([item for item in tied if item[1] is action])
+        data = ({"x": bucket[1] * 8 + random.randrange(8),
+                 "y": bucket[2] * 8 + random.randrange(8)} if action.is_complex() else {})
+        return prepare_action(action, data)
+
+    def take_action(self, action):
+        # Capture the actual request before enum mutation or the next decision.
+        action_id, data = action.value, action.action_data.model_dump()
+        frame = super().take_action(action)
+        if frame is not None:
+            # Update here rather than at the next decision, so WIN, death and
+            # the final budget-limited response are included in memory.
+            self.memory.observe(self._memory_before, action_id, data, frame)
+        return frame
+
+
+POLICIES = {"original": MyAgent, "legal": LegalRandomAgent, "memory": MemoryAgent}

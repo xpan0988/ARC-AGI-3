@@ -19,6 +19,7 @@ FRAMEWORK_DIR   := vendor/ARC-AGI-3-Agents
 COMP_SLUG       := arc-prize-2026-arc-agi-3
 GAME            ?=
 STEPS           ?= 200
+POLICY          ?= original
 
 .PHONY: help setup play-local pull-sample notebook submit status verify-local clean _check-kaggle
 
@@ -51,7 +52,7 @@ setup: ## One-time install: venv, arc-agi, kaggle CLI, clone framework
 	@echo "Setup complete. Try:  make play-local"
 
 play-local: ## Run agent/my_agent.py against ALL games (or GAME=ls20 for a single one)
-	$(VENV_PY) scripts/play_local.py $(if $(GAME),--game $(GAME)) --max-steps $(STEPS)
+	$(VENV_PY) scripts/play_local.py $(if $(GAME),--game $(GAME)) --max-steps $(STEPS) --policy $(POLICY)
 
 verify-local: ## Quick smoke test: 50 steps on ls20 + vc33 only
 	$(VENV_PY) scripts/play_local.py --game ls20,vc33 --max-steps 50
@@ -66,7 +67,7 @@ pull-sample: _check-kaggle ## Download the official Stochastic Goose sample note
 	@echo "Open reference/stochastic-goose/*.ipynb for the canonical pattern."
 
 notebook: ## Splice agent/my_agent.py into notebooks/submission.ipynb
-	$(VENV_PY) scripts/build_notebook.py
+	$(VENV_PY) scripts/build_notebook.py --policy $(POLICY)
 
 submit: notebook _check-kaggle ## Build notebook and push to Kaggle (one-line submission)
 	@grep -q REPLACE_WITH_YOUR_USERNAME notebooks/kernel-metadata.json && { \
