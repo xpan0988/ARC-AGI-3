@@ -1,0 +1,51 @@
+{
+  "reference_notebook": "dfranzen/arc-agi-3-milestone-2-solution",
+  "version": 3,
+  "script_version_id": 354920985,
+  "source_notebook_sha256": "589eaf393f416effe925c6830fc00fcdc0d6da91193b29ff0029282cbd6ee96e",
+  "source_repository_commit": "10882e332d883af3e61616df8c8a17d03a328a75",
+  "duck_base_commit": "7652836056c59e044f093e3c13ed7438c814169e",
+  "pennyroyal_release": "2.5.3",
+  "pennyroyal_base_commit": "d00d88efc8d6281b12be4f4073126aec95038c55",
+  "sglang": "0.5.19+gd00d88efc8d6",
+  "torch": "2.13.0+cu130",
+  "cuda_toolkit": "13.0.88",
+  "bundled_git_status": {
+    "ARC3-Inference": "aa69123 DIRTY (original attached bundle, before notebook harness patch)",
+    "tufa-arc-agi-framework": "fe9f7c4 clean",
+    "re-arc-3": "57e46d619d pinned",
+    "scope": "Reported shortened revisions; immutable Kaggle input IDs and archived per-file hashes identify the actual source snapshot"
+  },
+  "kaggle_environment": "2026-05-27",
+  "python": "3.12.13",
+  "accelerator": "nvidiaRtxPro6000",
+  "internet": false,
+  "input_source_ids_as_exported": [
+    {"sourceType": "competition", "sourceId": 133468},
+    {"sourceType": "datasetVersion", "sourceId": 20092813},
+    {"sourceType": "datasetVersion", "sourceId": 20134793},
+    {"sourceType": "modelInstanceVersion", "sourceId": 1007514},
+    {"sourceType": "modelInstanceVersion", "sourceId": 1007009}
+  ],
+  "target": {
+    "input": "dfranzen/intel-qwen3.8-flash-next-w4a16-autoround/transformers/default/1",
+    "quantization": "auto-round INT4 / W4A16; original BF16 PLE offloaded to host",
+    "shards": 38,
+    "weight_bytes": 181196006784,
+    "index_sha256": "32732da58649d48911ae5f7efaf9d400d7e573d03a241aa483095f817ba7bd61",
+    "config_sha256": "0fabfa21fab8bfe69f02234f7ae8df4ed91b785fca2e22011c1230f6a07e5329",
+    "tokenizer_sha256": "06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523"
+  },
+  "draft": {
+    "input": "dfranzen/albucino-qwen3-8-flash-next-drafter/transformers/default/1",
+    "quantization": "compressed-tensors symmetric INT4 group32 MTP routed experts",
+    "shards": 2,
+    "weight_bytes": 4140094152,
+    "index_sha256": "a3e600dae46c7f32e2ff42e6c40f46f75fb71ae7d5b73011b666664e5d54f6a2",
+    "config_sha256": "8e3846487f4f0144a968e2a24f5c31efd7d36687b2b112ed51e14e4ab8ab9c58"
+  },
+  "requirements_lock_sha256": "4b0ee12848c1e7c3a51b0819de3a1ae63a967313fd1f62b9e2ca6b9c82b8da02",
+  "sglang_wheel_sha256": "d0620216732b82b6efd4f8a78cc9b5f55343a4d3837fdfa3bcbb841b7718a225",
+  "frspec_token_map_sha256": "becfa41d394b86c26c632bea8f3c6ea64bbb76d7b238d8673c06afae21269f25",
+  "weight_hash_scope": "Kaggle immutable input versions plus config/index hashes and shard sizes; individual 185GB weight content not rehashed"
+}

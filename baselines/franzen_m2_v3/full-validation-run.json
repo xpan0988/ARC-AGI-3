@@ -1,0 +1,150 @@
+{
+  "recorded_at_utc": "2026-10-26T13:37:27.117533+00:00",
+  "status": "RUNNING",
+  "authorization": {
+    "scope": "One full Save & Run All validation of verified candidate 362495586; preserve the released baseline and configuration",
+    "full_run_attempts_launched": 1,
+    "second_full_run_authorized": false,
+    "competition_submission_authorized": false
+  },
+  "kaggle": {
+    "notebook": "panxiyuan/franzen-m2-v3-baseline",
+    "candidate_version": 2,
+    "candidate_script_version_id": 362495586,
+    "executing_version": 3,
+    "executing_script_version_id": 362506200,
+    "version_name": "Stage 3C full validation - exact V2 baseline",
+    "save_type": "Save & Run All (Commit)",
+    "url": "https://www.kaggle.com/code/panxiyuan/franzen-m2-v3-baseline?scriptVersionId=362506200",
+    "editor_url": "https://www.kaggle.com/code/panxiyuan/franzen-m2-v3-baseline/edit",
+    "created_at_utc": "2026-10-26T13:25:08Z",
+    "created_at_sydney": "2026-10-27T00:25:08+11:00",
+    "execution_start_at_utc": null,
+    "execution_end_at_utc": null,
+    "total_runtime_seconds": null,
+    "runtime_limit_seconds": 32400,
+    "completed_within_nine_hours": null,
+    "mode": "ordinary offline demo validation; TRUE_SUBMISSION=False"
+  },
+  "source_integrity": {
+    "prelaunch_editor_export": "/Users/xiyuanpan/Downloads/franzen-m2-v3-baseline (1).ipynb",
+    "candidate_export_sha256": "f8e3bf0065a198e6508f738546941d67454eeac74236f244a4de9ee9dc51f4fc",
+    "prelaunch_export_byte_identical_to_verified_candidate": true,
+    "all_23_cell_sources_match_released_franzen_version_3": true,
+    "all_five_input_versions_preserved": true,
+    "baseline_code_or_configuration_modified": false,
+    "executed_export_parity_verified": null,
+    "released_reference_script_version_id": 354920985,
+    "released_source_sha256": "589eaf393f416effe925c6830fc00fcdc0d6da91193b29ff0029282cbd6ee96e"
+  },
+  "inputs": [
+    {
+      "sourceType": "competition",
+      "sourceId": 133468
+    },
+    {
+      "sourceType": "datasetVersion",
+      "sourceId": 20092813
+    },
+    {
+      "sourceType": "datasetVersion",
+      "sourceId": 20134793
+    },
+    {
+      "sourceType": "modelInstanceVersion",
+      "sourceId": 1007514
+    },
+    {
+      "sourceType": "modelInstanceVersion",
+      "sourceId": 1007009
+    }
+  ],
+  "environment": {
+    "accelerator": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "internet_enabled": false,
+    "editor_environment_selection": "Pin to original environment (2026-05-27)",
+    "live_log_environment_label": "Latest Container Image",
+    "environment_label_discrepancy": "Editor pin was verified before Save; Logs label differs. Effective runtime versions below match release. Exact base-image identity remains unverified.",
+    "sglang": "0.5.19+gd00d88efc8d6",
+    "torch": "2.13.0+cu130",
+    "cuda_toolkit": "13.0.88",
+    "gpu_capability": "12,0",
+    "server_random_seed": null
+  },
+  "checkpoints": [
+    {
+      "observed_at_utc": "2026-10-26T13:35:00Z",
+      "ui_elapsed_seconds": 615.8,
+      "stage": "benchmark started; ten concurrent streams",
+      "last_log_elapsed_seconds": 569.0,
+      "server_ready_at_elapsed_seconds": 565.2,
+      "server_reported_startup_seconds": 511,
+      "checkpoint_precache_seconds": 267.8,
+      "checkpoint_precache_files": 62,
+      "checkpoint_precache_gb_decimal": 185.4,
+      "gpu_memory_gib": {
+        "used": 91.1,
+        "total": 95.6
+      },
+      "host_ram_gib": {
+        "used": 105.9,
+        "total": 176.9
+      },
+      "game_results_available": false
+    },
+    {
+      "observed_at_utc": "2026-10-26T13:37:10.121Z",
+      "ui_elapsed_seconds": 720.4,
+      "last_log_elapsed_seconds": 687.8,
+      "stage": "benchmark running; no completed game results yet",
+      "gpu_memory_gib": {
+        "used": 93.4,
+        "total": 95.6
+      },
+      "host_ram_gib": {
+        "used": 106.9,
+        "total": 176.9
+      },
+      "evidence_file": "generated/full_run_362506200/startup-logs.json"
+    }
+  ],
+  "quota": {
+    "last_observed_available_minutes_before_run": 1769,
+    "before_run_display": "29h29m available",
+    "observed_after_completion_available_minutes": null,
+    "note": "No post-run quota claim until the Kaggle display is inspected."
+  },
+  "results": {
+    "completed_episodes": null,
+    "games_won": null,
+    "levels_completed": null,
+    "demo_score": null,
+    "official_competition_score": null,
+    "submission_artifact_valid": null,
+    "submission_artifact_placeholder_only": null,
+    "failure_stage": null,
+    "root_cause": null
+  },
+  "monitoring": {
+    "heartbeat_id": "stage-3c-full-run-completion",
+    "status": "ACTIVE",
+    "interval_minutes": 30,
+    "monitor_tab_id": "1483995830",
+    "editor_tab_id": "1483995810",
+    "output_directory": "baselines/franzen_m2_v3/generated/full_run_362506200",
+    "pending": "Capture final executed notebook, logs, game results, output files, hashes and remaining quota; validate source parity and runtime; disable heartbeat at terminal result.",
+    "capture_note": "CUA can save DOM log snapshots and screenshots using node:fs/promises to /private/tmp, then copy into this ignored evidence directory. No browser protection bypass is needed."
+  },
+  "infrastructure_observations": [
+    "Chrome blocked viewer notebook export navigation with ERR_BLOCKED_BY_CLIENT; protection was not bypassed. Editor prelaunch notebook download worked.",
+    "Chrome download events can time out even when Downloads contains the file; inspect actual files before retrying.",
+    "The checkout moved to /Users/xiyuanpan/ARC-AGI-3; the old sandbox workspace path is stale. Baseline reports and ignored evidence use the actual checkout.",
+    "Live log rows can duplicate stderr messages; duplicated rows alone do not indicate multiple executions."
+  ],
+  "competition_submitted": false,
+  "artifacts_sha256": {
+    "prelaunch-candidate.ipynb": "f8e3bf0065a198e6508f738546941d67454eeac74236f244a4de9ee9dc51f4fc",
+    "running.png": "02b51c54c04e4222c5ab6e5fd91a26363a15476b2ee1aaa1ef79331a57f6cee5",
+    "startup-logs.json": "bf386733f7cfe2dbafb5ab1041a5dcb270528cd90a4fa5e1640db84b705938da"
+  }
+}

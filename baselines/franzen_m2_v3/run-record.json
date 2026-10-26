@@ -1,0 +1,178 @@
+{
+  "recorded_at_utc": "2026-10-26T13:37:00Z",
+  "status": "smoke_passed; one approved full validation RUNNING as 362506200; official submission not authorized",
+  "kaggle": {
+    "notebook": "panxiyuan/franzen-m2-v3-baseline",
+    "editor_url": "https://www.kaggle.com/code/panxiyuan/franzen-m2-v3-baseline/edit",
+    "smoke": {
+      "version": 1,
+      "script_version_id": 362494227,
+      "save_type": "Quick Save",
+      "save_status": "Successful",
+      "url": "https://www.kaggle.com/code/panxiyuan/franzen-m2-v3-baseline?scriptVersionId=362494227"
+    },
+    "full_candidate": {
+      "version": 2,
+      "script_version_id": 362495586,
+      "save_type": "Quick Save",
+      "executed": false,
+      "url": "https://www.kaggle.com/code/panxiyuan/franzen-m2-v3-baseline?scriptVersionId=362495586"
+    },
+    "note": "Quick Save displayed runtimes describe snapshot packaging, not the actual interactive model execution."
+  },
+  "quota": {
+    "before_minutes_available": 1800,
+    "after_minutes_available": 1769,
+    "observed_consumed_minutes": 31,
+    "session_status": "stopped"
+  },
+  "smoke": {
+    "game": "ls20-9607627b",
+    "initial_startup_attempt": {
+      "state": "cancelled",
+      "actions": 1,
+      "model_actions": 0,
+      "generated_tokens": 0,
+      "reason": "Eight-minute gameplay deadline expired while checkpoint loading continued; ten-minute actual cancellation including drain"
+    },
+    "ready_server_episode": {
+      "started_utc": "2026-10-26T12:38:44Z",
+      "ended_utc": "2026-10-26T12:39:32Z",
+      "reported_duration_seconds": 47,
+      "actions": 4,
+      "warmup_resets": 1,
+      "model_actions": 3,
+      "model_calls": 7,
+      "generated_tokens": 6881,
+      "completed_levels": 0,
+      "games_won": 0,
+      "stop_reason": "four-action smoke cap",
+      "state": "gave_up"
+    },
+    "notebook_start_epoch": 1793016844.6906478,
+    "postflight_epoch": 1793018372.7702653,
+    "notebook_to_postflight_seconds": 1528.08,
+    "source_parity_unchanged_original_cells": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      17,
+      18,
+      19,
+      21,
+      22
+    ],
+    "smoke_modified_original_cells": [
+      16,
+      20
+    ],
+    "extra_cells": "input preflight, bounded ready-server retry/postflight, CPU runtime audit",
+    "transitions": [
+      {
+        "action_num": 2,
+        "engine_action": "ACTION1",
+        "display": "UP",
+        "analysis_step": 1,
+        "rows": 64,
+        "columns": 64,
+        "changed_cells": 52,
+        "after_sha256": "c11a377268d286ce93111a2c209a160b71cb67a8537d5adb0d5f98304c7b62db"
+      },
+      {
+        "action_num": 3,
+        "engine_action": "ACTION1",
+        "display": "UP",
+        "analysis_step": 2,
+        "rows": 64,
+        "columns": 64,
+        "changed_cells": 52,
+        "after_sha256": "b2ee2db27a608502fec2f770f0ad27defcd52bd4fff358ff42ca2e40827862e7"
+      },
+      {
+        "action_num": 4,
+        "engine_action": "ACTION1",
+        "display": "UP",
+        "analysis_step": 2,
+        "rows": 64,
+        "columns": 64,
+        "changed_cells": 52,
+        "after_sha256": "727a6504f4f0b68b9495d1cdc7a6d419542bba446b89c4ede702579412f8ca41"
+      }
+    ],
+    "parquet": {
+      "rows": 1,
+      "dtypes": {
+        "row_id": "object",
+        "game_id": "object",
+        "end_of_game": "bool",
+        "score": "int64"
+      },
+      "placeholder_only": true
+    }
+  },
+  "runtime": {
+    "versions": {
+      "arc-agi": "0.9.8",
+      "arcengine": "0.9.3",
+      "numpy": "2.4.6",
+      "pandas": "2.3.3",
+      "pyarrow": "24.0.0"
+    },
+    "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition, 94451 MiB, 97887 MiB",
+    "server_random_seed": 697956516,
+    "server_seed_explicitly_set_by_release": false,
+    "cold_weight_load_seconds": 1190.01,
+    "server_tokenizer_startup_seconds": 1370.27,
+    "checkpoint_precache_seconds": 1157.65
+  },
+  "artifacts_sha256": {
+    "franzen_m2_v3_full.ipynb": "3863b5baaa1e82917e9e2e26ba2c53833462c4805fee0e8f1ac9847c449d731d",
+    "franzen_m2_v3_smoke.ipynb": "2a7c125eea98135a62c78366c5f34e67b259734c18e87e908410d2fe2882515c",
+    "executed-smoke.ipynb": "873a66fff206dba64e9158ab23b71688f5fe2f4d15610cde00ca389b69a0aab3",
+    "kaggle-full-candidate.ipynb": "f8e3bf0065a198e6508f738546941d67454eeac74236f244a4de9ee9dc51f4fc",
+    "franzen-smoke-evidence.zip": "c6a549e0144c760a943f01bb7570fb2a045daa46703734f0bee05a424341ee60",
+    "validation.json": "3c8af1c0ee870b630f158e0ca5d4df2faff247a614e63e6a4788a902f8892a4c"
+  },
+  "validation": {
+    "archived_hashes_match": true,
+    "kaggle_full_candidate_all_23_sources_match_reference": true,
+    "kaggle_inputs_unchanged": true,
+    "full_candidate_outputs_cleared": true,
+    "stage1_stage2_tests_passed": 18,
+    "stage1_stage2_tests_skipped": 1,
+    "all_three_starter_notebook_policies_build": true
+  },
+  "full_run": {
+    "executed": true,
+    "completed": false,
+    "user_approval_received": true,
+    "status": "RUNNING",
+    "version": 3,
+    "script_version_id": 362506200,
+    "url": "https://www.kaggle.com/code/panxiyuan/franzen-m2-v3-baseline?scriptVersionId=362506200",
+    "created_at_utc": "2026-10-26T13:25:08Z",
+    "created_at_sydney": "2026-10-27T00:25:08+11:00",
+    "attempts_launched": 1,
+    "retry_authorized": false,
+    "nine_hour_completion_verified": null,
+    "details_file": "full-validation-run.json"
+  },
+  "competition_submission": {
+    "submitted": false,
+    "score": null,
+    "runtime": null
+  }
+}
