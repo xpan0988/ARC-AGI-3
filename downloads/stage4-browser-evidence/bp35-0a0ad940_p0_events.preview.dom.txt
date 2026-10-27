@@ -1,0 +1,1197 @@
+- navigation "Main Kaggle page navigation":
+  - button "Navigation menu": menu
+  - link "Skip to content":
+    - /url: "#site-content"
+    - text: Skip to
+    - text: content
+  - link "Return to Kaggle home page":
+    - /url: /
+  - button "Create on Kaggle":
+    - paragraph: Create
+  - list:
+    - listitem "Home List Item":
+      - link "Home":
+        - /url: /
+        - paragraph: Home
+    - listitem "Competitions List Item":
+      - link "Competitions":
+        - /url: /competitions
+        - paragraph: Competitions
+    - listitem "Benchmarks List Item":
+      - link "Benchmarks":
+        - /url: /benchmarks
+        - paragraph: Benchmarks
+    - listitem "Arenas List Item":
+      - link "Arenas":
+        - /url: /arenas
+        - paragraph: Arenas
+    - listitem "Game Arena List Item":
+      - link "Game Arena":
+        - /url: /game-arena
+        - paragraph: Game Arena
+  - list:
+    - listitem "Data Hub List Item":
+      - link "Data Hub":
+        - /url: "#"
+        - paragraph: Data Hub
+      - button "Expand"
+  - list:
+    - listitem "More on Kaggle List Item":
+      - link "More on Kaggle":
+        - /url: "#"
+        - paragraph: More
+      - button "Expand"
+  - separator
+  - list:
+    - listitem "Your Work List Item":
+      - link "Your Work":
+        - /url: /work
+        - paragraph: Your Work
+      - button "Collapse Your Work" [expanded]
+    - listitem "Expand Viewed List Item":
+      - link "Expand Viewed":
+        - /url: "#"
+        - paragraph: Viewed
+      - button "Expand Viewed"
+    - list
+    - listitem "Expand Edited List Item":
+      - link "Expand Edited":
+        - /url: "#"
+        - paragraph: Edited
+      - button "Expand Edited"
+    - list
+  - button "Open Active Events dialog 1 View Active Events":
+    - generic "Open Active Events dialog": auto_awesome_motion
+    - generic: "1"
+    - paragraph: View Active Events
+- navigation "Main menu, search and your account":
+  - textbox "Search"
+  - button "pan xiyuan":
+    - generic "pan xiyuan"
+- main:
+  - generic: Kaggle uses cookies from Google to deliver and enhance the quality of its services and to analyze traffic.
+  - link "Learn more":
+    - /url: /cookies
+    - generic: Learn more
+  - generic: OK, Got it.
+  - link "pan xiyuan's profile":
+    - /url: /panxiyuan
+    - generic "pan xiyuan"
+  - generic: pan xiyuan
+  - generic: · 11h ago · 13 views · Private
+  - heading "Franzen M2 V3 baseline" [level=1]
+  - button "Edit title": edit
+  - link "[object Object] opens in new window":
+    - /url: /code/dfranzen/arc-agi-3-milestone-2-solution
+    - paragraph:
+      - text: Copied from Daniel Franzen (
+      - generic: "+0"
+      - text: ","
+      - generic: "-0"
+      - text: )
+  - heading "Franzen M2 V3 baseline" [level=2]
+  - button "Upvote":
+    - generic: arrow_drop_up
+  - button "0 votes": "0"
+  - button "Share":
+    - generic: lock
+    - generic: Share
+  - link "Edit":
+    - /url: /code/panxiyuan/franzen-m2-v3-baseline/edit/run/362506200
+    - button "Edit":
+      - generic: edit
+      - generic: Edit
+  - button "Download":
+    - generic: file_download
+    - generic: Download
+  - button "More options for this notebook": more_vert
+  - tablist:
+    - tab "Notebook, 1 of 6":
+      - generic: Notebook
+    - tab "Input, 2 of 6":
+      - generic: Input
+    - tab "Output, 3 of 6" [selected]:
+      - generic: Output
+    - tab "Logs, 4 of 6":
+      - generic: Logs
+    - tab "Comments (0), 5 of 6":
+      - generic: Comments (0)
+    - tab "Settings, 6 of 6":
+      - generic: Settings
+  - separator
+  - heading "Output Data" [level=2]
+  - button "Back to artifacts"
+  - heading "bp35-0a0ad940_p0_events.jsonl(4.71 MB)" [level=4]:
+    - text: bp35-0a0ad940_p0_events.jsonl
+    - generic: (4.71 MB)
+  - button "Submit to Competition":
+    - generic: file_upload
+    - generic: Submit to Competition
+  - button "Download": get_app
+  - button "Hide tree"
+  - generic: error
+  - generic: This preview is truncated due to the large file size. The number of JSON items and individual items might be might be truncated. Create a Notebook or download this file to see the full content.
+  - button "Download":
+    - generic: Download
+  - generic: "\"root\""
+  - generic: ":"
+  - generic: "{"
+  - generic: 12 items
+  - generic: "\"board\""
+  - generic: ":"
+  - generic: "["
+  - generic: 64 items
+  - text: "0"
+  - generic: ":"
+  - generic: "["
+  - generic: ...
+  - generic: "]"
+  - generic: 64 items
+  - text: "1"
+  - generic: ":"
+  - generic: "["
+  - generic: ...
+  - generic: "]"
+  - generic: 64 items
+  - text: "2"
+  - generic: ":"
+  - generic: "["
+  - generic: ...
+  - generic: "]"
+  - generic: 64 items
+  - text: "3"
+  - generic: ":"
+  - generic: "["
+  - generic: ...
+  - generic: "]"
+  - generic: 64 items
+  - text: "4"
+  - generic: ":"
+  - generic: "["
+  - generic: ...
+  - generic: "]"
+  - generic: 64 items
+  - text: "5"
+  - generic: ":"
+  - generic: "["
+  - generic: ...
+  - generic: "]"
+  - generic: 64 items
+  - text: "6"
+  - generic: ":"
+  - generic: "["
+  - generic: ...
+  - generic: "]"
+  - generic: 64 items
+  - text: "7"
+  - generic: ":"
+  - generic: "["
+  - generic: ...
+  - generic: "]"
+  - generic: 64 items
+  - text: "8"
+  - generic: ":"
+  - generic: "["
+  - generic: ...
+  - generic: "]"
+  - generic: 64 items
+  - text: "9"
+  - generic: ":"
+  - generic: "["
+  - generic: ...
+  - generic: "]"
+  - generic: 64 items
+  - text: "10"
+  - generic: ":"
+  - generic: "["
+  - generic: ...
+  - generic: "]"
+  - generic: 64 items
+  - text: "11"
+  - generic: ":"
+  - generic: "["
+  - generic: ...
+  - generic: "]"
+  - generic: 64 items
+  - text: "12"
+  - generic: ":"
+  - generic: "["
+  - generic: ...
+  - generic: "]"
+  - generic: 64 items
+  - text: "13"
+  - generic: ":"
+  - generic: "["
+  - generic: ...
+  - generic: "]"
+  - generic: 64 items
+  - text: "14"
+  - generic: ":"
+  - generic: "["
+  - generic: ...
+  - generic: "]"
+  - generic: 64 items
+  - text: "15"
+  - generic: ":"
+  - generic: "["
+  - generic: ...
+  - generic: "]"
+  - generic: 64 items
+  - text: "16"
+  - generic: ":"
+  - generic: "["
+  - generic: ...
+  - generic: "]"
+  - generic: 64 items
+  - text: "17"
+  - generic: ":"
+  - generic: "["
+  - generic: ...
+  - generic: "]"
+  - generic: 64 items
+  - text: "18"
+  - generic: ":"
+  - generic: "["
+  - generic: ...
+  - generic: "]"
+  - generic: 64 items
+  - text: "19"
+  - generic: ":"
+  - generic: "["
+  - generic: ...
+  - generic: "]"
+  - generic: 64 items
+  - text: "20"
+  - generic: ":"
+  - generic: "["
+  - generic: ...
+  - generic: "]"
+  - generic: 64 items
+  - text: "21"
+  - generic: ":"
+  - generic: "["
+  - generic: ...
+  - generic: "]"
+  - generic: 64 items
+  - text: "22"
+  - generic: ":"
+  - generic: "["
+  - generic: ...
+  - generic: "]"
+  - generic: 64 items
+  - text: "23"
+  - generic: ":"
+  - generic: "["
+  - generic: ...
+  - generic: "]"
+  - generic: 64 items
+  - text: "24"
+  - generic: ":"
+  - generic: "["
+  - generic: ...
+  - generic: "]"
+  - generic: 64 items
+  - text: "25"
+  - generic: ":"
+  - generic: "["
+  - generic: ...
+  - generic: "]"
+  - generic: 64 items
+  - text: "26"
+  - generic: ":"
+  - generic: "["
+  - generic: ...
+  - generic: "]"
+  - generic: 64 items
+  - text: "27"
+  - generic: ":"
+  - generic: "["
+  - generic: ...
+  - generic: "]"
+  - generic: 64 items
+  - text: "28"
+  - generic: ":"
+  - generic: "["
+  - generic: ...
+  - generic: "]"
+  - generic: 64 items
+  - text: "29"
+  - generic: ":"
+  - generic: "["
+  - generic: ...
+  - generic: "]"
+  - generic: 64 items
+  - text: "30"
+  - generic: ":"
+  - generic: "["
+  - generic: ...
+  - generic: "]"
+  - generic: 64 items
+  - text: "31"
+  - generic: ":"
+  - generic: "["
+  - generic: ...
+  - generic: "]"
+  - generic: 64 items
+  - text: "32"
+  - generic: ":"
+  - generic: "["
+  - generic: ...
+  - generic: "]"
+  - generic: 64 items
+  - text: "33"
+  - generic: ":"
+  - generic: "["
+  - generic: ...
+  - generic: "]"
+  - generic: 64 items
+  - text: "34"
+  - generic: ":"
+  - generic: "["
+  - generic: ...
+  - generic: "]"
+  - generic: 64 items
+  - text: "35"
+  - generic: ":"
+  - generic: "["
+  - generic: ...
+  - generic: "]"
+  - generic: 64 items
+  - text: "36"
+  - generic: ":"
+  - generic: "["
+  - generic: ...
+  - generic: "]"
+  - generic: 64 items
+  - text: "37"
+  - generic: ":"
+  - generic: "["
+  - generic: ...
+  - generic: "]"
+  - generic: 64 items
+  - text: "38"
+  - generic: ":"
+  - generic: "["
+  - generic: ...
+  - generic: "]"
+  - generic: 64 items
+  - text: "39"
+  - generic: ":"
+  - generic: "["
+  - generic: ...
+  - generic: "]"
+  - generic: 64 items
+  - text: "40"
+  - generic: ":"
+  - generic: "["
+  - generic: ...
+  - generic: "]"
+  - generic: 64 items
+  - text: "41"
+  - generic: ":"
+  - generic: "["
+  - generic: ...
+  - generic: "]"
+  - generic: 64 items
+  - text: "42"
+  - generic: ":"
+  - generic: "["
+  - generic: ...
+  - generic: "]"
+  - generic: 64 items
+  - text: "43"
+  - generic: ":"
+  - generic: "["
+  - generic: ...
+  - generic: "]"
+  - generic: 64 items
+  - text: "44"
+  - generic: ":"
+  - generic: "["
+  - generic: ...
+  - generic: "]"
+  - generic: 64 items
+  - text: "45"
+  - generic: ":"
+  - generic: "["
+  - generic: ...
+  - generic: "]"
+  - generic: 64 items
+  - text: "46"
+  - generic: ":"
+  - generic: "["
+  - generic: ...
+  - generic: "]"
+  - generic: 64 items
+  - text: "47"
+  - generic: ":"
+  - generic: "["
+  - generic: ...
+  - generic: "]"
+  - generic: 64 items
+  - text: "48"
+  - generic: ":"
+  - generic: "["
+  - generic: ...
+  - generic: "]"
+  - generic: 64 items
+  - text: "49"
+  - generic: ":"
+  - generic: "["
+  - generic: ...
+  - generic: "]"
+  - generic: 64 items
+  - text: "50"
+  - generic: ":"
+  - generic: "["
+  - generic: ...
+  - generic: "]"
+  - generic: 64 items
+  - text: "51"
+  - generic: ":"
+  - generic: "["
+  - generic: ...
+  - generic: "]"
+  - generic: 64 items
+  - text: "52"
+  - generic: ":"
+  - generic: "["
+  - generic: ...
+  - generic: "]"
+  - generic: 64 items
+  - text: "53"
+  - generic: ":"
+  - generic: "["
+  - generic: ...
+  - generic: "]"
+  - generic: 64 items
+  - text: "54"
+  - generic: ":"
+  - generic: "["
+  - generic: ...
+  - generic: "]"
+  - generic: 64 items
+  - text: "55"
+  - generic: ":"
+  - generic: "["
+  - generic: ...
+  - generic: "]"
+  - generic: 64 items
+  - text: "56"
+  - generic: ":"
+  - generic: "["
+  - generic: ...
+  - generic: "]"
+  - generic: 64 items
+  - text: "57"
+  - generic: ":"
+  - generic: "["
+  - generic: ...
+  - generic: "]"
+  - generic: 64 items
+  - text: "58"
+  - generic: ":"
+  - generic: "["
+  - generic: ...
+  - generic: "]"
+  - generic: 64 items
+  - text: "59"
+  - generic: ":"
+  - generic: "["
+  - generic: ...
+  - generic: "]"
+  - generic: 64 items
+  - text: "60"
+  - generic: ":"
+  - generic: "["
+  - generic: ...
+  - generic: "]"
+  - generic: 64 items
+  - text: "61"
+  - generic: ":"
+  - generic: "["
+  - generic: ...
+  - generic: "]"
+  - generic: 64 items
+  - text: "62"
+  - generic: ":"
+  - generic: "["
+  - generic: ...
+  - generic: "]"
+  - generic: 64 items
+  - text: "63"
+  - generic: ":"
+  - generic: "["
+  - generic: ...
+  - generic: "]"
+  - generic: 64 items
+  - generic: "]"
+  - text: "\""
+  - generic: board_ascii
+  - text: "\""
+  - generic: ":"
+  - text: string
+  - generic: "\"BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBSSSSSSSSSSSSSSSSSSSSSSSBBBBBBBBBB BBGBBBBBGBBBBGNNNGBGNNNGBGNNNGBSSSSSSSSSSSSSSSSSSSSSSSBBGBBBBBGB BBBBBBBBBBBBBNNNNNBNNNNNBNNNNNBSSSSSSSSSSSSSSSSSSSSSSSBBBBBBBBBB BBBBBBBBBBBBBNNNNNBNNNNNBNNNNNBSSSSSSSSSSSSSSSSSSSSSSSBBBBBBBBBB BGBBBBBGBBBBBNNNNNBNNNNNBNNNNNBSSSSSSSSSSSSSSSSSSSSSSSBGBBBBBGBB BBBBGBBBBBGBBGNNNGBGNNNGBGNNNGBSSSSSSSSSSSSSSSSSSSSSSSBBBBGBBBBB BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBSSSSSSSSSSSSSSSSSSSSSSSBBBBBBBBBB BBGBBBBBGBBBBBGBBBBBGBBBBBGBBBBSSSSSSSSSSSSSSSSSSSSSSSBBGBBBBBGB BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBSSSSSSSSSSSSSSSSSSSSSSSBBBBBBBBBB BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBSSSSSSSSSSSSSSSSSSSSSSSBBBBBBBBBB BGBBBBBGBBBBBGBBBBBGBBBBBGBBBBBSSSSSSSSSSSSSSSSSSSSSSSBGBBBBBGBB BBBBGBBBBBGBBBBBGBBBBBGBBBBBGBBSSSSSSSSSSSSSSSSSSSSSSSBBBBGBBBBB BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB BBGBBBBBGBBBBBGBBBBBGBBBBBGBBBBGNNNGBGNNNGBGNNNGBGNNNGBBGBBBBBGB BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBNNNNNBNNNNNBNNNNNBNNNNNBBBBBBBBBB BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBNNNNNBNNNNNBNNNNNBNNNNNBBBBBBBBBB BGBBBBBGBBBBBGBBBBBGBBBBBGBBBBBNNNNNBNNNNNBNNNNNBNNNNNBGBBBBBGBB BBBBGBBBBBGBBBBBGBBBBBGBBBBBGBBGNNNGBGNNNGBGNNNGBGNNNGBBBBGBBBBB BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB BBGBBBBBGBBBBSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSBBGBBBBBGB BBBBBBBBBBBBBSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSBBBBBBBBBB BBBBBBBBBBBBBSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSBBBBBBBBBB BGBBBBBGBBBBBSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSBGBBBBBGBB BBBBGBBBBBGBBSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSBBBBGBBBBB BBBBBBBBBBBBBSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSBBBBBBBBBB BBGBBBBBGBBBBSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSBBGBBBBBGB BBBBBBBBBBBBBSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSBBBBBBBBBB BBBBBBBBBBBBBSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSBBBBBBBBBB BGBBBBBGBBBBBSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSBGBBBBBGBB BBBBGBBBBBGBBSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSBBBBGBBBBB BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBSSSSSBBBBBBBBBBBBBBBB BBGBBBBBGBBBBBGBBBBBGBBBBBGBBBBBGBBBBBGBBBBSSSSSBBGBBBBBGBBBBBGB BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBSSSSSBBBBBBBBBBBBBBBB BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBSSSSSBBBBBBBBBBBBBBBB BGBBBBBGBBBBBGBBBBBGBBBBBGBBBBBGBBBBBGBBBBBSSSSSBGBBBBBGBBBBBGBB BBBBGBBBBBGBBBBBGBBBBBGBBBBBGBBBBBGBBBBBGBBSSSSSBBBBGBBBBBGBBBBB BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBSSSSSBBBBBBBBBBBBBBBB BBGBBBBBGBBBBSSSSSSBBbBBSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSBBGBBBBBGB BBBBBBBBBBBBBSSSSSSBbbYBSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSBBBBBBBBBB BBBBBBBBBBBBBSSSSSSBbbYBSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSBBBBBBBBBB BGBBBBBGBBBBBSSSSSSBBbBBSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSBGBBBBBGBB BBBBGBBBBBGBBSSSSSSSBBBSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSBBBBGBBBBB BBBBBBBBBBBBBSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSBBBBBBBBBB BBGBBBBBGBBBBSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSBBGBBBBBGB BBBBBBBBBBBBBSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSBBBBBBBBBB BBBBBBBBBBBBBSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSBBBBBBBBBB BGBBBBBGBBBBBSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSBGBBBBBGBB BBBBGBBBBBGBBSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSBBBBGBBBBB BBBBBBBBBBBBBSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSBBBBBBBBBB BBGBBBBBGBBBBSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSBBGBBBBBGB BBBBBBBBBBBBBSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSBBBBBBBBBB BBBBBBBBBBBBBSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSBBBBBBBBBB BGBBBBBGBBBBBSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSBGBBBBBGBB BBBBGBBBBBGBBSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSBBBBGBBBBB BBBBBBBBBBBBBSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSBBBBBBBBBB BBGBBBBBGBBBBSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSBBGBBBBBGB BBBBBBBBBBBBBSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSBBBBBBBBBB BBBBBBBBBBBBBSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSBBBBBBBBBB BGBBBBBGBBBBBSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSBGBBBBBGBB BBBBGBBBBBGBBSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSBBBBGBBBBB BBBBBBBBBBBBBSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSBBBBBBBBBB BBGBBBBBGBBBBSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSBBGBBBBBGB BBBBBBBBBBBBBSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSBBBBBBBBBB WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW\""
+  - text: "\""
+  - generic: score
+  - text: "\""
+  - generic: ":"
+  - generic: int0
+  - text: "\""
+  - generic: state
+  - text: "\""
+  - generic: ":"
+  - text: string
+  - generic: "\"NOT_FINISHED\""
+  - text: "\""
+  - generic: level
+  - text: "\""
+  - generic: ":"
+  - generic: int1
+  - text: "\""
+  - generic: run_status
+  - text: "\""
+  - generic: ":"
+  - text: string
+  - generic: "\"playing\""
+  - text: "\""
+  - generic: type
+  - text: "\""
+  - generic: ":"
+  - text: string
+  - generic: "\"initial\""
+  - text: "\""
+  - generic: title
+  - text: "\""
+  - generic: ":"
+  - text: string
+  - generic: "\"Initial State\""
+  - text: "\""
+  - generic: action_num
+  - text: "\""
+  - generic: ":"
+  - generic: int0
+  - text: "\""
+  - generic: analysis_step
+  - text: "\""
+  - generic: ":"
+  - generic: "NULL"
+  - text: "\""
+  - generic: action_display
+  - text: "\""
+  - generic: ":"
+  - text: string
+  - generic: "\"RESET\""
+  - text: "\""
+  - generic: reward
+  - text: "\""
+  - generic: ":"
+  - generic: int0
+  - generic: "}"
+  - heading "Output" [level=2]
+  - button "Output actions": more_vert
+  - list:
+    - button "arrow_drop_down":
+      - generic: arrow_drop_down
+    - generic: folder
+    - paragraph: artifacts
+    - list:
+      - generic "Expand ar25-0c556536_p0_events.jsonl"
+      - paragraph: ar25-0c556536_p0_events.jsonl
+      - generic "Expand ar25-0c556536_p0_viewer_data.json"
+      - paragraph: ar25-0c556536_p0_viewer_data.json
+      - generic "Expand ar25-0c556536_p1_events.jsonl"
+      - paragraph: ar25-0c556536_p1_events.jsonl
+      - generic "Expand ar25-0c556536_p1_viewer_data.json"
+      - paragraph: ar25-0c556536_p1_viewer_data.json
+      - generic "Expand ar25-0c556536_p2_events.jsonl"
+      - paragraph: ar25-0c556536_p2_events.jsonl
+      - generic "Expand ar25-0c556536_p2_viewer_data.json"
+      - paragraph: ar25-0c556536_p2_viewer_data.json
+      - generic "Expand ar25-0c556536_p3_events.jsonl"
+      - paragraph: ar25-0c556536_p3_events.jsonl
+      - generic "Expand ar25-0c556536_p3_viewer_data.json"
+      - paragraph: ar25-0c556536_p3_viewer_data.json
+      - generic "Collapse bp35-0a0ad940_p0_events.jsonl"
+      - generic "bp35-0a0ad940_p0_events.jsonl (4.71 MB)" [active]:
+        - paragraph: bp35-0a0ad940_p0_events.jsonl
+      - generic "Expand bp35-0a0ad940_p0_viewer_data.json"
+      - paragraph: bp35-0a0ad940_p0_viewer_data.json
+      - generic "Expand bp35-0a0ad940_p1_events.jsonl"
+      - paragraph: bp35-0a0ad940_p1_events.jsonl
+      - generic "Expand bp35-0a0ad940_p1_viewer_data.json"
+      - paragraph: bp35-0a0ad940_p1_viewer_data.json
+      - generic "Expand bp35-0a0ad940_p2_events.jsonl"
+      - paragraph: bp35-0a0ad940_p2_events.jsonl
+      - generic "Expand bp35-0a0ad940_p2_viewer_data.json"
+      - paragraph: bp35-0a0ad940_p2_viewer_data.json
+      - generic "Expand bp35-0a0ad940_p3_events.jsonl"
+      - paragraph: bp35-0a0ad940_p3_events.jsonl
+      - generic "Expand bp35-0a0ad940_p3_viewer_data.json"
+      - paragraph: bp35-0a0ad940_p3_viewer_data.json
+      - generic "Expand cd82-fb555c5d_p0_events.jsonl"
+      - paragraph: cd82-fb555c5d_p0_events.jsonl
+      - generic "Expand cd82-fb555c5d_p0_viewer_data.json"
+      - paragraph: cd82-fb555c5d_p0_viewer_data.json
+      - generic "Expand cd82-fb555c5d_p1_events.jsonl"
+      - paragraph: cd82-fb555c5d_p1_events.jsonl
+      - generic "Expand cd82-fb555c5d_p1_viewer_data.json"
+      - paragraph: cd82-fb555c5d_p1_viewer_data.json
+      - generic "Expand cd82-fb555c5d_p2_events.jsonl"
+      - paragraph: cd82-fb555c5d_p2_events.jsonl
+      - generic "Expand cd82-fb555c5d_p2_viewer_data.json"
+      - paragraph: cd82-fb555c5d_p2_viewer_data.json
+      - generic "Expand cd82-fb555c5d_p3_events.jsonl"
+      - paragraph: cd82-fb555c5d_p3_events.jsonl
+      - generic "Expand cd82-fb555c5d_p3_viewer_data.json"
+      - paragraph: cd82-fb555c5d_p3_viewer_data.json
+      - generic "Expand cn04-2fe56bfb_p0_events.jsonl"
+      - paragraph: cn04-2fe56bfb_p0_events.jsonl
+      - generic "Expand cn04-2fe56bfb_p0_viewer_data.json"
+      - paragraph: cn04-2fe56bfb_p0_viewer_data.json
+      - generic "Expand cn04-2fe56bfb_p1_events.jsonl"
+      - paragraph: cn04-2fe56bfb_p1_events.jsonl
+      - generic "Expand cn04-2fe56bfb_p1_viewer_data.json"
+      - paragraph: cn04-2fe56bfb_p1_viewer_data.json
+      - generic "Expand cn04-2fe56bfb_p2_events.jsonl"
+      - paragraph: cn04-2fe56bfb_p2_events.jsonl
+      - generic "Expand cn04-2fe56bfb_p2_viewer_data.json"
+      - paragraph: cn04-2fe56bfb_p2_viewer_data.json
+      - button "more_horiz Load more":
+        - generic: more_horiz
+        - paragraph: Load more
+    - button "arrow_right":
+      - generic: arrow_right
+    - generic: folder
+    - paragraph: movies
+    - button "arrow_right":
+      - generic: arrow_right
+    - generic: folder
+    - paragraph: prompts
+    - button "arrow_right":
+      - generic: arrow_right
+    - generic: folder
+    - paragraph: solver_analysis
+    - button "arrow_drop_down":
+      - generic: arrow_drop_down
+    - generic: folder
+    - paragraph: transcripts
+    - list:
+      - generic "Expand ar25-0c556536_p0.txt"
+      - generic: article
+      - paragraph: ar25-0c556536_p0.txt
+      - generic "Expand ar25-0c556536_p1.txt"
+      - generic: article
+      - paragraph: ar25-0c556536_p1.txt
+      - generic "Expand ar25-0c556536_p2.txt"
+      - generic: article
+      - paragraph: ar25-0c556536_p2.txt
+      - generic "Expand ar25-0c556536_p3.txt"
+      - generic: article
+      - paragraph: ar25-0c556536_p3.txt
+      - generic "Expand bp35-0a0ad940_p0.txt"
+      - generic: article
+      - paragraph: bp35-0a0ad940_p0.txt
+      - generic "Expand bp35-0a0ad940_p1.txt"
+      - generic: article
+      - paragraph: bp35-0a0ad940_p1.txt
+      - generic "Expand bp35-0a0ad940_p2.txt"
+      - generic: article
+      - paragraph: bp35-0a0ad940_p2.txt
+      - generic "Expand bp35-0a0ad940_p3.txt"
+      - generic: article
+      - paragraph: bp35-0a0ad940_p3.txt
+      - generic "Expand cd82-fb555c5d_p0.txt"
+      - generic: article
+      - paragraph: cd82-fb555c5d_p0.txt
+      - generic "Expand cd82-fb555c5d_p1.txt"
+      - generic: article
+      - paragraph: cd82-fb555c5d_p1.txt
+      - generic "Expand cd82-fb555c5d_p2.txt"
+      - generic: article
+      - paragraph: cd82-fb555c5d_p2.txt
+      - generic "Expand cd82-fb555c5d_p3.txt"
+      - generic: article
+      - paragraph: cd82-fb555c5d_p3.txt
+      - generic "Expand cn04-2fe56bfb_p0.txt"
+      - generic: article
+      - paragraph: cn04-2fe56bfb_p0.txt
+      - generic "Expand cn04-2fe56bfb_p1.txt"
+      - generic: article
+      - paragraph: cn04-2fe56bfb_p1.txt
+      - generic "Expand cn04-2fe56bfb_p2.txt"
+      - generic: article
+      - paragraph: cn04-2fe56bfb_p2.txt
+      - generic "Expand cn04-2fe56bfb_p3.txt"
+      - generic: article
+      - paragraph: cn04-2fe56bfb_p3.txt
+      - generic "Expand dc22-fdcac232_p0.txt"
+      - generic: article
+      - paragraph: dc22-fdcac232_p0.txt
+      - generic "Expand dc22-fdcac232_p1.txt"
+      - generic: article
+      - paragraph: dc22-fdcac232_p1.txt
+      - generic "Expand dc22-fdcac232_p2.txt"
+      - generic: article
+      - paragraph: dc22-fdcac232_p2.txt
+      - generic "Expand dc22-fdcac232_p3.txt"
+      - generic: article
+      - paragraph: dc22-fdcac232_p3.txt
+      - generic "Expand ft09-0d8bbf25_p0.txt"
+      - generic: article
+      - paragraph: ft09-0d8bbf25_p0.txt
+      - generic "Expand ft09-0d8bbf25_p1.txt"
+      - generic: article
+      - paragraph: ft09-0d8bbf25_p1.txt
+      - generic "Expand ft09-0d8bbf25_p2.txt"
+      - generic: article
+      - paragraph: ft09-0d8bbf25_p2.txt
+      - generic "Expand ft09-0d8bbf25_p3.txt"
+      - generic: article
+      - paragraph: ft09-0d8bbf25_p3.txt
+      - generic "Expand g50t-5849a774_p0.txt"
+      - generic: article
+      - paragraph: g50t-5849a774_p0.txt
+      - generic "Expand g50t-5849a774_p1.txt"
+      - generic: article
+      - paragraph: g50t-5849a774_p1.txt
+      - generic "Expand g50t-5849a774_p2.txt"
+      - generic: article
+      - paragraph: g50t-5849a774_p2.txt
+      - generic "Expand g50t-5849a774_p3.txt"
+      - generic: article
+      - paragraph: g50t-5849a774_p3.txt
+      - generic "Expand ka59-38d34dbb_p0.txt"
+      - generic: article
+      - paragraph: ka59-38d34dbb_p0.txt
+      - generic "Expand ka59-38d34dbb_p1.txt"
+      - generic: article
+      - paragraph: ka59-38d34dbb_p1.txt
+      - generic "Expand ka59-38d34dbb_p2.txt"
+      - generic: article
+      - paragraph: ka59-38d34dbb_p2.txt
+      - generic "Expand ka59-38d34dbb_p3.txt"
+      - generic: article
+      - paragraph: ka59-38d34dbb_p3.txt
+      - generic "Expand lf52-271a04aa_p0.txt"
+      - generic: article
+      - paragraph: lf52-271a04aa_p0.txt
+      - generic "Expand lf52-271a04aa_p1.txt"
+      - generic: article
+      - paragraph: lf52-271a04aa_p1.txt
+      - generic "Expand lf52-271a04aa_p2.txt"
+      - generic: article
+      - paragraph: lf52-271a04aa_p2.txt
+      - generic "Expand lf52-271a04aa_p3.txt"
+      - generic: article
+      - paragraph: lf52-271a04aa_p3.txt
+      - generic "Expand lp85-305b61c3_p0.txt"
+      - generic: article
+      - paragraph: lp85-305b61c3_p0.txt
+      - generic "Expand lp85-305b61c3_p1.txt"
+      - generic: article
+      - paragraph: lp85-305b61c3_p1.txt
+      - generic "Expand lp85-305b61c3_p2.txt"
+      - generic: article
+      - paragraph: lp85-305b61c3_p2.txt
+      - generic "Expand lp85-305b61c3_p3.txt"
+      - generic: article
+      - paragraph: lp85-305b61c3_p3.txt
+      - generic "Expand ls20-9607627b_p0.txt"
+      - generic: article
+      - paragraph: ls20-9607627b_p0.txt
+      - generic "Expand ls20-9607627b_p1.txt"
+      - generic: article
+      - paragraph: ls20-9607627b_p1.txt
+      - generic "Expand ls20-9607627b_p2.txt"
+      - generic: article
+      - paragraph: ls20-9607627b_p2.txt
+      - generic "Expand ls20-9607627b_p3.txt"
+      - generic: article
+      - paragraph: ls20-9607627b_p3.txt
+      - generic "Expand m0r0-492f87ba_p0.txt"
+      - generic: article
+      - paragraph: m0r0-492f87ba_p0.txt
+      - generic "Expand m0r0-492f87ba_p1.txt"
+      - generic: article
+      - paragraph: m0r0-492f87ba_p1.txt
+      - generic "Expand m0r0-492f87ba_p2.txt"
+      - generic: article
+      - paragraph: m0r0-492f87ba_p2.txt
+      - generic "Expand m0r0-492f87ba_p3.txt"
+      - generic: article
+      - paragraph: m0r0-492f87ba_p3.txt
+      - generic "Expand r11l-495a7899_p0.txt"
+      - generic: article
+      - paragraph: r11l-495a7899_p0.txt
+      - generic "Expand r11l-495a7899_p1.txt"
+      - generic: article
+      - paragraph: r11l-495a7899_p1.txt
+      - generic "Expand r11l-495a7899_p2.txt"
+      - generic: article
+      - paragraph: r11l-495a7899_p2.txt
+      - generic "Expand r11l-495a7899_p3.txt"
+      - generic: article
+      - paragraph: r11l-495a7899_p3.txt
+      - generic "Expand re86-8af5384d_p0.txt"
+      - generic: article
+      - paragraph: re86-8af5384d_p0.txt
+      - generic "Expand re86-8af5384d_p1.txt"
+      - generic: article
+      - paragraph: re86-8af5384d_p1.txt
+      - generic "Expand re86-8af5384d_p2.txt"
+      - generic: article
+      - paragraph: re86-8af5384d_p2.txt
+      - generic "Expand re86-8af5384d_p3.txt"
+      - generic: article
+      - paragraph: re86-8af5384d_p3.txt
+      - generic "Expand s5i5-18d95033_p0.txt"
+      - generic: article
+      - paragraph: s5i5-18d95033_p0.txt
+      - generic "Expand s5i5-18d95033_p1.txt"
+      - generic: article
+      - paragraph: s5i5-18d95033_p1.txt
+      - generic "Expand s5i5-18d95033_p2.txt"
+      - generic: article
+      - paragraph: s5i5-18d95033_p2.txt
+      - generic "Expand s5i5-18d95033_p3.txt"
+      - generic: article
+      - paragraph: s5i5-18d95033_p3.txt
+      - generic "Expand sb26-7fbdac44_p0.txt"
+      - generic: article
+      - paragraph: sb26-7fbdac44_p0.txt
+      - generic "Expand sb26-7fbdac44_p1.txt"
+      - generic: article
+      - paragraph: sb26-7fbdac44_p1.txt
+      - generic "Expand sb26-7fbdac44_p2.txt"
+      - generic: article
+      - paragraph: sb26-7fbdac44_p2.txt
+      - generic "Expand sb26-7fbdac44_p3.txt"
+      - generic: article
+      - paragraph: sb26-7fbdac44_p3.txt
+      - generic "Expand sc25-635fd71a_p0.txt"
+      - generic: article
+      - paragraph: sc25-635fd71a_p0.txt
+      - generic "Expand sc25-635fd71a_p1.txt"
+      - generic: article
+      - paragraph: sc25-635fd71a_p1.txt
+      - generic "Expand sc25-635fd71a_p2.txt"
+      - generic: article
+      - paragraph: sc25-635fd71a_p2.txt
+      - generic "Expand sc25-635fd71a_p3.txt"
+      - generic: article
+      - paragraph: sc25-635fd71a_p3.txt
+      - generic "Expand sk48-d8078629_p0.txt"
+      - generic: article
+      - paragraph: sk48-d8078629_p0.txt
+      - generic "Expand sk48-d8078629_p1.txt"
+      - generic: article
+      - paragraph: sk48-d8078629_p1.txt
+      - generic "Expand sk48-d8078629_p2.txt"
+      - generic: article
+      - paragraph: sk48-d8078629_p2.txt
+      - generic "Expand sk48-d8078629_p3.txt"
+      - generic: article
+      - paragraph: sk48-d8078629_p3.txt
+      - generic "Expand sp80-589a99af_p0.txt"
+      - generic: article
+      - paragraph: sp80-589a99af_p0.txt
+      - generic "Expand sp80-589a99af_p1.txt"
+      - generic: article
+      - paragraph: sp80-589a99af_p1.txt
+      - generic "Expand sp80-589a99af_p2.txt"
+      - generic: article
+      - paragraph: sp80-589a99af_p2.txt
+      - generic "Expand sp80-589a99af_p3.txt"
+      - generic: article
+      - paragraph: sp80-589a99af_p3.txt
+      - generic "Expand su15-1944f8ab_p0.txt"
+      - generic: article
+      - paragraph: su15-1944f8ab_p0.txt
+      - generic "Expand su15-1944f8ab_p1.txt"
+      - generic: article
+      - paragraph: su15-1944f8ab_p1.txt
+      - generic "Expand su15-1944f8ab_p2.txt"
+      - generic: article
+      - paragraph: su15-1944f8ab_p2.txt
+      - generic "Expand su15-1944f8ab_p3.txt"
+      - generic: article
+      - paragraph: su15-1944f8ab_p3.txt
+      - generic "Expand tn36-ef4dde99_p0.txt"
+      - generic: article
+      - paragraph: tn36-ef4dde99_p0.txt
+      - generic "Expand tn36-ef4dde99_p1.txt"
+      - generic: article
+      - paragraph: tn36-ef4dde99_p1.txt
+      - generic "Expand tn36-ef4dde99_p2.txt"
+      - generic: article
+      - paragraph: tn36-ef4dde99_p2.txt
+      - generic "Expand tn36-ef4dde99_p3.txt"
+      - generic: article
+      - paragraph: tn36-ef4dde99_p3.txt
+      - generic "Expand tr87-cd924810_p0.txt"
+      - generic: article
+      - paragraph: tr87-cd924810_p0.txt
+      - generic "Expand tr87-cd924810_p1.txt"
+      - generic: article
+      - paragraph: tr87-cd924810_p1.txt
+      - generic "Expand tr87-cd924810_p2.txt"
+      - generic: article
+      - paragraph: tr87-cd924810_p2.txt
+      - generic "Expand tr87-cd924810_p3.txt"
+      - generic: article
+      - paragraph: tr87-cd924810_p3.txt
+      - generic "Expand tu93-0768757b_p0.txt"
+      - generic: article
+      - paragraph: tu93-0768757b_p0.txt
+      - generic "Expand tu93-0768757b_p1.txt"
+      - generic: article
+      - paragraph: tu93-0768757b_p1.txt
+      - button "more_horiz Load more":
+        - generic: more_horiz
+        - paragraph: Load more
+    - generic "Expand .per_game_cards.pkl"
+    - generic: insert_drive_file
+    - paragraph: .per_game_cards.pkl
+    - generic "Expand ar25-0c556536_p0_requests.jsonl"
+    - paragraph: ar25-0c556536_p0_requests.jsonl
+    - generic "Expand ar25-0c556536_p1_requests.jsonl"
+    - paragraph: ar25-0c556536_p1_requests.jsonl
+    - generic "Expand ar25-0c556536_p2_requests.jsonl"
+    - paragraph: ar25-0c556536_p2_requests.jsonl
+    - generic "Expand ar25-0c556536_p3_requests.jsonl"
+    - paragraph: ar25-0c556536_p3_requests.jsonl
+    - generic "Expand benchmark.json"
+    - paragraph: benchmark.json
+    - generic "Expand bp35-0a0ad940_p0_requests.jsonl"
+    - paragraph: bp35-0a0ad940_p0_requests.jsonl
+    - generic "Expand bp35-0a0ad940_p1_requests.jsonl"
+    - paragraph: bp35-0a0ad940_p1_requests.jsonl
+    - generic "Expand bp35-0a0ad940_p2_requests.jsonl"
+    - paragraph: bp35-0a0ad940_p2_requests.jsonl
+    - generic "Expand bp35-0a0ad940_p3_requests.jsonl"
+    - paragraph: bp35-0a0ad940_p3_requests.jsonl
+    - generic "Expand cd82-fb555c5d_p0_requests.jsonl"
+    - paragraph: cd82-fb555c5d_p0_requests.jsonl
+    - generic "Expand cd82-fb555c5d_p1_requests.jsonl"
+    - paragraph: cd82-fb555c5d_p1_requests.jsonl
+    - generic "Expand cd82-fb555c5d_p2_requests.jsonl"
+    - paragraph: cd82-fb555c5d_p2_requests.jsonl
+    - generic "Expand cd82-fb555c5d_p3_requests.jsonl"
+    - paragraph: cd82-fb555c5d_p3_requests.jsonl
+    - generic "Expand cn04-2fe56bfb_p0_requests.jsonl"
+    - paragraph: cn04-2fe56bfb_p0_requests.jsonl
+    - generic "Expand cn04-2fe56bfb_p1_requests.jsonl"
+    - paragraph: cn04-2fe56bfb_p1_requests.jsonl
+    - generic "Expand cn04-2fe56bfb_p2_requests.jsonl"
+    - paragraph: cn04-2fe56bfb_p2_requests.jsonl
+    - generic "Expand cn04-2fe56bfb_p3_requests.jsonl"
+    - paragraph: cn04-2fe56bfb_p3_requests.jsonl
+    - generic "Expand dc22-fdcac232_p0_requests.jsonl"
+    - paragraph: dc22-fdcac232_p0_requests.jsonl
+    - generic "Expand dc22-fdcac232_p1_requests.jsonl"
+    - paragraph: dc22-fdcac232_p1_requests.jsonl
+    - generic "Expand dc22-fdcac232_p2_requests.jsonl"
+    - paragraph: dc22-fdcac232_p2_requests.jsonl
+    - generic "Expand dc22-fdcac232_p3_requests.jsonl"
+    - paragraph: dc22-fdcac232_p3_requests.jsonl
+    - generic "Expand diagnostics.html"
+    - generic: web_asset
+    - paragraph: diagnostics.html
+    - generic "Expand ft09-0d8bbf25_p0_requests.jsonl"
+    - paragraph: ft09-0d8bbf25_p0_requests.jsonl
+    - generic "Expand ft09-0d8bbf25_p1_requests.jsonl"
+    - paragraph: ft09-0d8bbf25_p1_requests.jsonl
+    - generic "Expand ft09-0d8bbf25_p2_requests.jsonl"
+    - paragraph: ft09-0d8bbf25_p2_requests.jsonl
+    - generic "Expand ft09-0d8bbf25_p3_requests.jsonl"
+    - paragraph: ft09-0d8bbf25_p3_requests.jsonl
+    - generic "Expand g50t-5849a774_p0_requests.jsonl"
+    - paragraph: g50t-5849a774_p0_requests.jsonl
+    - generic "Expand g50t-5849a774_p1_requests.jsonl"
+    - paragraph: g50t-5849a774_p1_requests.jsonl
+    - generic "Expand g50t-5849a774_p2_requests.jsonl"
+    - paragraph: g50t-5849a774_p2_requests.jsonl
+    - generic "Expand g50t-5849a774_p3_requests.jsonl"
+    - paragraph: g50t-5849a774_p3_requests.jsonl
+    - generic "Expand games.pkl"
+    - generic: insert_drive_file
+    - paragraph: games.pkl
+    - generic "Expand git_status.txt"
+    - generic: article
+    - paragraph: git_status.txt
+    - generic "Expand intermediate_states.pkl"
+    - generic: insert_drive_file
+    - paragraph: intermediate_states.pkl
+    - generic "Expand ka59-38d34dbb_p0_requests.jsonl"
+    - paragraph: ka59-38d34dbb_p0_requests.jsonl
+    - generic "Expand ka59-38d34dbb_p1_requests.jsonl"
+    - paragraph: ka59-38d34dbb_p1_requests.jsonl
+    - generic "Expand ka59-38d34dbb_p2_requests.jsonl"
+    - paragraph: ka59-38d34dbb_p2_requests.jsonl
+    - generic "Expand ka59-38d34dbb_p3_requests.jsonl"
+    - paragraph: ka59-38d34dbb_p3_requests.jsonl
+    - generic "Expand lf52-271a04aa_p0_requests.jsonl"
+    - paragraph: lf52-271a04aa_p0_requests.jsonl
+    - generic "Expand lf52-271a04aa_p1_requests.jsonl"
+    - paragraph: lf52-271a04aa_p1_requests.jsonl
+    - generic "Expand lf52-271a04aa_p2_requests.jsonl"
+    - paragraph: lf52-271a04aa_p2_requests.jsonl
+    - generic "Expand lf52-271a04aa_p3_requests.jsonl"
+    - paragraph: lf52-271a04aa_p3_requests.jsonl
+    - generic "Expand lp85-305b61c3_p0_requests.jsonl"
+    - paragraph: lp85-305b61c3_p0_requests.jsonl
+    - generic "Expand lp85-305b61c3_p1_requests.jsonl"
+    - paragraph: lp85-305b61c3_p1_requests.jsonl
+    - generic "Expand lp85-305b61c3_p2_requests.jsonl"
+    - paragraph: lp85-305b61c3_p2_requests.jsonl
+    - generic "Expand lp85-305b61c3_p3_requests.jsonl"
+    - paragraph: lp85-305b61c3_p3_requests.jsonl
+    - generic "Expand ls20-9607627b_p0_requests.jsonl"
+    - paragraph: ls20-9607627b_p0_requests.jsonl
+    - generic "Expand ls20-9607627b_p1_requests.jsonl"
+    - paragraph: ls20-9607627b_p1_requests.jsonl
+    - generic "Expand ls20-9607627b_p2_requests.jsonl"
+    - paragraph: ls20-9607627b_p2_requests.jsonl
+    - generic "Expand ls20-9607627b_p3_requests.jsonl"
+    - paragraph: ls20-9607627b_p3_requests.jsonl
+    - generic "Expand m0r0-492f87ba_p0_requests.jsonl"
+    - paragraph: m0r0-492f87ba_p0_requests.jsonl
+    - generic "Expand m0r0-492f87ba_p1_requests.jsonl"
+    - paragraph: m0r0-492f87ba_p1_requests.jsonl
+    - generic "Expand m0r0-492f87ba_p2_requests.jsonl"
+    - paragraph: m0r0-492f87ba_p2_requests.jsonl
+    - generic "Expand m0r0-492f87ba_p3_requests.jsonl"
+    - paragraph: m0r0-492f87ba_p3_requests.jsonl
+    - generic "Expand r11l-495a7899_p0_requests.jsonl"
+    - paragraph: r11l-495a7899_p0_requests.jsonl
+    - generic "Expand r11l-495a7899_p1_requests.jsonl"
+    - paragraph: r11l-495a7899_p1_requests.jsonl
+    - generic "Expand r11l-495a7899_p2_requests.jsonl"
+    - paragraph: r11l-495a7899_p2_requests.jsonl
+    - generic "Expand r11l-495a7899_p3_requests.jsonl"
+    - paragraph: r11l-495a7899_p3_requests.jsonl
+    - generic "Expand re86-8af5384d_p0_requests.jsonl"
+    - paragraph: re86-8af5384d_p0_requests.jsonl
+    - generic "Expand re86-8af5384d_p1_requests.jsonl"
+    - paragraph: re86-8af5384d_p1_requests.jsonl
+    - generic "Expand re86-8af5384d_p2_requests.jsonl"
+    - paragraph: re86-8af5384d_p2_requests.jsonl
+    - generic "Expand re86-8af5384d_p3_requests.jsonl"
+    - paragraph: re86-8af5384d_p3_requests.jsonl
+    - generic "Expand requests.jsonl"
+    - paragraph: requests.jsonl
+    - generic "Expand s5i5-18d95033_p0_requests.jsonl"
+    - paragraph: s5i5-18d95033_p0_requests.jsonl
+    - generic "Expand s5i5-18d95033_p1_requests.jsonl"
+    - paragraph: s5i5-18d95033_p1_requests.jsonl
+    - generic "Expand s5i5-18d95033_p2_requests.jsonl"
+    - paragraph: s5i5-18d95033_p2_requests.jsonl
+    - generic "Expand s5i5-18d95033_p3_requests.jsonl"
+    - paragraph: s5i5-18d95033_p3_requests.jsonl
+    - generic "Expand sb26-7fbdac44_p0_requests.jsonl"
+    - paragraph: sb26-7fbdac44_p0_requests.jsonl
+    - generic "Expand sb26-7fbdac44_p1_requests.jsonl"
+    - paragraph: sb26-7fbdac44_p1_requests.jsonl
+    - generic "Expand sb26-7fbdac44_p2_requests.jsonl"
+    - paragraph: sb26-7fbdac44_p2_requests.jsonl
+    - generic "Expand sb26-7fbdac44_p3_requests.jsonl"
+    - paragraph: sb26-7fbdac44_p3_requests.jsonl
+    - generic "Expand sc25-635fd71a_p0_requests.jsonl"
+    - paragraph: sc25-635fd71a_p0_requests.jsonl
+    - generic "Expand sc25-635fd71a_p1_requests.jsonl"
+    - paragraph: sc25-635fd71a_p1_requests.jsonl
+    - generic "Expand sc25-635fd71a_p2_requests.jsonl"
+    - paragraph: sc25-635fd71a_p2_requests.jsonl
+    - generic "Expand sc25-635fd71a_p3_requests.jsonl"
+    - paragraph: sc25-635fd71a_p3_requests.jsonl
+    - generic "Expand serve.log"
+    - generic: insert_drive_file
+    - paragraph: serve.log
+    - generic "Expand sk48-d8078629_p0_requests.jsonl"
+    - paragraph: sk48-d8078629_p0_requests.jsonl
+    - generic "Expand sk48-d8078629_p1_requests.jsonl"
+    - paragraph: sk48-d8078629_p1_requests.jsonl
+    - generic "Expand sk48-d8078629_p2_requests.jsonl"
+    - paragraph: sk48-d8078629_p2_requests.jsonl
+    - generic "Expand sk48-d8078629_p3_requests.jsonl"
+    - paragraph: sk48-d8078629_p3_requests.jsonl
+    - generic "Expand solver.pkl"
+    - generic: insert_drive_file
+    - paragraph: solver.pkl
+    - generic "Expand sp80-589a99af_p0_requests.jsonl"
+    - paragraph: sp80-589a99af_p0_requests.jsonl
+    - generic "Expand sp80-589a99af_p1_requests.jsonl"
+    - paragraph: sp80-589a99af_p1_requests.jsonl
+    - generic "Expand sp80-589a99af_p2_requests.jsonl"
+    - paragraph: sp80-589a99af_p2_requests.jsonl
+    - generic "Expand sp80-589a99af_p3_requests.jsonl"
+    - paragraph: sp80-589a99af_p3_requests.jsonl
+    - generic "Expand su15-1944f8ab_p0_requests.jsonl"
+    - paragraph: su15-1944f8ab_p0_requests.jsonl
+    - generic "Expand su15-1944f8ab_p1_requests.jsonl"
+    - paragraph: su15-1944f8ab_p1_requests.jsonl
+    - generic "Expand su15-1944f8ab_p2_requests.jsonl"
+    - paragraph: su15-1944f8ab_p2_requests.jsonl
+    - generic "Expand su15-1944f8ab_p3_requests.jsonl"
+    - paragraph: su15-1944f8ab_p3_requests.jsonl
+    - generic "Expand submission.parquet"
+    - generic: insert_drive_file
+    - paragraph: submission.parquet
+    - generic "Expand summary.txt"
+    - generic: article
+    - paragraph: summary.txt
+    - generic "Expand tn36-ef4dde99_p0_requests.jsonl"
+    - paragraph: tn36-ef4dde99_p0_requests.jsonl
+    - generic "Expand tn36-ef4dde99_p1_requests.jsonl"
+    - paragraph: tn36-ef4dde99_p1_requests.jsonl
+    - generic "Expand tn36-ef4dde99_p2_requests.jsonl"
+    - paragraph: tn36-ef4dde99_p2_requests.jsonl
+    - generic "Expand tn36-ef4dde99_p3_requests.jsonl"
+    - paragraph: tn36-ef4dde99_p3_requests.jsonl
+    - generic "Expand tr87-cd924810_p0_requests.jsonl"
+    - paragraph: tr87-cd924810_p0_requests.jsonl
+    - generic "Expand tr87-cd924810_p1_requests.jsonl"
+    - paragraph: tr87-cd924810_p1_requests.jsonl
+    - generic "Expand tr87-cd924810_p2_requests.jsonl"
+    - paragraph: tr87-cd924810_p2_requests.jsonl
+    - generic "Expand tr87-cd924810_p3_requests.jsonl"
+    - paragraph: tr87-cd924810_p3_requests.jsonl
+    - generic "Expand tu93-0768757b_p0_requests.jsonl"
+    - paragraph: tu93-0768757b_p0_requests.jsonl
+    - generic "Expand tu93-0768757b_p1_requests.jsonl"
+    - paragraph: tu93-0768757b_p1_requests.jsonl
+    - generic "Expand tu93-0768757b_p2_requests.jsonl"
+    - paragraph: tu93-0768757b_p2_requests.jsonl
+    - generic "Expand tu93-0768757b_p3_requests.jsonl"
+    - paragraph: tu93-0768757b_p3_requests.jsonl
+    - generic "Expand vc33-5430563c_p0_requests.jsonl"
+    - paragraph: vc33-5430563c_p0_requests.jsonl
+    - generic "Expand vc33-5430563c_p1_requests.jsonl"
+    - paragraph: vc33-5430563c_p1_requests.jsonl
+    - generic "Expand vc33-5430563c_p2_requests.jsonl"
+    - paragraph: vc33-5430563c_p2_requests.jsonl
+    - generic "Expand vc33-5430563c_p3_requests.jsonl"
+    - paragraph: vc33-5430563c_p3_requests.jsonl
+    - generic "Expand wa30-ee6fef47_p0_requests.jsonl"
+    - paragraph: wa30-ee6fef47_p0_requests.jsonl
+    - generic "Expand wa30-ee6fef47_p1_requests.jsonl"
+    - paragraph: wa30-ee6fef47_p1_requests.jsonl
+    - generic "Expand wa30-ee6fef47_p2_requests.jsonl"
+    - paragraph: wa30-ee6fef47_p2_requests.jsonl
+    - generic "Expand wa30-ee6fef47_p3_requests.jsonl"
+    - paragraph: wa30-ee6fef47_p3_requests.jsonl
+  - code:
+    - generic: Download notebook output
+    - generic: navigate_next
+    - generic: minimize
+    - textbox "Download notebook output" [disabled]: kaggle kernels output panxiyuan/franzen-m2-v3-baseline -p /path/to/dest
+    - button "Copy": content_copy
+    - button "View CLI documentation": help
+    - generic: Download notebook output
+    - paragraph:
+      - alert
+- alert
+- generic: Could not connect to the reCAPTCHA service. Please check your internet connection and reload to get a reCAPTCHA challenge.
+- tooltip "bp35-0a0ad940_p0_events.jsonl (4.71 MB)":
+  - paragraph: bp35-0a0ad940_p0_events.jsonl (4.71 MB)

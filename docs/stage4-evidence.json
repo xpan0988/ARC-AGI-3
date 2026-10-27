@@ -1,0 +1,3140 @@
+{
+  "script_version_id": 362506200,
+  "scope": "offline source and archived-output audit; no game/model execution",
+  "full_run_metrics": {
+    "episodes": 100,
+    "wins": 33,
+    "gave_up": 67,
+    "games_with_win": 12,
+    "games_never_won": 13,
+    "never_won_game_episodes": 52,
+    "failed_zero_levels": 9,
+    "failed_some_below_half_levels": 30,
+    "failed_at_least_half_levels": 28,
+    "failed_one_level_short": 7,
+    "actions": 21078,
+    "history_generated_tokens": 17506945,
+    "benchmark_seconds": 29456.295006,
+    "notebook_seconds": 30053.5,
+    "nine_hour_margin_seconds": 2346.5,
+    "failed_final_elapsed_min_seconds": 29019.821370079,
+    "failed_final_elapsed_max_seconds": 29455.446017146,
+    "completed_levels_including_repeats": 417,
+    "mean_public_score": 47.93969028340703
+  },
+  "sample_method": "Purposive endpoint/pass stratification: 13 available 102400-character transcript prefixes; include every Python call with action(...) in analysis sections bounded by a following section header; exclude trailing partial section, repeated prompt/raw-call metadata and skipped actions. All are early level-1 sequences; no middle/late sampling possible. Not a probability sample.",
+  "sample_metrics": {
+    "episode_prefixes": 13,
+    "game_prefixes": 13,
+    "complete_analysis_sections": 37,
+    "complete_python_calls": 75,
+    "action_bearing_snippets": 30,
+    "executed_actions": 49,
+    "multi_action_snippets": 5,
+    "actions_in_multi_action_snippets": 24,
+    "post_first_actions": 19,
+    "direct_tool_return_shape_errors": 1,
+    "endpoint_noop_actions": 3,
+    "endpoint_noops_with_transient_animation": 1,
+    "established_incorrect_continuation_preconditions": 0,
+    "plausibly_saved_actions_demonstrated_by_predictive_verification": 0,
+    "failed_episode_prefixes": 11,
+    "won_episode_prefixes": 2,
+    "prefixes_by_pass": {
+      "1": 1,
+      "2": 4,
+      "0": 7,
+      "3": 1
+    }
+  },
+  "sequences": [
+    {
+      "id": 1,
+      "episode": "ar25-0c556536_p0",
+      "analysis_header": "--- analysis_step=1 | action=1 | 13:52:14 | tool-agent ---",
+      "python_call_index_in_section": 3,
+      "source": "/Users/xiyuanpan/ARC-AGI-3/downloads/stage4-browser-evidence/ar25-0c556536_p0.preview.txt",
+      "line": 321,
+      "actions_executed": 1,
+      "actions": [
+        {
+          "id": "ACTION1",
+          "data": {}
+        }
+      ],
+      "observation": "UP probe: both mirrored shapes move upward; goal remains tentative.",
+      "evidence_label": "observed local behavior; episode cause unknown",
+      "terminal_failure_cause": "not applicable: episode won; local prefix is not a full success trace",
+      "episode_outcome": "won",
+      "episode_completed_levels": 8,
+      "episode_total_levels": 8
+    },
+    {
+      "id": 2,
+      "episode": "ar25-0c556536_p0",
+      "analysis_header": "--- analysis_step=2 | action=2 | 13:52:42 | tool-agent ---",
+      "python_call_index_in_section": 1,
+      "source": "/Users/xiyuanpan/ARC-AGI-3/downloads/stage4-browser-evidence/ar25-0c556536_p0.preview.txt",
+      "line": 547,
+      "actions_executed": 1,
+      "actions": [
+        {
+          "id": "ACTION3",
+          "data": {}
+        }
+      ],
+      "observation": "LEFT probe: black and charcoal shapes move in opposite horizontal directions; next reasoning recognizes mirroring.",
+      "evidence_label": "observed local behavior; episode cause unknown",
+      "terminal_failure_cause": "not applicable: episode won; local prefix is not a full success trace",
+      "episode_outcome": "won",
+      "episode_completed_levels": 8,
+      "episode_total_levels": 8
+    },
+    {
+      "id": 3,
+      "episode": "ar25-0c556536_p0",
+      "analysis_header": "--- analysis_step=3 | action=3 | 13:52:52 | tool-agent ---",
+      "python_call_index_in_section": 2,
+      "source": "/Users/xiyuanpan/ARC-AGI-3/downloads/stage4-browser-evidence/ar25-0c556536_p0.preview.txt",
+      "line": 830,
+      "actions_executed": 4,
+      "actions": [
+        {
+          "id": "ACTION3",
+          "data": {}
+        },
+        {
+          "id": "ACTION3",
+          "data": {}
+        },
+        {
+          "id": "ACTION3",
+          "data": {}
+        },
+        {
+          "id": "ACTION3",
+          "data": {}
+        }
+      ],
+      "observation": "Four LEFTs: predicted charcoal bbox reaches columns 51–59; observed bbox matches. No demonstrated contradiction.",
+      "evidence_label": "observed local behavior; episode cause unknown",
+      "terminal_failure_cause": "not applicable: episode won; local prefix is not a full success trace",
+      "episode_outcome": "won",
+      "episode_completed_levels": 8,
+      "episode_total_levels": 8
+    },
+    {
+      "id": 4,
+      "episode": "bp35-0a0ad940_p0",
+      "analysis_header": "--- analysis_step=1 | action=1 | 13:35:27 | tool-agent ---",
+      "python_call_index_in_section": 1,
+      "source": "/Users/xiyuanpan/ARC-AGI-3/downloads/stage4-browser-evidence/bp35-0a0ad940_p0.preview.txt",
+      "line": 793,
+      "actions_executed": 1,
+      "actions": [
+        {
+          "id": "ACTION3",
+          "data": {}
+        }
+      ],
+      "observation": "LEFT probe under competing goal/mechanism hypotheses; sprite changes position and orientation.",
+      "evidence_label": "observed local behavior; episode cause unknown",
+      "terminal_failure_cause": "unclassifiable from prefix",
+      "episode_outcome": "gave_up",
+      "episode_completed_levels": 2,
+      "episode_total_levels": 9
+    },
+    {
+      "id": 5,
+      "episode": "bp35-0a0ad940_p0",
+      "analysis_header": "--- analysis_step=2 | action=2 | 13:35:34 | tool-agent ---",
+      "python_call_index_in_section": 2,
+      "source": "/Users/xiyuanpan/ARC-AGI-3/downloads/stage4-browser-evidence/bp35-0a0ad940_p0.preview.txt",
+      "line": 1091,
+      "actions_executed": 1,
+      "actions": [
+        {
+          "id": "ACTION4",
+          "data": {}
+        }
+      ],
+      "observation": "RIGHT tests slide-to-wall hypothesis; predicted far-right box (49–53) is contradicted by return near initial position. A refuted hypothesis, not proof of the terminal failure cause.",
+      "evidence_label": "direct refuted hypothesis; episode cause unknown",
+      "terminal_failure_cause": "unclassifiable from prefix",
+      "episode_outcome": "gave_up",
+      "episode_completed_levels": 2,
+      "episode_total_levels": 9
+    },
+    {
+      "id": 6,
+      "episode": "cn04-2fe56bfb_p0",
+      "analysis_header": "--- analysis_step=1 | action=1 | 13:34:40 | tool-agent ---",
+      "python_call_index_in_section": 3,
+      "source": "/Users/xiyuanpan/ARC-AGI-3/downloads/stage4-browser-evidence/cn04-2fe56bfb_p0.preview.txt",
+      "line": 326,
+      "actions_executed": 1,
+      "actions": [
+        {
+          "id": "ACTION4",
+          "data": {}
+        }
+      ],
+      "observation": "RIGHT tests which shape is controlled; visible components change.",
+      "evidence_label": "observed local behavior; episode cause unknown",
+      "terminal_failure_cause": "unclassifiable from prefix",
+      "episode_outcome": "gave_up",
+      "episode_completed_levels": 5,
+      "episode_total_levels": 6
+    },
+    {
+      "id": 7,
+      "episode": "cn04-2fe56bfb_p0",
+      "analysis_header": "--- analysis_step=2 | action=2 | 13:35:11 | tool-agent ---",
+      "python_call_index_in_section": 2,
+      "source": "/Users/xiyuanpan/ARC-AGI-3/downloads/stage4-browser-evidence/cn04-2fe56bfb_p0.preview.txt",
+      "line": 604,
+      "actions_executed": 1,
+      "actions": [
+        {
+          "id": "ACTION5",
+          "data": {}
+        }
+      ],
+      "observation": "SPACE tests rotation; component diff reports zero rotated while independently printed white-shape orientation changes 180 to 270. Diff categories are heuristic.",
+      "evidence_label": "observed local behavior; episode cause unknown",
+      "terminal_failure_cause": "unclassifiable from prefix",
+      "episode_outcome": "gave_up",
+      "episode_completed_levels": 5,
+      "episode_total_levels": 6
+    },
+    {
+      "id": 8,
+      "episode": "dc22-fdcac232_p0",
+      "analysis_header": "--- analysis_step=1 | action=1 | 13:35:22 | tool-agent ---",
+      "python_call_index_in_section": 1,
+      "source": "/Users/xiyuanpan/ARC-AGI-3/downloads/stage4-browser-evidence/dc22-fdcac232_p0.preview.txt",
+      "line": 623,
+      "actions_executed": 1,
+      "actions": [
+        {
+          "id": "ACTION4",
+          "data": {}
+        }
+      ],
+      "observation": "RIGHT tests control; green component moves from column 10 to 12.",
+      "evidence_label": "observed local behavior; episode cause unknown",
+      "terminal_failure_cause": "unclassifiable from prefix",
+      "episode_outcome": "gave_up",
+      "episode_completed_levels": 4,
+      "episode_total_levels": 6
+    },
+    {
+      "id": 9,
+      "episode": "dc22-fdcac232_p0",
+      "analysis_header": "--- analysis_step=2 | action=2 | 13:35:43 | tool-agent ---",
+      "python_call_index_in_section": 2,
+      "source": "/Users/xiyuanpan/ARC-AGI-3/downloads/stage4-browser-evidence/dc22-fdcac232_p0.preview.txt",
+      "line": 916,
+      "actions_executed": 1,
+      "actions": [
+        {
+          "id": "ACTION2",
+          "data": {}
+        }
+      ],
+      "observation": "DOWN tests control; green component moves from row 40 to 42.",
+      "evidence_label": "observed local behavior; episode cause unknown",
+      "terminal_failure_cause": "unclassifiable from prefix",
+      "episode_outcome": "gave_up",
+      "episode_completed_levels": 4,
+      "episode_total_levels": 6
+    },
+    {
+      "id": 10,
+      "episode": "ft09-0d8bbf25_p0",
+      "analysis_header": "--- analysis_step=1 | action=1 | 14:05:16 | tool-agent ---",
+      "python_call_index_in_section": 1,
+      "source": "/Users/xiyuanpan/ARC-AGI-3/downloads/stage4-browser-evidence/ft09-0d8bbf25_p0.preview.txt",
+      "line": 730,
+      "actions_executed": 1,
+      "actions": [
+        {
+          "id": "ACTION6",
+          "data": {
+            "x": 38,
+            "y": 38
+          }
+        }
+      ],
+      "observation": "One click tests tile interaction; color changes are reported.",
+      "evidence_label": "observed local behavior; episode cause unknown",
+      "terminal_failure_cause": "not applicable: episode won; local prefix is not a full success trace",
+      "episode_outcome": "won",
+      "episode_completed_levels": 6,
+      "episode_total_levels": 6
+    },
+    {
+      "id": 11,
+      "episode": "ft09-0d8bbf25_p0",
+      "analysis_header": "--- analysis_step=2 | action=2 | 14:05:46 | tool-agent ---",
+      "python_call_index_in_section": 2,
+      "source": "/Users/xiyuanpan/ARC-AGI-3/downloads/stage4-browser-evidence/ft09-0d8bbf25_p0.preview.txt",
+      "line": 1032,
+      "actions_executed": 3,
+      "actions": [
+        {
+          "id": "ACTION6",
+          "data": {
+            "x": 38,
+            "y": 46
+          }
+        },
+        {
+          "id": "ACTION6",
+          "data": {
+            "x": 54,
+            "y": 46
+          }
+        },
+        {
+          "id": "ACTION6",
+          "data": {
+            "x": 38,
+            "y": 54
+          }
+        }
+      ],
+      "observation": "Three targeted clicks: level_completed stops the batch. Positive goal/visual-relation evidence.",
+      "evidence_label": "observed local behavior; episode cause unknown",
+      "terminal_failure_cause": "not applicable: episode won; local prefix is not a full success trace",
+      "episode_outcome": "won",
+      "episode_completed_levels": 6,
+      "episode_total_levels": 6
+    },
+    {
+      "id": 12,
+      "episode": "g50t-5849a774_p2",
+      "analysis_header": "--- analysis_step=1 | action=1 | 15:29:58 | tool-agent ---",
+      "python_call_index_in_section": 3,
+      "source": "/Users/xiyuanpan/ARC-AGI-3/downloads/stage4-browser-evidence/g50t-5849a774_p2.preview.txt",
+      "line": 391,
+      "actions_executed": 1,
+      "actions": [
+        {
+          "id": "ACTION2",
+          "data": {}
+        }
+      ],
+      "observation": "DOWN tests controllable object and step size; blue component shifts six rows.",
+      "evidence_label": "observed local behavior; episode cause unknown",
+      "terminal_failure_cause": "unclassifiable from prefix",
+      "episode_outcome": "gave_up",
+      "episode_completed_levels": 2,
+      "episode_total_levels": 7
+    },
+    {
+      "id": 13,
+      "episode": "lf52-271a04aa_p0",
+      "analysis_header": "--- analysis_step=1 | action=1 | 13:48:51 | tool-agent ---",
+      "python_call_index_in_section": 3,
+      "source": "/Users/xiyuanpan/ARC-AGI-3/downloads/stage4-browser-evidence/lf52-271a04aa_p0.preview.txt",
+      "line": 321,
+      "actions_executed": 1,
+      "actions": [
+        {
+          "id": "ACTION6",
+          "data": {
+            "x": 12,
+            "y": 13
+          }
+        }
+      ],
+      "observation": "Endpoint no-op with six-frame animation and 48 transient pixels. Next turn inspects the timeline; no-op does not mean no evidence.",
+      "evidence_label": "observed local behavior; episode cause unknown",
+      "terminal_failure_cause": "unclassifiable from prefix",
+      "episode_outcome": "gave_up",
+      "episode_completed_levels": 1,
+      "episode_total_levels": 10
+    },
+    {
+      "id": 14,
+      "episode": "lf52-271a04aa_p0",
+      "analysis_header": "--- analysis_step=2 | action=2 | 13:49:14 | tool-agent ---",
+      "python_call_index_in_section": 2,
+      "source": "/Users/xiyuanpan/ARC-AGI-3/downloads/stage4-browser-evidence/lf52-271a04aa_p0.preview.txt",
+      "line": 592,
+      "actions_executed": 1,
+      "actions": [
+        {
+          "id": "ACTION6",
+          "data": {
+            "x": 18,
+            "y": 19
+          }
+        }
+      ],
+      "observation": "Click on green object changes selection/outline and returns two animation frames; several interpretations remain open.",
+      "evidence_label": "observed local behavior; episode cause unknown",
+      "terminal_failure_cause": "unclassifiable from prefix",
+      "episode_outcome": "gave_up",
+      "episode_completed_levels": 1,
+      "episode_total_levels": 10
+    },
+    {
+      "id": 15,
+      "episode": "lf52-271a04aa_p0",
+      "analysis_header": "--- analysis_step=3 | action=3 | 13:49:29 | tool-agent ---",
+      "python_call_index_in_section": 2,
+      "source": "/Users/xiyuanpan/ARC-AGI-3/downloads/stage4-browser-evidence/lf52-271a04aa_p0.preview.txt",
+      "line": 893,
+      "actions_executed": 1,
+      "actions": [
+        {
+          "id": "ACTION4",
+          "data": {}
+        }
+      ],
+      "observation": "RIGHT probe changes only endpoint edge pixel(s); usefulness beyond this prefix is unknown.",
+      "evidence_label": "observed local behavior; episode cause unknown",
+      "terminal_failure_cause": "unclassifiable from prefix",
+      "episode_outcome": "gave_up",
+      "episode_completed_levels": 1,
+      "episode_total_levels": 10
+    },
+    {
+      "id": 16,
+      "episode": "ls20-9607627b_p2",
+      "analysis_header": "--- analysis_step=1 | action=1 | 15:23:14 | tool-agent ---",
+      "python_call_index_in_section": 4,
+      "source": "/Users/xiyuanpan/ARC-AGI-3/downloads/stage4-browser-evidence/ls20-9607627b_p2.preview.txt",
+      "line": 415,
+      "actions_executed": 1,
+      "actions": [
+        {
+          "id": "ACTION4",
+          "data": {}
+        }
+      ],
+      "observation": "RIGHT establishes paired orange/blue movement by five columns.",
+      "evidence_label": "observed local behavior; episode cause unknown",
+      "terminal_failure_cause": "unclassifiable from prefix",
+      "episode_outcome": "gave_up",
+      "episode_completed_levels": 4,
+      "episode_total_levels": 7
+    },
+    {
+      "id": 17,
+      "episode": "ls20-9607627b_p2",
+      "analysis_header": "--- analysis_step=2 | action=2 | 15:24:01 | tool-agent ---",
+      "python_call_index_in_section": 1,
+      "source": "/Users/xiyuanpan/ARC-AGI-3/downloads/stage4-browser-evidence/ls20-9607627b_p2.preview.txt",
+      "line": 655,
+      "actions_executed": 4,
+      "actions": [
+        {
+          "id": "ACTION4",
+          "data": {}
+        },
+        {
+          "id": "ACTION1",
+          "data": {}
+        },
+        {
+          "id": "ACTION3",
+          "data": {}
+        },
+        {
+          "id": "ACTION2",
+          "data": {}
+        }
+      ],
+      "observation": "Four separate action calls in one snippet record per-action positions; deliberate control experiment returns to starting position.",
+      "evidence_label": "observed local behavior; episode cause unknown",
+      "terminal_failure_cause": "unclassifiable from prefix",
+      "episode_outcome": "gave_up",
+      "episode_completed_levels": 4,
+      "episode_total_levels": 7
+    },
+    {
+      "id": 18,
+      "episode": "ls20-9607627b_p2",
+      "analysis_header": "--- analysis_step=3 | action=6 | 15:24:30 | tool-agent ---",
+      "python_call_index_in_section": 1,
+      "source": "/Users/xiyuanpan/ARC-AGI-3/downloads/stage4-browser-evidence/ls20-9607627b_p2.preview.txt",
+      "line": 920,
+      "actions_executed": 1,
+      "actions": [
+        {
+          "id": "ACTION3",
+          "data": {}
+        }
+      ],
+      "observation": "First LEFT executes, then action([act])[0] raises KeyError: 0. Remaining five planned actions do not execute. Direct execution-contract failure.",
+      "evidence_label": "direct execution failure",
+      "terminal_failure_cause": "unclassifiable from prefix",
+      "episode_outcome": "gave_up",
+      "episode_completed_levels": 4,
+      "episode_total_levels": 7
+    },
+    {
+      "id": 19,
+      "episode": "m0r0-492f87ba_p0",
+      "analysis_header": "--- analysis_step=1 | action=1 | 13:34:40 | tool-agent ---",
+      "python_call_index_in_section": 3,
+      "source": "/Users/xiyuanpan/ARC-AGI-3/downloads/stage4-browser-evidence/m0r0-492f87ba_p0.preview.txt",
+      "line": 335,
+      "actions_executed": 1,
+      "actions": [
+        {
+          "id": "ACTION1",
+          "data": {}
+        }
+      ],
+      "observation": "UP moves both blue squares; interpretation remains tentative.",
+      "evidence_label": "observed local behavior; episode cause unknown",
+      "terminal_failure_cause": "unclassifiable from prefix",
+      "episode_outcome": "gave_up",
+      "episode_completed_levels": 5,
+      "episode_total_levels": 6
+    },
+    {
+      "id": 20,
+      "episode": "m0r0-492f87ba_p0",
+      "analysis_header": "--- analysis_step=2 | action=2 | 13:35:07 | tool-agent ---",
+      "python_call_index_in_section": 2,
+      "source": "/Users/xiyuanpan/ARC-AGI-3/downloads/stage4-browser-evidence/m0r0-492f87ba_p0.preview.txt",
+      "line": 732,
+      "actions_executed": 4,
+      "actions": [
+        {
+          "id": "ACTION3",
+          "data": {}
+        },
+        {
+          "id": "ACTION3",
+          "data": {}
+        },
+        {
+          "id": "ACTION1",
+          "data": {}
+        },
+        {
+          "id": "ACTION4",
+          "data": {}
+        }
+      ],
+      "observation": "LEFT LEFT UP RIGHT: deliberate probe records both blue positions and black-cell counts after every action.",
+      "evidence_label": "observed local behavior; episode cause unknown",
+      "terminal_failure_cause": "unclassifiable from prefix",
+      "episode_outcome": "gave_up",
+      "episode_completed_levels": 5,
+      "episode_total_levels": 6
+    },
+    {
+      "id": 21,
+      "episode": "re86-8af5384d_p2",
+      "analysis_header": "--- analysis_step=1 | action=1 | 15:17:18 | tool-agent ---",
+      "python_call_index_in_section": 2,
+      "source": "/Users/xiyuanpan/ARC-AGI-3/downloads/stage4-browser-evidence/re86-8af5384d_p2.preview.txt",
+      "line": 245,
+      "actions_executed": 1,
+      "actions": [
+        {
+          "id": "ACTION1",
+          "data": {}
+        }
+      ],
+      "observation": "UP probe moves blue cross and center by three rows.",
+      "evidence_label": "observed local behavior; episode cause unknown",
+      "terminal_failure_cause": "unclassifiable from prefix",
+      "episode_outcome": "gave_up",
+      "episode_completed_levels": 6,
+      "episode_total_levels": 8
+    },
+    {
+      "id": 22,
+      "episode": "re86-8af5384d_p2",
+      "analysis_header": "--- analysis_step=2 | action=2 | 15:17:35 | tool-agent ---",
+      "python_call_index_in_section": 1,
+      "source": "/Users/xiyuanpan/ARC-AGI-3/downloads/stage4-browser-evidence/re86-8af5384d_p2.preview.txt",
+      "line": 465,
+      "actions_executed": 1,
+      "actions": [
+        {
+          "id": "ACTION4",
+          "data": {}
+        }
+      ],
+      "observation": "RIGHT probe moves blue cross by three columns.",
+      "evidence_label": "observed local behavior; episode cause unknown",
+      "terminal_failure_cause": "unclassifiable from prefix",
+      "episode_outcome": "gave_up",
+      "episode_completed_levels": 6,
+      "episode_total_levels": 8
+    },
+    {
+      "id": 23,
+      "episode": "re86-8af5384d_p2",
+      "analysis_header": "--- analysis_step=3 | action=3 | 15:17:41 | tool-agent ---",
+      "python_call_index_in_section": 2,
+      "source": "/Users/xiyuanpan/ARC-AGI-3/downloads/stage4-browser-evidence/re86-8af5384d_p2.preview.txt",
+      "line": 736,
+      "actions_executed": 9,
+      "actions": [
+        {
+          "id": "ACTION1",
+          "data": {}
+        },
+        {
+          "id": "ACTION1",
+          "data": {}
+        },
+        {
+          "id": "ACTION1",
+          "data": {}
+        },
+        {
+          "id": "ACTION1",
+          "data": {}
+        },
+        {
+          "id": "ACTION1",
+          "data": {}
+        },
+        {
+          "id": "ACTION1",
+          "data": {}
+        },
+        {
+          "id": "ACTION4",
+          "data": {}
+        },
+        {
+          "id": "ACTION4",
+          "data": {}
+        },
+        {
+          "id": "ACTION4",
+          "data": {}
+        }
+      ],
+      "observation": "Nine-step positioning plan; actual centers follow the three-cell displacement rule. No level completion yet; no demonstrated failed continuation precondition.",
+      "evidence_label": "observed local behavior; episode cause unknown",
+      "terminal_failure_cause": "unclassifiable from prefix",
+      "episode_outcome": "gave_up",
+      "episode_completed_levels": 6,
+      "episode_total_levels": 8
+    },
+    {
+      "id": 24,
+      "episode": "s5i5-18d95033_p2",
+      "analysis_header": "--- analysis_step=1 | action=1 | 15:21:26 | tool-agent ---",
+      "python_call_index_in_section": 3,
+      "source": "/Users/xiyuanpan/ARC-AGI-3/downloads/stage4-browser-evidence/s5i5-18d95033_p2.preview.txt",
+      "line": 415,
+      "actions_executed": 1,
+      "actions": [
+        {
+          "id": "ACTION6",
+          "data": {
+            "x": 30,
+            "y": 10
+          }
+        }
+      ],
+      "observation": "Click on green bar gives endpoint no-op; next action changes target region. Not established low-information waste.",
+      "evidence_label": "observed local behavior; episode cause unknown",
+      "terminal_failure_cause": "unclassifiable from prefix",
+      "episode_outcome": "gave_up",
+      "episode_completed_levels": 7,
+      "episode_total_levels": 8
+    },
+    {
+      "id": 25,
+      "episode": "s5i5-18d95033_p2",
+      "analysis_header": "--- analysis_step=2 | action=2 | 15:21:57 | tool-agent ---",
+      "python_call_index_in_section": 1,
+      "source": "/Users/xiyuanpan/ARC-AGI-3/downloads/stage4-browser-evidence/s5i5-18d95033_p2.preview.txt",
+      "line": 616,
+      "actions_executed": 1,
+      "actions": [
+        {
+          "id": "ACTION6",
+          "data": {
+            "x": 39,
+            "y": 21
+          }
+        }
+      ],
+      "observation": "Click on green glyph shrinks remote green bar and moves red marker left, revealing a cross-region relation.",
+      "evidence_label": "observed local behavior; episode cause unknown",
+      "terminal_failure_cause": "unclassifiable from prefix",
+      "episode_outcome": "gave_up",
+      "episode_completed_levels": 7,
+      "episode_total_levels": 8
+    },
+    {
+      "id": 26,
+      "episode": "s5i5-18d95033_p2",
+      "analysis_header": "--- analysis_step=3 | action=3 | 15:22:01 | tool-agent ---",
+      "python_call_index_in_section": 2,
+      "source": "/Users/xiyuanpan/ARC-AGI-3/downloads/stage4-browser-evidence/s5i5-18d95033_p2.preview.txt",
+      "line": 906,
+      "actions_executed": 1,
+      "actions": [
+        {
+          "id": "ACTION6",
+          "data": {
+            "x": 45,
+            "y": 21
+          }
+        }
+      ],
+      "observation": "Click on opposite glyph restores green bar/marker; reasoning considers alignment with distant targets. Goal not verified here.",
+      "evidence_label": "observed local behavior; episode cause unknown",
+      "terminal_failure_cause": "unclassifiable from prefix",
+      "episode_outcome": "gave_up",
+      "episode_completed_levels": 7,
+      "episode_total_levels": 8
+    },
+    {
+      "id": 27,
+      "episode": "sk48-d8078629_p3",
+      "analysis_header": "--- analysis_step=1 | action=1 | 15:30:41 | tool-agent ---",
+      "python_call_index_in_section": 3,
+      "source": "/Users/xiyuanpan/ARC-AGI-3/downloads/stage4-browser-evidence/sk48-d8078629_p3.preview.txt",
+      "line": 334,
+      "actions_executed": 1,
+      "actions": [
+        {
+          "id": "ACTION4",
+          "data": {}
+        }
+      ],
+      "observation": "RIGHT extends horizontal structure while head stays; reports appearances rather than movement.",
+      "evidence_label": "observed local behavior; episode cause unknown",
+      "terminal_failure_cause": "unclassifiable from prefix",
+      "episode_outcome": "gave_up",
+      "episode_completed_levels": 0,
+      "episode_total_levels": 8
+    },
+    {
+      "id": 28,
+      "episode": "sk48-d8078629_p3",
+      "analysis_header": "--- analysis_step=2 | action=2 | 15:31:11 | tool-agent ---",
+      "python_call_index_in_section": 2,
+      "source": "/Users/xiyuanpan/ARC-AGI-3/downloads/stage4-browser-evidence/sk48-d8078629_p3.preview.txt",
+      "line": 597,
+      "actions_executed": 1,
+      "actions": [
+        {
+          "id": "ACTION1",
+          "data": {}
+        }
+      ],
+      "observation": "UP moves head and attached structure; agent revises fixed-anchor interpretation.",
+      "evidence_label": "observed local behavior; episode cause unknown",
+      "terminal_failure_cause": "unclassifiable from prefix",
+      "episode_outcome": "gave_up",
+      "episode_completed_levels": 0,
+      "episode_total_levels": 8
+    },
+    {
+      "id": 29,
+      "episode": "sk48-d8078629_p3",
+      "analysis_header": "--- analysis_step=3 | action=3 | 15:31:27 | tool-agent ---",
+      "python_call_index_in_section": 1,
+      "source": "/Users/xiyuanpan/ARC-AGI-3/downloads/stage4-browser-evidence/sk48-d8078629_p3.preview.txt",
+      "line": 876,
+      "actions_executed": 1,
+      "actions": [
+        {
+          "id": "ACTION4",
+          "data": {}
+        }
+      ],
+      "observation": "RIGHT extends structure toward green target; no completion observed; ultimate mechanism unverified.",
+      "evidence_label": "observed local behavior; episode cause unknown",
+      "terminal_failure_cause": "unclassifiable from prefix",
+      "episode_outcome": "gave_up",
+      "episode_completed_levels": 0,
+      "episode_total_levels": 8
+    },
+    {
+      "id": 30,
+      "episode": "tu93-0768757b_p1",
+      "analysis_header": "--- analysis_step=1 | action=1 | 14:22:34 | tool-agent ---",
+      "python_call_index_in_section": 1,
+      "source": "/Users/xiyuanpan/ARC-AGI-3/downloads/stage4-browser-evidence/tu93-0768757b_p1.preview.txt",
+      "line": 948,
+      "actions_executed": 1,
+      "actions": [
+        {
+          "id": "ACTION4",
+          "data": {}
+        }
+      ],
+      "observation": "RIGHT tests tile-step assumption; blue object moves six pixels with six-frame animation. BFS had already been computed under a tentative tile model.",
+      "evidence_label": "observed local behavior; episode cause unknown",
+      "terminal_failure_cause": "unclassifiable from prefix",
+      "episode_outcome": "gave_up",
+      "episode_completed_levels": 8,
+      "episode_total_levels": 9
+    }
+  ],
+  "episode_results": [
+    {
+      "game_id": "sk48-d8078629",
+      "pass_index": 0,
+      "state": "gave_up",
+      "levels_completed": 3,
+      "levels_total": 8,
+      "score": 16.666666666666664,
+      "actions": 144,
+      "history_entries": 144,
+      "solver_analysis_html": "solver_analysis/sk48-d8078629_p0.html",
+      "actions_per_level": [
+        47,
+        31,
+        66,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "final_wallclock_seconds": 29036.21684012,
+      "last_action_wallclock_seconds": 28964.922202391997,
+      "generated_tokens": 176006
+    },
+    {
+      "game_id": "tn36-ef4dde99",
+      "pass_index": 0,
+      "state": "gave_up",
+      "levels_completed": 0,
+      "levels_total": 7,
+      "score": 0.0,
+      "actions": 123,
+      "history_entries": 123,
+      "solver_analysis_html": "solver_analysis/tn36-ef4dde99_p0.html",
+      "actions_per_level": [
+        123,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "final_wallclock_seconds": 29400.490116252,
+      "last_action_wallclock_seconds": 1096.429177819,
+      "generated_tokens": 69736
+    },
+    {
+      "game_id": "m0r0-492f87ba",
+      "pass_index": 0,
+      "state": "gave_up",
+      "levels_completed": 5,
+      "levels_total": 6,
+      "score": 71.42857142857143,
+      "actions": 371,
+      "history_entries": 371,
+      "solver_analysis_html": "solver_analysis/m0r0-492f87ba_p0.html",
+      "actions_per_level": [
+        18,
+        36,
+        112,
+        30,
+        63,
+        112
+      ],
+      "final_wallclock_seconds": 29258.349869972,
+      "last_action_wallclock_seconds": 28875.912498798,
+      "generated_tokens": 259740
+    },
+    {
+      "game_id": "bp35-0a0ad940",
+      "pass_index": 0,
+      "state": "gave_up",
+      "levels_completed": 2,
+      "levels_total": 9,
+      "score": 6.666666666666667,
+      "actions": 89,
+      "history_entries": 89,
+      "solver_analysis_html": "solver_analysis/bp35-0a0ad940_p0.html",
+      "actions_per_level": [
+        18,
+        47,
+        24,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "final_wallclock_seconds": 29160.178458593,
+      "last_action_wallclock_seconds": 25250.215478597,
+      "generated_tokens": 204282
+    },
+    {
+      "game_id": "cn04-2fe56bfb",
+      "pass_index": 0,
+      "state": "gave_up",
+      "levels_completed": 5,
+      "levels_total": 6,
+      "score": 71.42857142857143,
+      "actions": 294,
+      "history_entries": 294,
+      "solver_analysis_html": "solver_analysis/cn04-2fe56bfb_p0.html",
+      "actions_per_level": [
+        14,
+        73,
+        30,
+        40,
+        68,
+        69
+      ],
+      "final_wallclock_seconds": 29076.173276008,
+      "last_action_wallclock_seconds": 28352.694866549,
+      "generated_tokens": 367490
+    },
+    {
+      "game_id": "dc22-fdcac232",
+      "pass_index": 0,
+      "state": "gave_up",
+      "levels_completed": 4,
+      "levels_total": 6,
+      "score": 43.516972315410634,
+      "actions": 339,
+      "history_entries": 339,
+      "solver_analysis_html": "solver_analysis/dc22-fdcac232_p0.html",
+      "actions_per_level": [
+        39,
+        48,
+        59,
+        131,
+        62,
+        0
+      ],
+      "final_wallclock_seconds": 29087.843731956,
+      "last_action_wallclock_seconds": 26370.881841061,
+      "generated_tokens": 292551
+    },
+    {
+      "game_id": "tu93-0768757b",
+      "pass_index": 0,
+      "state": "won",
+      "levels_completed": 9,
+      "levels_total": 9,
+      "score": 90.93279926840421,
+      "actions": 306,
+      "history_entries": 306,
+      "solver_analysis_html": "solver_analysis/tu93-0768757b_p0.html",
+      "actions_per_level": [
+        18,
+        27,
+        23,
+        42,
+        34,
+        63,
+        27,
+        25,
+        47
+      ],
+      "final_wallclock_seconds": 24225.777462468,
+      "last_action_wallclock_seconds": 24225.116612091,
+      "generated_tokens": 278238
+    },
+    {
+      "game_id": "lp85-305b61c3",
+      "pass_index": 0,
+      "state": "won",
+      "levels_completed": 8,
+      "levels_total": 8,
+      "score": 100.0,
+      "actions": 180,
+      "history_entries": 180,
+      "solver_analysis_html": "solver_analysis/lp85-305b61c3_p0.html",
+      "actions_per_level": [
+        5,
+        11,
+        16,
+        17,
+        12,
+        73,
+        11,
+        35
+      ],
+      "final_wallclock_seconds": 11927.209797915,
+      "last_action_wallclock_seconds": 11926.670783086,
+      "generated_tokens": 125621
+    },
+    {
+      "game_id": "ka59-38d34dbb",
+      "pass_index": 0,
+      "state": "gave_up",
+      "levels_completed": 2,
+      "levels_total": 7,
+      "score": 10.714285714285714,
+      "actions": 318,
+      "history_entries": 318,
+      "solver_analysis_html": "solver_analysis/ka59-38d34dbb_p0.html",
+      "actions_per_level": [
+        24,
+        45,
+        249,
+        0,
+        0,
+        0,
+        0
+      ],
+      "final_wallclock_seconds": 29400.136036319,
+      "last_action_wallclock_seconds": 19744.371601337,
+      "generated_tokens": 155104
+    },
+    {
+      "game_id": "wa30-ee6fef47",
+      "pass_index": 0,
+      "state": "gave_up",
+      "levels_completed": 1,
+      "levels_total": 9,
+      "score": 2.2222222222222223,
+      "actions": 133,
+      "history_entries": 133,
+      "solver_analysis_html": "solver_analysis/wa30-ee6fef47_p0.html",
+      "actions_per_level": [
+        62,
+        71,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "final_wallclock_seconds": 29446.981320794002,
+      "last_action_wallclock_seconds": 23529.330700603998,
+      "generated_tokens": 148859
+    },
+    {
+      "game_id": "vc33-5430563c",
+      "pass_index": 0,
+      "state": "gave_up",
+      "levels_completed": 6,
+      "levels_total": 7,
+      "score": 72.04748546461974,
+      "actions": 232,
+      "history_entries": 232,
+      "solver_analysis_html": "solver_analysis/vc33-5430563c_p0.html",
+      "actions_per_level": [
+        16,
+        9,
+        31,
+        97,
+        54,
+        24,
+        1
+      ],
+      "final_wallclock_seconds": 29020.392259088003,
+      "last_action_wallclock_seconds": 28999.598687881,
+      "generated_tokens": 217332
+    },
+    {
+      "game_id": "lf52-271a04aa",
+      "pass_index": 0,
+      "state": "gave_up",
+      "levels_completed": 1,
+      "levels_total": 10,
+      "score": 1.8181818181818181,
+      "actions": 70,
+      "history_entries": 70,
+      "solver_analysis_html": "solver_analysis/lf52-271a04aa_p0.html",
+      "actions_per_level": [
+        11,
+        59,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "final_wallclock_seconds": 29373.944509228,
+      "last_action_wallclock_seconds": 20116.467453153,
+      "generated_tokens": 97483
+    },
+    {
+      "game_id": "r11l-495a7899",
+      "pass_index": 0,
+      "state": "won",
+      "levels_completed": 6,
+      "levels_total": 6,
+      "score": 100.0,
+      "actions": 146,
+      "history_entries": 146,
+      "solver_analysis_html": "solver_analysis/r11l-495a7899_p0.html",
+      "actions_per_level": [
+        6,
+        37,
+        40,
+        15,
+        25,
+        23
+      ],
+      "final_wallclock_seconds": 23938.968547315002,
+      "last_action_wallclock_seconds": 23938.592106363998,
+      "generated_tokens": 263839
+    },
+    {
+      "game_id": "sc25-635fd71a",
+      "pass_index": 0,
+      "state": "gave_up",
+      "levels_completed": 4,
+      "levels_total": 6,
+      "score": 39.019989183342354,
+      "actions": 300,
+      "history_entries": 300,
+      "solver_analysis_html": "solver_analysis/sc25-635fd71a_p0.html",
+      "actions_per_level": [
+        50,
+        12,
+        16,
+        86,
+        136,
+        0
+      ],
+      "final_wallclock_seconds": 29296.277286488,
+      "last_action_wallclock_seconds": 25809.535808936,
+      "generated_tokens": 146187
+    },
+    {
+      "game_id": "sp80-589a99af",
+      "pass_index": 0,
+      "state": "gave_up",
+      "levels_completed": 3,
+      "levels_total": 6,
+      "score": 17.97437673130194,
+      "actions": 139,
+      "history_entries": 139,
+      "solver_analysis_html": "solver_analysis/sp80-589a99af_p0.html",
+      "actions_per_level": [
+        8,
+        18,
+        76,
+        37,
+        0,
+        0
+      ],
+      "final_wallclock_seconds": 29070.266064846997,
+      "last_action_wallclock_seconds": 26679.814227086998,
+      "generated_tokens": 255637
+    },
+    {
+      "game_id": "ar25-0c556536",
+      "pass_index": 0,
+      "state": "won",
+      "levels_completed": 8,
+      "levels_total": 8,
+      "score": 100.0,
+      "actions": 307,
+      "history_entries": 307,
+      "solver_analysis_html": "solver_analysis/ar25-0c556536_p0.html",
+      "actions_per_level": [
+        17,
+        14,
+        58,
+        22,
+        32,
+        75,
+        42,
+        47
+      ],
+      "final_wallclock_seconds": 17621.420079021,
+      "last_action_wallclock_seconds": 17620.765017517002,
+      "generated_tokens": 131318
+    },
+    {
+      "game_id": "sb26-7fbdac44",
+      "pass_index": 0,
+      "state": "won",
+      "levels_completed": 8,
+      "levels_total": 8,
+      "score": 95.59751330350137,
+      "actions": 154,
+      "history_entries": 154,
+      "solver_analysis_html": "solver_analysis/sb26-7fbdac44_p0.html",
+      "actions_per_level": [
+        9,
+        31,
+        15,
+        22,
+        17,
+        19,
+        17,
+        24
+      ],
+      "final_wallclock_seconds": 13936.146452618,
+      "last_action_wallclock_seconds": 13935.640590034,
+      "generated_tokens": 69055
+    },
+    {
+      "game_id": "cd82-fb555c5d",
+      "pass_index": 0,
+      "state": "won",
+      "levels_completed": 6,
+      "levels_total": 6,
+      "score": 80.80027008485409,
+      "actions": 206,
+      "history_entries": 206,
+      "solver_analysis_html": "solver_analysis/cd82-fb555c5d_p0.html",
+      "actions_per_level": [
+        61,
+        44,
+        24,
+        21,
+        39,
+        17
+      ],
+      "final_wallclock_seconds": 13345.873896375,
+      "last_action_wallclock_seconds": 13345.447248948,
+      "generated_tokens": 186970
+    },
+    {
+      "game_id": "re86-8af5384d",
+      "pass_index": 0,
+      "state": "gave_up",
+      "levels_completed": 6,
+      "levels_total": 8,
+      "score": 58.333333333333336,
+      "actions": 425,
+      "history_entries": 425,
+      "solver_analysis_html": "solver_analysis/re86-8af5384d_p0.html",
+      "actions_per_level": [
+        21,
+        38,
+        48,
+        89,
+        97,
+        80,
+        52,
+        0
+      ],
+      "final_wallclock_seconds": 29152.885500285,
+      "last_action_wallclock_seconds": 26179.633279048998,
+      "generated_tokens": 267953
+    },
+    {
+      "game_id": "s5i5-18d95033",
+      "pass_index": 0,
+      "state": "gave_up",
+      "levels_completed": 6,
+      "levels_total": 8,
+      "score": 57.54333333333333,
+      "actions": 272,
+      "history_entries": 272,
+      "solver_analysis_html": "solver_analysis/s5i5-18d95033_p0.html",
+      "actions_per_level": [
+        16,
+        45,
+        43,
+        30,
+        56,
+        50,
+        32,
+        0
+      ],
+      "final_wallclock_seconds": 29035.792997161,
+      "last_action_wallclock_seconds": 28860.538477616,
+      "generated_tokens": 422098
+    },
+    {
+      "game_id": "ls20-9607627b",
+      "pass_index": 0,
+      "state": "gave_up",
+      "levels_completed": 4,
+      "levels_total": 7,
+      "score": 32.62190895936287,
+      "actions": 408,
+      "history_entries": 408,
+      "solver_analysis_html": "solver_analysis/ls20-9607627b_p0.html",
+      "actions_per_level": [
+        28,
+        102,
+        42,
+        101,
+        135,
+        0,
+        0
+      ],
+      "final_wallclock_seconds": 29262.723060385,
+      "last_action_wallclock_seconds": 22487.00946105,
+      "generated_tokens": 229394
+    },
+    {
+      "game_id": "ft09-0d8bbf25",
+      "pass_index": 0,
+      "state": "won",
+      "levels_completed": 6,
+      "levels_total": 6,
+      "score": 100.0,
+      "actions": 88,
+      "history_entries": 88,
+      "solver_analysis_html": "solver_analysis/ft09-0d8bbf25_p0.html",
+      "actions_per_level": [
+        4,
+        7,
+        14,
+        25,
+        23,
+        15
+      ],
+      "final_wallclock_seconds": 2673.240571542,
+      "last_action_wallclock_seconds": 2673.0209043659997,
+      "generated_tokens": 59666
+    },
+    {
+      "game_id": "su15-1944f8ab",
+      "pass_index": 0,
+      "state": "gave_up",
+      "levels_completed": 3,
+      "levels_total": 9,
+      "score": 13.333333333333334,
+      "actions": 265,
+      "history_entries": 265,
+      "solver_analysis_html": "solver_analysis/su15-1944f8ab_p0.html",
+      "actions_per_level": [
+        10,
+        46,
+        20,
+        189,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "final_wallclock_seconds": 29385.181281276,
+      "last_action_wallclock_seconds": 24419.303591447,
+      "generated_tokens": 161124
+    },
+    {
+      "game_id": "tr87-cd924810",
+      "pass_index": 0,
+      "state": "won",
+      "levels_completed": 6,
+      "levels_total": 6,
+      "score": 100.0,
+      "actions": 307,
+      "history_entries": 307,
+      "solver_analysis_html": "solver_analysis/tr87-cd924810_p0.html",
+      "actions_per_level": [
+        24,
+        32,
+        28,
+        31,
+        84,
+        108
+      ],
+      "final_wallclock_seconds": 22431.349613104,
+      "last_action_wallclock_seconds": 22430.556055461,
+      "generated_tokens": 91438
+    },
+    {
+      "game_id": "g50t-5849a774",
+      "pass_index": 0,
+      "state": "gave_up",
+      "levels_completed": 0,
+      "levels_total": 7,
+      "score": 0.0,
+      "actions": 86,
+      "history_entries": 86,
+      "solver_analysis_html": "solver_analysis/g50t-5849a774_p0.html",
+      "actions_per_level": [
+        86,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "final_wallclock_seconds": 29386.602461019,
+      "last_action_wallclock_seconds": 28111.933974807,
+      "generated_tokens": 109442
+    },
+    {
+      "game_id": "sk48-d8078629",
+      "pass_index": 1,
+      "state": "gave_up",
+      "levels_completed": 1,
+      "levels_total": 8,
+      "score": 2.7777777777777777,
+      "actions": 81,
+      "history_entries": 81,
+      "solver_analysis_html": "solver_analysis/sk48-d8078629_p1.html",
+      "actions_per_level": [
+        57,
+        24,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "final_wallclock_seconds": 29413.874505013,
+      "last_action_wallclock_seconds": 21726.653655965998,
+      "generated_tokens": 103147
+    },
+    {
+      "game_id": "tn36-ef4dde99",
+      "pass_index": 1,
+      "state": "gave_up",
+      "levels_completed": 2,
+      "levels_total": 7,
+      "score": 10.192188827937882,
+      "actions": 204,
+      "history_entries": 204,
+      "solver_analysis_html": "solver_analysis/tn36-ef4dde99_p1.html",
+      "actions_per_level": [
+        43,
+        17,
+        144,
+        0,
+        0,
+        0,
+        0
+      ],
+      "final_wallclock_seconds": 29366.990937367,
+      "last_action_wallclock_seconds": 24826.066222081,
+      "generated_tokens": 157690
+    },
+    {
+      "game_id": "m0r0-492f87ba",
+      "pass_index": 1,
+      "state": "won",
+      "levels_completed": 6,
+      "levels_total": 6,
+      "score": 100.0,
+      "actions": 307,
+      "history_entries": 307,
+      "solver_analysis_html": "solver_analysis/m0r0-492f87ba_p1.html",
+      "actions_per_level": [
+        15,
+        23,
+        82,
+        29,
+        70,
+        88
+      ],
+      "final_wallclock_seconds": 27226.727861426,
+      "last_action_wallclock_seconds": 27225.849251426,
+      "generated_tokens": 213004
+    },
+    {
+      "game_id": "bp35-0a0ad940",
+      "pass_index": 1,
+      "state": "gave_up",
+      "levels_completed": 1,
+      "levels_total": 9,
+      "score": 2.2222222222222223,
+      "actions": 45,
+      "history_entries": 45,
+      "solver_analysis_html": "solver_analysis/bp35-0a0ad940_p1.html",
+      "actions_per_level": [
+        20,
+        25,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "final_wallclock_seconds": 29092.152668953,
+      "last_action_wallclock_seconds": 18456.096035661,
+      "generated_tokens": 167255
+    },
+    {
+      "game_id": "cn04-2fe56bfb",
+      "pass_index": 1,
+      "state": "gave_up",
+      "levels_completed": 4,
+      "levels_total": 6,
+      "score": 47.61904761904761,
+      "actions": 253,
+      "history_entries": 253,
+      "solver_analysis_html": "solver_analysis/cn04-2fe56bfb_p1.html",
+      "actions_per_level": [
+        14,
+        50,
+        23,
+        43,
+        123,
+        0
+      ],
+      "final_wallclock_seconds": 29237.789740859,
+      "last_action_wallclock_seconds": 26727.60987718,
+      "generated_tokens": 207892
+    },
+    {
+      "game_id": "dc22-fdcac232",
+      "pass_index": 1,
+      "state": "gave_up",
+      "levels_completed": 2,
+      "levels_total": 6,
+      "score": 12.142857142857142,
+      "actions": 286,
+      "history_entries": 286,
+      "solver_analysis_html": "solver_analysis/dc22-fdcac232_p1.html",
+      "actions_per_level": [
+        118,
+        94,
+        74,
+        0,
+        0,
+        0
+      ],
+      "final_wallclock_seconds": 29019.821370079,
+      "last_action_wallclock_seconds": 29014.949343125,
+      "generated_tokens": 130158
+    },
+    {
+      "game_id": "tu93-0768757b",
+      "pass_index": 1,
+      "state": "gave_up",
+      "levels_completed": 8,
+      "levels_total": 9,
+      "score": 80.0,
+      "actions": 290,
+      "history_entries": 290,
+      "solver_analysis_html": "solver_analysis/tu93-0768757b_p1.html",
+      "actions_per_level": [
+        18,
+        27,
+        24,
+        42,
+        29,
+        41,
+        14,
+        21,
+        74
+      ],
+      "final_wallclock_seconds": 29121.143164925,
+      "last_action_wallclock_seconds": 28561.919762984,
+      "generated_tokens": 322396
+    },
+    {
+      "game_id": "lp85-305b61c3",
+      "pass_index": 1,
+      "state": "won",
+      "levels_completed": 8,
+      "levels_total": 8,
+      "score": 100.0,
+      "actions": 118,
+      "history_entries": 118,
+      "solver_analysis_html": "solver_analysis/lp85-305b61c3_p1.html",
+      "actions_per_level": [
+        6,
+        12,
+        17,
+        14,
+        11,
+        20,
+        10,
+        28
+      ],
+      "final_wallclock_seconds": 11900.183262436,
+      "last_action_wallclock_seconds": 11899.821565461,
+      "generated_tokens": 141751
+    },
+    {
+      "game_id": "ka59-38d34dbb",
+      "pass_index": 1,
+      "state": "gave_up",
+      "levels_completed": 5,
+      "levels_total": 7,
+      "score": 51.69340930048971,
+      "actions": 358,
+      "history_entries": 358,
+      "solver_analysis_html": "solver_analysis/ka59-38d34dbb_p1.html",
+      "actions_per_level": [
+        21,
+        48,
+        52,
+        66,
+        20,
+        151,
+        0
+      ],
+      "final_wallclock_seconds": 29281.655625790998,
+      "last_action_wallclock_seconds": 17000.464331979998,
+      "generated_tokens": 228021
+    },
+    {
+      "game_id": "wa30-ee6fef47",
+      "pass_index": 1,
+      "state": "gave_up",
+      "levels_completed": 3,
+      "levels_total": 9,
+      "score": 11.113794595588525,
+      "actions": 544,
+      "history_entries": 544,
+      "solver_analysis_html": "solver_analysis/wa30-ee6fef47_p1.html",
+      "actions_per_level": [
+        55,
+        190,
+        181,
+        118,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "final_wallclock_seconds": 29327.394098405002,
+      "last_action_wallclock_seconds": 23166.267653361,
+      "generated_tokens": 234236
+    },
+    {
+      "game_id": "vc33-5430563c",
+      "pass_index": 1,
+      "state": "won",
+      "levels_completed": 7,
+      "levels_total": 7,
+      "score": 100.0,
+      "actions": 270,
+      "history_entries": 270,
+      "solver_analysis_html": "solver_analysis/vc33-5430563c_p1.html",
+      "actions_per_level": [
+        16,
+        14,
+        24,
+        46,
+        53,
+        20,
+        97
+      ],
+      "final_wallclock_seconds": 19448.673238098,
+      "last_action_wallclock_seconds": 19446.96409938,
+      "generated_tokens": 214220
+    },
+    {
+      "game_id": "lf52-271a04aa",
+      "pass_index": 1,
+      "state": "gave_up",
+      "levels_completed": 1,
+      "levels_total": 10,
+      "score": 1.8181818181818181,
+      "actions": 129,
+      "history_entries": 129,
+      "solver_analysis_html": "solver_analysis/lf52-271a04aa_p1.html",
+      "actions_per_level": [
+        10,
+        119,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "final_wallclock_seconds": 29334.328472126002,
+      "last_action_wallclock_seconds": 19948.99414549,
+      "generated_tokens": 87594
+    },
+    {
+      "game_id": "r11l-495a7899",
+      "pass_index": 1,
+      "state": "won",
+      "levels_completed": 6,
+      "levels_total": 6,
+      "score": 100.0,
+      "actions": 94,
+      "history_entries": 94,
+      "solver_analysis_html": "solver_analysis/r11l-495a7899_p1.html",
+      "actions_per_level": [
+        6,
+        13,
+        14,
+        14,
+        22,
+        25
+      ],
+      "final_wallclock_seconds": 15776.288706410998,
+      "last_action_wallclock_seconds": 15775.892805336001,
+      "generated_tokens": 196449
+    },
+    {
+      "game_id": "sc25-635fd71a",
+      "pass_index": 1,
+      "state": "gave_up",
+      "levels_completed": 3,
+      "levels_total": 6,
+      "score": 25.6954509969063,
+      "actions": 198,
+      "history_entries": 198,
+      "solver_analysis_html": "solver_analysis/sc25-635fd71a_p1.html",
+      "actions_per_level": [
+        39,
+        5,
+        37,
+        117,
+        0,
+        0
+      ],
+      "final_wallclock_seconds": 29126.958977799,
+      "last_action_wallclock_seconds": 16839.070097832002,
+      "generated_tokens": 122972
+    },
+    {
+      "game_id": "sp80-589a99af",
+      "pass_index": 1,
+      "state": "gave_up",
+      "levels_completed": 4,
+      "levels_total": 6,
+      "score": 47.61904761904761,
+      "actions": 116,
+      "history_entries": 116,
+      "solver_analysis_html": "solver_analysis/sp80-589a99af_p1.html",
+      "actions_per_level": [
+        10,
+        14,
+        11,
+        37,
+        44,
+        0
+      ],
+      "final_wallclock_seconds": 29103.750871509998,
+      "last_action_wallclock_seconds": 27637.865058347998,
+      "generated_tokens": 311661
+    },
+    {
+      "game_id": "ar25-0c556536",
+      "pass_index": 1,
+      "state": "won",
+      "levels_completed": 8,
+      "levels_total": 8,
+      "score": 100.0,
+      "actions": 397,
+      "history_entries": 397,
+      "solver_analysis_html": "solver_analysis/ar25-0c556536_p1.html",
+      "actions_per_level": [
+        20,
+        19,
+        45,
+        29,
+        32,
+        140,
+        49,
+        63
+      ],
+      "final_wallclock_seconds": 19251.303592473,
+      "last_action_wallclock_seconds": 19250.47993046,
+      "generated_tokens": 205254
+    },
+    {
+      "game_id": "sb26-7fbdac44",
+      "pass_index": 1,
+      "state": "won",
+      "levels_completed": 8,
+      "levels_total": 8,
+      "score": 76.64477040816327,
+      "actions": 203,
+      "history_entries": 203,
+      "solver_analysis_html": "solver_analysis/sb26-7fbdac44_p1.html",
+      "actions_per_level": [
+        9,
+        32,
+        15,
+        24,
+        42,
+        19,
+        17,
+        45
+      ],
+      "final_wallclock_seconds": 15135.512076927002,
+      "last_action_wallclock_seconds": 15134.991402769001,
+      "generated_tokens": 139044
+    },
+    {
+      "game_id": "cd82-fb555c5d",
+      "pass_index": 1,
+      "state": "gave_up",
+      "levels_completed": 0,
+      "levels_total": 6,
+      "score": 0.0,
+      "actions": 67,
+      "history_entries": 67,
+      "solver_analysis_html": "solver_analysis/cd82-fb555c5d_p1.html",
+      "actions_per_level": [
+        67,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "final_wallclock_seconds": 29309.126323345,
+      "last_action_wallclock_seconds": 26506.764192872,
+      "generated_tokens": 109708
+    },
+    {
+      "game_id": "re86-8af5384d",
+      "pass_index": 1,
+      "state": "gave_up",
+      "levels_completed": 5,
+      "levels_total": 8,
+      "score": 41.66666666666667,
+      "actions": 460,
+      "history_entries": 460,
+      "solver_analysis_html": "solver_analysis/re86-8af5384d_p1.html",
+      "actions_per_level": [
+        21,
+        42,
+        47,
+        120,
+        85,
+        145,
+        0,
+        0
+      ],
+      "final_wallclock_seconds": 29354.685381188,
+      "last_action_wallclock_seconds": 25091.887343143,
+      "generated_tokens": 196239
+    },
+    {
+      "game_id": "s5i5-18d95033",
+      "pass_index": 1,
+      "state": "gave_up",
+      "levels_completed": 3,
+      "levels_total": 8,
+      "score": 14.18240465880033,
+      "actions": 279,
+      "history_entries": 279,
+      "solver_analysis_html": "solver_analysis/s5i5-18d95033_p1.html",
+      "actions_per_level": [
+        16,
+        177,
+        68,
+        18,
+        0,
+        0,
+        0,
+        0
+      ],
+      "final_wallclock_seconds": 29020.62296799,
+      "last_action_wallclock_seconds": 28748.387094627004,
+      "generated_tokens": 280955
+    },
+    {
+      "game_id": "ls20-9607627b",
+      "pass_index": 1,
+      "state": "gave_up",
+      "levels_completed": 2,
+      "levels_total": 7,
+      "score": 9.466411142913822,
+      "actions": 249,
+      "history_entries": 249,
+      "solver_analysis_html": "solver_analysis/ls20-9607627b_p1.html",
+      "actions_per_level": [
+        15,
+        142,
+        92,
+        0,
+        0,
+        0,
+        0
+      ],
+      "final_wallclock_seconds": 29222.200529029,
+      "last_action_wallclock_seconds": 27255.410341396,
+      "generated_tokens": 148953
+    },
+    {
+      "game_id": "ft09-0d8bbf25",
+      "pass_index": 1,
+      "state": "won",
+      "levels_completed": 6,
+      "levels_total": 6,
+      "score": 100.0,
+      "actions": 114,
+      "history_entries": 114,
+      "solver_analysis_html": "solver_analysis/ft09-0d8bbf25_p1.html",
+      "actions_per_level": [
+        4,
+        7,
+        14,
+        29,
+        25,
+        35
+      ],
+      "final_wallclock_seconds": 10517.750692549,
+      "last_action_wallclock_seconds": 10517.042692572,
+      "generated_tokens": 90642
+    },
+    {
+      "game_id": "su15-1944f8ab",
+      "pass_index": 1,
+      "state": "gave_up",
+      "levels_completed": 3,
+      "levels_total": 9,
+      "score": 13.333333333333334,
+      "actions": 147,
+      "history_entries": 147,
+      "solver_analysis_html": "solver_analysis/su15-1944f8ab_p1.html",
+      "actions_per_level": [
+        15,
+        24,
+        28,
+        80,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "final_wallclock_seconds": 29171.510045131,
+      "last_action_wallclock_seconds": 16497.005971862,
+      "generated_tokens": 132852
+    },
+    {
+      "game_id": "tr87-cd924810",
+      "pass_index": 1,
+      "state": "won",
+      "levels_completed": 6,
+      "levels_total": 6,
+      "score": 100.0,
+      "actions": 270,
+      "history_entries": 270,
+      "solver_analysis_html": "solver_analysis/tr87-cd924810_p1.html",
+      "actions_per_level": [
+        36,
+        41,
+        28,
+        28,
+        71,
+        66
+      ],
+      "final_wallclock_seconds": 25231.762934985,
+      "last_action_wallclock_seconds": 25230.668618473,
+      "generated_tokens": 163082
+    },
+    {
+      "game_id": "g50t-5849a774",
+      "pass_index": 1,
+      "state": "gave_up",
+      "levels_completed": 0,
+      "levels_total": 7,
+      "score": 0.0,
+      "actions": 37,
+      "history_entries": 37,
+      "solver_analysis_html": "solver_analysis/g50t-5849a774_p1.html",
+      "actions_per_level": [
+        37,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "final_wallclock_seconds": 29202.33872908,
+      "last_action_wallclock_seconds": 5230.654052807,
+      "generated_tokens": 65972
+    },
+    {
+      "game_id": "sk48-d8078629",
+      "pass_index": 2,
+      "state": "gave_up",
+      "levels_completed": 0,
+      "levels_total": 8,
+      "score": 0.0,
+      "actions": 114,
+      "history_entries": 114,
+      "solver_analysis_html": "solver_analysis/sk48-d8078629_p2.html",
+      "actions_per_level": [
+        114,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "final_wallclock_seconds": 29454.776786571998,
+      "last_action_wallclock_seconds": 5477.149901706,
+      "generated_tokens": 65247
+    },
+    {
+      "game_id": "tn36-ef4dde99",
+      "pass_index": 2,
+      "state": "gave_up",
+      "levels_completed": 0,
+      "levels_total": 7,
+      "score": 0.0,
+      "actions": 87,
+      "history_entries": 87,
+      "solver_analysis_html": "solver_analysis/tn36-ef4dde99_p2.html",
+      "actions_per_level": [
+        87,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "final_wallclock_seconds": 29302.265569517,
+      "last_action_wallclock_seconds": 5564.327841425,
+      "generated_tokens": 63980
+    },
+    {
+      "game_id": "m0r0-492f87ba",
+      "pass_index": 2,
+      "state": "gave_up",
+      "levels_completed": 0,
+      "levels_total": 6,
+      "score": 0.0,
+      "actions": 73,
+      "history_entries": 73,
+      "solver_analysis_html": "solver_analysis/m0r0-492f87ba_p2.html",
+      "actions_per_level": [
+        73,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "final_wallclock_seconds": 29412.052914283,
+      "last_action_wallclock_seconds": 27075.122801118,
+      "generated_tokens": 113439
+    },
+    {
+      "game_id": "bp35-0a0ad940",
+      "pass_index": 2,
+      "state": "gave_up",
+      "levels_completed": 1,
+      "levels_total": 9,
+      "score": 1.8525519848771264,
+      "actions": 53,
+      "history_entries": 53,
+      "solver_analysis_html": "solver_analysis/bp35-0a0ad940_p2.html",
+      "actions_per_level": [
+        23,
+        30,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "final_wallclock_seconds": 29176.445829802,
+      "last_action_wallclock_seconds": 26396.887747873003,
+      "generated_tokens": 153903
+    },
+    {
+      "game_id": "cn04-2fe56bfb",
+      "pass_index": 2,
+      "state": "gave_up",
+      "levels_completed": 4,
+      "levels_total": 6,
+      "score": 47.61904761904761,
+      "actions": 199,
+      "history_entries": 199,
+      "solver_analysis_html": "solver_analysis/cn04-2fe56bfb_p2.html",
+      "actions_per_level": [
+        16,
+        35,
+        25,
+        33,
+        90,
+        0
+      ],
+      "final_wallclock_seconds": 29097.754144052,
+      "last_action_wallclock_seconds": 27369.672791338002,
+      "generated_tokens": 200913
+    },
+    {
+      "game_id": "dc22-fdcac232",
+      "pass_index": 2,
+      "state": "gave_up",
+      "levels_completed": 4,
+      "levels_total": 6,
+      "score": 47.61904761904761,
+      "actions": 364,
+      "history_entries": 364,
+      "solver_analysis_html": "solver_analysis/dc22-fdcac232_p2.html",
+      "actions_per_level": [
+        104,
+        81,
+        56,
+        81,
+        42,
+        0
+      ],
+      "final_wallclock_seconds": 29029.374335288998,
+      "last_action_wallclock_seconds": 28917.732664592,
+      "generated_tokens": 208774
+    },
+    {
+      "game_id": "tu93-0768757b",
+      "pass_index": 2,
+      "state": "won",
+      "levels_completed": 9,
+      "levels_total": 9,
+      "score": 100.0,
+      "actions": 241,
+      "history_entries": 241,
+      "solver_analysis_html": "solver_analysis/tu93-0768757b_p2.html",
+      "actions_per_level": [
+        18,
+        18,
+        27,
+        33,
+        34,
+        43,
+        15,
+        22,
+        31
+      ],
+      "final_wallclock_seconds": 23711.502900489002,
+      "last_action_wallclock_seconds": 23709.787582831003,
+      "generated_tokens": 245379
+    },
+    {
+      "game_id": "lp85-305b61c3",
+      "pass_index": 2,
+      "state": "won",
+      "levels_completed": 8,
+      "levels_total": 8,
+      "score": 100.0,
+      "actions": 174,
+      "history_entries": 174,
+      "solver_analysis_html": "solver_analysis/lp85-305b61c3_p2.html",
+      "actions_per_level": [
+        7,
+        11,
+        17,
+        22,
+        11,
+        22,
+        19,
+        65
+      ],
+      "final_wallclock_seconds": 27853.848252185,
+      "last_action_wallclock_seconds": 27853.314436992,
+      "generated_tokens": 152335
+    },
+    {
+      "game_id": "ka59-38d34dbb",
+      "pass_index": 2,
+      "state": "gave_up",
+      "levels_completed": 2,
+      "levels_total": 7,
+      "score": 10.714285714285714,
+      "actions": 184,
+      "history_entries": 184,
+      "solver_analysis_html": "solver_analysis/ka59-38d34dbb_p2.html",
+      "actions_per_level": [
+        17,
+        39,
+        128,
+        0,
+        0,
+        0,
+        0
+      ],
+      "final_wallclock_seconds": 29420.795400566,
+      "last_action_wallclock_seconds": 26221.905829635998,
+      "generated_tokens": 171516
+    },
+    {
+      "game_id": "wa30-ee6fef47",
+      "pass_index": 2,
+      "state": "gave_up",
+      "levels_completed": 1,
+      "levels_total": 9,
+      "score": 2.2222222222222223,
+      "actions": 160,
+      "history_entries": 160,
+      "solver_analysis_html": "solver_analysis/wa30-ee6fef47_p2.html",
+      "actions_per_level": [
+        31,
+        129,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "final_wallclock_seconds": 29426.427034773,
+      "last_action_wallclock_seconds": 21450.650905382,
+      "generated_tokens": 103911
+    },
+    {
+      "game_id": "vc33-5430563c",
+      "pass_index": 2,
+      "state": "gave_up",
+      "levels_completed": 3,
+      "levels_total": 7,
+      "score": 21.313492063492067,
+      "actions": 119,
+      "history_entries": 119,
+      "solver_analysis_html": "solver_analysis/vc33-5430563c_p2.html",
+      "actions_per_level": [
+        15,
+        12,
+        24,
+        68,
+        0,
+        0,
+        0
+      ],
+      "final_wallclock_seconds": 29416.618041678,
+      "last_action_wallclock_seconds": 24739.342226964,
+      "generated_tokens": 132364
+    },
+    {
+      "game_id": "lf52-271a04aa",
+      "pass_index": 2,
+      "state": "gave_up",
+      "levels_completed": 1,
+      "levels_total": 10,
+      "score": 1.8181818181818181,
+      "actions": 120,
+      "history_entries": 120,
+      "solver_analysis_html": "solver_analysis/lf52-271a04aa_p2.html",
+      "actions_per_level": [
+        10,
+        110,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "final_wallclock_seconds": 29347.13730442,
+      "last_action_wallclock_seconds": 20682.749547929,
+      "generated_tokens": 89267
+    },
+    {
+      "game_id": "r11l-495a7899",
+      "pass_index": 2,
+      "state": "won",
+      "levels_completed": 6,
+      "levels_total": 6,
+      "score": 100.0,
+      "actions": 99,
+      "history_entries": 99,
+      "solver_analysis_html": "solver_analysis/r11l-495a7899_p2.html",
+      "actions_per_level": [
+        10,
+        16,
+        14,
+        13,
+        22,
+        24
+      ],
+      "final_wallclock_seconds": 18376.134272329,
+      "last_action_wallclock_seconds": 18374.928249965,
+      "generated_tokens": 193932
+    },
+    {
+      "game_id": "sc25-635fd71a",
+      "pass_index": 2,
+      "state": "won",
+      "levels_completed": 6,
+      "levels_total": 6,
+      "score": 87.62668221142592,
+      "actions": 364,
+      "history_entries": 364,
+      "solver_analysis_html": "solver_analysis/sc25-635fd71a_p2.html",
+      "actions_per_level": [
+        40,
+        9,
+        24,
+        126,
+        114,
+        51
+      ],
+      "final_wallclock_seconds": 26078.825693401,
+      "last_action_wallclock_seconds": 26076.363453602,
+      "generated_tokens": 198078
+    },
+    {
+      "game_id": "sp80-589a99af",
+      "pass_index": 2,
+      "state": "gave_up",
+      "levels_completed": 4,
+      "levels_total": 6,
+      "score": 47.61904761904761,
+      "actions": 169,
+      "history_entries": 169,
+      "solver_analysis_html": "solver_analysis/sp80-589a99af_p2.html",
+      "actions_per_level": [
+        15,
+        34,
+        13,
+        54,
+        53,
+        0
+      ],
+      "final_wallclock_seconds": 29192.566657004998,
+      "last_action_wallclock_seconds": 24717.425528761,
+      "generated_tokens": 315833
+    },
+    {
+      "game_id": "ar25-0c556536",
+      "pass_index": 2,
+      "state": "won",
+      "levels_completed": 8,
+      "levels_total": 8,
+      "score": 100.0,
+      "actions": 280,
+      "history_entries": 280,
+      "solver_analysis_html": "solver_analysis/ar25-0c556536_p2.html",
+      "actions_per_level": [
+        15,
+        16,
+        51,
+        22,
+        28,
+        53,
+        37,
+        58
+      ],
+      "final_wallclock_seconds": 11227.775049111,
+      "last_action_wallclock_seconds": 11227.239438370001,
+      "generated_tokens": 122463
+    },
+    {
+      "game_id": "sb26-7fbdac44",
+      "pass_index": 2,
+      "state": "won",
+      "levels_completed": 8,
+      "levels_total": 8,
+      "score": 100.0,
+      "actions": 145,
+      "history_entries": 145,
+      "solver_analysis_html": "solver_analysis/sb26-7fbdac44_p2.html",
+      "actions_per_level": [
+        9,
+        27,
+        15,
+        15,
+        17,
+        19,
+        26,
+        17
+      ],
+      "final_wallclock_seconds": 15927.914627822,
+      "last_action_wallclock_seconds": 15927.357489546997,
+      "generated_tokens": 77927
+    },
+    {
+      "game_id": "cd82-fb555c5d",
+      "pass_index": 2,
+      "state": "won",
+      "levels_completed": 6,
+      "levels_total": 6,
+      "score": 75.91964285714286,
+      "actions": 195,
+      "history_entries": 195,
+      "solver_analysis_html": "solver_analysis/cd82-fb555c5d_p2.html",
+      "actions_per_level": [
+        43,
+        7,
+        25,
+        60,
+        40,
+        20
+      ],
+      "final_wallclock_seconds": 17069.702771790002,
+      "last_action_wallclock_seconds": 17068.850939066,
+      "generated_tokens": 152641
+    },
+    {
+      "game_id": "re86-8af5384d",
+      "pass_index": 2,
+      "state": "gave_up",
+      "levels_completed": 6,
+      "levels_total": 8,
+      "score": 58.333333333333336,
+      "actions": 521,
+      "history_entries": 521,
+      "solver_analysis_html": "solver_analysis/re86-8af5384d_p2.html",
+      "actions_per_level": [
+        23,
+        36,
+        47,
+        80,
+        105,
+        97,
+        133,
+        0
+      ],
+      "final_wallclock_seconds": 29242.701044629,
+      "last_action_wallclock_seconds": 28719.451086257,
+      "generated_tokens": 215671
+    },
+    {
+      "game_id": "s5i5-18d95033",
+      "pass_index": 2,
+      "state": "gave_up",
+      "levels_completed": 7,
+      "levels_total": 8,
+      "score": 77.77777777777779,
+      "actions": 318,
+      "history_entries": 318,
+      "solver_analysis_html": "solver_analysis/s5i5-18d95033_p2.html",
+      "actions_per_level": [
+        18,
+        26,
+        43,
+        40,
+        52,
+        28,
+        50,
+        61
+      ],
+      "final_wallclock_seconds": 29080.31728875,
+      "last_action_wallclock_seconds": 25772.367657073002,
+      "generated_tokens": 407052
+    },
+    {
+      "game_id": "ls20-9607627b",
+      "pass_index": 2,
+      "state": "gave_up",
+      "levels_completed": 4,
+      "levels_total": 7,
+      "score": 27.578756487465657,
+      "actions": 521,
+      "history_entries": 521,
+      "solver_analysis_html": "solver_analysis/ls20-9607627b_p2.html",
+      "actions_per_level": [
+        25,
+        216,
+        97,
+        63,
+        120,
+        0,
+        0
+      ],
+      "final_wallclock_seconds": 29318.460723698998,
+      "last_action_wallclock_seconds": 26893.78007006,
+      "generated_tokens": 264591
+    },
+    {
+      "game_id": "ft09-0d8bbf25",
+      "pass_index": 2,
+      "state": "won",
+      "levels_completed": 6,
+      "levels_total": 6,
+      "score": 100.0,
+      "actions": 86,
+      "history_entries": 86,
+      "solver_analysis_html": "solver_analysis/ft09-0d8bbf25_p2.html",
+      "actions_per_level": [
+        4,
+        7,
+        14,
+        16,
+        26,
+        19
+      ],
+      "final_wallclock_seconds": 10014.411702997,
+      "last_action_wallclock_seconds": 10014.19904772,
+      "generated_tokens": 78399
+    },
+    {
+      "game_id": "su15-1944f8ab",
+      "pass_index": 2,
+      "state": "gave_up",
+      "levels_completed": 1,
+      "levels_total": 9,
+      "score": 2.2222222222222223,
+      "actions": 45,
+      "history_entries": 45,
+      "solver_analysis_html": "solver_analysis/su15-1944f8ab_p2.html",
+      "actions_per_level": [
+        16,
+        29,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "final_wallclock_seconds": 29109.181479461,
+      "last_action_wallclock_seconds": 17826.201275191997,
+      "generated_tokens": 96212
+    },
+    {
+      "game_id": "tr87-cd924810",
+      "pass_index": 2,
+      "state": "won",
+      "levels_completed": 6,
+      "levels_total": 6,
+      "score": 100.0,
+      "actions": 237,
+      "history_entries": 237,
+      "solver_analysis_html": "solver_analysis/tr87-cd924810_p2.html",
+      "actions_per_level": [
+        24,
+        32,
+        28,
+        28,
+        41,
+        84
+      ],
+      "final_wallclock_seconds": 18697.155091954,
+      "last_action_wallclock_seconds": 18695.685580819998,
+      "generated_tokens": 134161
+    },
+    {
+      "game_id": "g50t-5849a774",
+      "pass_index": 2,
+      "state": "gave_up",
+      "levels_completed": 2,
+      "levels_total": 7,
+      "score": 9.915951579159346,
+      "actions": 341,
+      "history_entries": 341,
+      "solver_analysis_html": "solver_analysis/g50t-5849a774_p2.html",
+      "actions_per_level": [
+        113,
+        64,
+        164,
+        0,
+        0,
+        0,
+        0
+      ],
+      "final_wallclock_seconds": 29380.222490027,
+      "last_action_wallclock_seconds": 23248.652123054002,
+      "generated_tokens": 205473
+    },
+    {
+      "game_id": "sk48-d8078629",
+      "pass_index": 3,
+      "state": "gave_up",
+      "levels_completed": 0,
+      "levels_total": 8,
+      "score": 0.0,
+      "actions": 62,
+      "history_entries": 62,
+      "solver_analysis_html": "solver_analysis/sk48-d8078629_p3.html",
+      "actions_per_level": [
+        62,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "final_wallclock_seconds": 29455.446017146,
+      "last_action_wallclock_seconds": 7974.324719193,
+      "generated_tokens": 70428
+    },
+    {
+      "game_id": "tn36-ef4dde99",
+      "pass_index": 3,
+      "state": "gave_up",
+      "levels_completed": 4,
+      "levels_total": 7,
+      "score": 30.785599109302414,
+      "actions": 205,
+      "history_entries": 205,
+      "solver_analysis_html": "solver_analysis/tn36-ef4dde99_p3.html",
+      "actions_per_level": [
+        15,
+        32,
+        10,
+        61,
+        87,
+        0,
+        0
+      ],
+      "final_wallclock_seconds": 29208.031571382002,
+      "last_action_wallclock_seconds": 27115.725855899997,
+      "generated_tokens": 247511
+    },
+    {
+      "game_id": "m0r0-492f87ba",
+      "pass_index": 3,
+      "state": "gave_up",
+      "levels_completed": 5,
+      "levels_total": 6,
+      "score": 67.15730664989323,
+      "actions": 358,
+      "history_entries": 358,
+      "solver_analysis_html": "solver_analysis/m0r0-492f87ba_p3.html",
+      "actions_per_level": [
+        29,
+        38,
+        118,
+        42,
+        51,
+        80
+      ],
+      "final_wallclock_seconds": 29065.285434462,
+      "last_action_wallclock_seconds": 26021.887732871,
+      "generated_tokens": 248426
+    },
+    {
+      "game_id": "bp35-0a0ad940",
+      "pass_index": 3,
+      "state": "gave_up",
+      "levels_completed": 1,
+      "levels_total": 9,
+      "score": 1.3443072702331962,
+      "actions": 61,
+      "history_entries": 61,
+      "solver_analysis_html": "solver_analysis/bp35-0a0ad940_p3.html",
+      "actions_per_level": [
+        27,
+        34,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "final_wallclock_seconds": 29212.915359849,
+      "last_action_wallclock_seconds": 25836.184596747,
+      "generated_tokens": 140686
+    },
+    {
+      "game_id": "cn04-2fe56bfb",
+      "pass_index": 3,
+      "state": "won",
+      "levels_completed": 6,
+      "levels_total": 6,
+      "score": 100.0,
+      "actions": 208,
+      "history_entries": 208,
+      "solver_analysis_html": "solver_analysis/cn04-2fe56bfb_p3.html",
+      "actions_per_level": [
+        14,
+        37,
+        32,
+        32,
+        49,
+        44
+      ],
+      "final_wallclock_seconds": 21715.897659791,
+      "last_action_wallclock_seconds": 21715.384888769,
+      "generated_tokens": 178192
+    },
+    {
+      "game_id": "dc22-fdcac232",
+      "pass_index": 3,
+      "state": "gave_up",
+      "levels_completed": 4,
+      "levels_total": 6,
+      "score": 44.48069141926029,
+      "actions": 327,
+      "history_entries": 327,
+      "solver_analysis_html": "solver_analysis/dc22-fdcac232_p3.html",
+      "actions_per_level": [
+        64,
+        45,
+        92,
+        75,
+        51,
+        0
+      ],
+      "final_wallclock_seconds": 29019.86412739,
+      "last_action_wallclock_seconds": 28895.616412186002,
+      "generated_tokens": 322681
+    },
+    {
+      "game_id": "tu93-0768757b",
+      "pass_index": 3,
+      "state": "won",
+      "levels_completed": 9,
+      "levels_total": 9,
+      "score": 100.0,
+      "actions": 213,
+      "history_entries": 213,
+      "solver_analysis_html": "solver_analysis/tu93-0768757b_p3.html",
+      "actions_per_level": [
+        19,
+        15,
+        19,
+        17,
+        29,
+        28,
+        15,
+        29,
+        42
+      ],
+      "final_wallclock_seconds": 17255.013848002,
+      "last_action_wallclock_seconds": 17254.428055274002,
+      "generated_tokens": 192308
+    },
+    {
+      "game_id": "lp85-305b61c3",
+      "pass_index": 3,
+      "state": "won",
+      "levels_completed": 8,
+      "levels_total": 8,
+      "score": 100.0,
+      "actions": 162,
+      "history_entries": 162,
+      "solver_analysis_html": "solver_analysis/lp85-305b61c3_p3.html",
+      "actions_per_level": [
+        6,
+        11,
+        17,
+        28,
+        11,
+        21,
+        5,
+        63
+      ],
+      "final_wallclock_seconds": 16804.657114721,
+      "last_action_wallclock_seconds": 16802.343859700002,
+      "generated_tokens": 108607
+    },
+    {
+      "game_id": "ka59-38d34dbb",
+      "pass_index": 3,
+      "state": "gave_up",
+      "levels_completed": 1,
+      "levels_total": 7,
+      "score": 3.571428571428571,
+      "actions": 83,
+      "history_entries": 83,
+      "solver_analysis_html": "solver_analysis/ka59-38d34dbb_p3.html",
+      "actions_per_level": [
+        21,
+        62,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "final_wallclock_seconds": 29183.127684973,
+      "last_action_wallclock_seconds": 18999.539781895997,
+      "generated_tokens": 114837
+    },
+    {
+      "game_id": "wa30-ee6fef47",
+      "pass_index": 3,
+      "state": "gave_up",
+      "levels_completed": 1,
+      "levels_total": 9,
+      "score": 2.2222222222222223,
+      "actions": 82,
+      "history_entries": 82,
+      "solver_analysis_html": "solver_analysis/wa30-ee6fef47_p3.html",
+      "actions_per_level": [
+        44,
+        38,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "final_wallclock_seconds": 29164.800039093,
+      "last_action_wallclock_seconds": 19586.969790171,
+      "generated_tokens": 152961
+    },
+    {
+      "game_id": "vc33-5430563c",
+      "pass_index": 3,
+      "state": "won",
+      "levels_completed": 7,
+      "levels_total": 7,
+      "score": 100.0,
+      "actions": 255,
+      "history_entries": 255,
+      "solver_analysis_html": "solver_analysis/vc33-5430563c_p3.html",
+      "actions_per_level": [
+        14,
+        10,
+        25,
+        78,
+        44,
+        22,
+        62
+      ],
+      "final_wallclock_seconds": 24407.131763924,
+      "last_action_wallclock_seconds": 24406.490242186002,
+      "generated_tokens": 171059
+    },
+    {
+      "game_id": "lf52-271a04aa",
+      "pass_index": 3,
+      "state": "gave_up",
+      "levels_completed": 1,
+      "levels_total": 10,
+      "score": 1.8181818181818181,
+      "actions": 53,
+      "history_entries": 53,
+      "solver_analysis_html": "solver_analysis/lf52-271a04aa_p3.html",
+      "actions_per_level": [
+        15,
+        38,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "final_wallclock_seconds": 29158.748981984,
+      "last_action_wallclock_seconds": 19024.040967823003,
+      "generated_tokens": 93829
+    },
+    {
+      "game_id": "r11l-495a7899",
+      "pass_index": 3,
+      "state": "won",
+      "levels_completed": 6,
+      "levels_total": 6,
+      "score": 100.0,
+      "actions": 130,
+      "history_entries": 130,
+      "solver_analysis_html": "solver_analysis/r11l-495a7899_p3.html",
+      "actions_per_level": [
+        5,
+        12,
+        12,
+        14,
+        33,
+        54
+      ],
+      "final_wallclock_seconds": 27832.307278529,
+      "last_action_wallclock_seconds": 27829.969960877,
+      "generated_tokens": 309496
+    },
+    {
+      "game_id": "sc25-635fd71a",
+      "pass_index": 3,
+      "state": "gave_up",
+      "levels_completed": 5,
+      "levels_total": 6,
+      "score": 71.42857142857143,
+      "actions": 433,
+      "history_entries": 433,
+      "solver_analysis_html": "solver_analysis/sc25-635fd71a_p3.html",
+      "actions_per_level": [
+        120,
+        7,
+        25,
+        63,
+        107,
+        111
+      ],
+      "final_wallclock_seconds": 29020.537364146,
+      "last_action_wallclock_seconds": 29017.795715426,
+      "generated_tokens": 200709
+    },
+    {
+      "game_id": "sp80-589a99af",
+      "pass_index": 3,
+      "state": "gave_up",
+      "levels_completed": 4,
+      "levels_total": 6,
+      "score": 44.20353151122382,
+      "actions": 189,
+      "history_entries": 189,
+      "solver_analysis_html": "solver_analysis/sp80-589a99af_p3.html",
+      "actions_per_level": [
+        7,
+        23,
+        39,
+        62,
+        58,
+        0
+      ],
+      "final_wallclock_seconds": 29025.169878598,
+      "last_action_wallclock_seconds": 28980.821837733998,
+      "generated_tokens": 280419
+    },
+    {
+      "game_id": "ar25-0c556536",
+      "pass_index": 3,
+      "state": "won",
+      "levels_completed": 8,
+      "levels_total": 8,
+      "score": 100.0,
+      "actions": 291,
+      "history_entries": 291,
+      "solver_analysis_html": "solver_analysis/ar25-0c556536_p3.html",
+      "actions_per_level": [
+        20,
+        19,
+        44,
+        30,
+        29,
+        54,
+        47,
+        48
+      ],
+      "final_wallclock_seconds": 14587.479349778,
+      "last_action_wallclock_seconds": 14586.054239108,
+      "generated_tokens": 105952
+    },
+    {
+      "game_id": "sb26-7fbdac44",
+      "pass_index": 3,
+      "state": "won",
+      "levels_completed": 8,
+      "levels_total": 8,
+      "score": 84.87142242473537,
+      "actions": 225,
+      "history_entries": 225,
+      "solver_analysis_html": "solver_analysis/sb26-7fbdac44_p3.html",
+      "actions_per_level": [
+        29,
+        36,
+        15,
+        15,
+        31,
+        19,
+        28,
+        52
+      ],
+      "final_wallclock_seconds": 27480.882512915,
+      "last_action_wallclock_seconds": 27480.05322746,
+      "generated_tokens": 132687
+    },
+    {
+      "game_id": "cd82-fb555c5d",
+      "pass_index": 3,
+      "state": "won",
+      "levels_completed": 6,
+      "levels_total": 6,
+      "score": 73.11892457967902,
+      "actions": 184,
+      "history_entries": 184,
+      "solver_analysis_html": "solver_analysis/cd82-fb555c5d_p3.html",
+      "actions_per_level": [
+        44,
+        14,
+        32,
+        19,
+        48,
+        27
+      ],
+      "final_wallclock_seconds": 19290.991895951,
+      "last_action_wallclock_seconds": 19289.822272839,
+      "generated_tokens": 140442
+    },
+    {
+      "game_id": "re86-8af5384d",
+      "pass_index": 3,
+      "state": "gave_up",
+      "levels_completed": 5,
+      "levels_total": 8,
+      "score": 41.66666666666667,
+      "actions": 377,
+      "history_entries": 377,
+      "solver_analysis_html": "solver_analysis/re86-8af5384d_p3.html",
+      "actions_per_level": [
+        21,
+        37,
+        47,
+        55,
+        158,
+        59,
+        0,
+        0
+      ],
+      "final_wallclock_seconds": 29132.97052894,
+      "last_action_wallclock_seconds": 22735.688494823,
+      "generated_tokens": 181901
+    },
+    {
+      "game_id": "s5i5-18d95033",
+      "pass_index": 3,
+      "state": "gave_up",
+      "levels_completed": 1,
+      "levels_total": 8,
+      "score": 0.6298815822625347,
+      "actions": 109,
+      "history_entries": 109,
+      "solver_analysis_html": "solver_analysis/s5i5-18d95033_p3.html",
+      "actions_per_level": [
+        42,
+        67,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "final_wallclock_seconds": 29286.034815351002,
+      "last_action_wallclock_seconds": 20180.750968921002,
+      "generated_tokens": 116142
+    },
+    {
+      "game_id": "ls20-9607627b",
+      "pass_index": 3,
+      "state": "gave_up",
+      "levels_completed": 2,
+      "levels_total": 7,
+      "score": 9.949718858131488,
+      "actions": 268,
+      "history_entries": 268,
+      "solver_analysis_html": "solver_analysis/ls20-9607627b_p3.html",
+      "actions_per_level": [
+        18,
+        136,
+        114,
+        0,
+        0,
+        0,
+        0
+      ],
+      "final_wallclock_seconds": 29250.096101085,
+      "last_action_wallclock_seconds": 23956.634945051,
+      "generated_tokens": 145480
+    },
+    {
+      "game_id": "ft09-0d8bbf25",
+      "pass_index": 3,
+      "state": "gave_up",
+      "levels_completed": 4,
+      "levels_total": 6,
+      "score": 47.61904761904761,
+      "actions": 88,
+      "history_entries": 88,
+      "solver_analysis_html": "solver_analysis/ft09-0d8bbf25_p3.html",
+      "actions_per_level": [
+        4,
+        7,
+        20,
+        16,
+        41,
+        0
+      ],
+      "final_wallclock_seconds": 29021.907588744998,
+      "last_action_wallclock_seconds": 26956.842685098,
+      "generated_tokens": 169593
+    },
+    {
+      "game_id": "su15-1944f8ab",
+      "pass_index": 3,
+      "state": "gave_up",
+      "levels_completed": 3,
+      "levels_total": 9,
+      "score": 13.333333333333334,
+      "actions": 117,
+      "history_entries": 117,
+      "solver_analysis_html": "solver_analysis/su15-1944f8ab_p3.html",
+      "actions_per_level": [
+        10,
+        30,
+        18,
+        59,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "final_wallclock_seconds": 29137.433169085998,
+      "last_action_wallclock_seconds": 21102.378370631,
+      "generated_tokens": 176168
+    },
+    {
+      "game_id": "tr87-cd924810",
+      "pass_index": 3,
+      "state": "gave_up",
+      "levels_completed": 1,
+      "levels_total": 6,
+      "score": 4.761904761904762,
+      "actions": 121,
+      "history_entries": 121,
+      "solver_analysis_html": "solver_analysis/tr87-cd924810_p3.html",
+      "actions_per_level": [
+        41,
+        80,
+        0,
+        0,
+        0,
+        0
+      ],
+      "final_wallclock_seconds": 29329.606950029,
+      "last_action_wallclock_seconds": 16386.469372432,
+      "generated_tokens": 111852
+    },
+    {
+      "game_id": "g50t-5849a774",
+      "pass_index": 3,
+      "state": "gave_up",
+      "levels_completed": 0,
+      "levels_total": 7,
+      "score": 0.0,
+      "actions": 50,
+      "history_entries": 50,
+      "solver_analysis_html": "solver_analysis/g50t-5849a774_p3.html",
+      "actions_per_level": [
+        50,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "final_wallclock_seconds": 29234.572502605002,
+      "last_action_wallclock_seconds": 10544.731931489,
+      "generated_tokens": 73408
+    }
+  ],
+  "input_sha256": {
+    "baselines/franzen_m2_v3/generated/full_run_362506200/benchmark.json": "2ae82ce8e4670da9f5690f83406b23d99d66867ea68d4e72b4d56cbcb2f0d0f0",
+    "baselines/franzen_m2_v3/generated/full_run_362506200/per-game-results.json": "2e185f6eebd7cf1ac8f9c6845f07742e23d0e46160d453319c68c62462fb4b40",
+    "baselines/franzen_m2_v3/generated/full_run_362506200/execution.log": "da770d374045e7a36ef6bacd1c852462f72da3b2fc56f123662e8f966698fc41",
+    "baselines/franzen_m2_v3/generated/full_run_362506200/prelaunch-candidate.ipynb": "f8e3bf0065a198e6508f738546941d67454eeac74236f244a4de9ee9dc51f4fc",
+    "local_output/research_refs/franzen/notebook-v3.py": "73b72e33cda425b3778f89ad96a06ec0a14891a2de140362a61aabe0dc9bb698",
+    "downloads/stage4-browser-evidence/dc22-fdcac232_p0.preview.txt": "7956d59c8478a2205a6ca3585cc22e6c2bee037dfae0eb5344818ff61eba7485",
+    "downloads/stage4-browser-evidence/re86-8af5384d_p2.preview.txt": "555874460399c88ca96432a58718dc6d8ea5eea1b79c49b0d799a2dcc02624ce",
+    "downloads/stage4-browser-evidence/lf52-271a04aa_p0.preview.txt": "70ee6ef12bb0e3b4f8a48763439f23f5afc811c5e7727f2deb1a11ce2610af80",
+    "downloads/stage4-browser-evidence/bp35-0a0ad940_p0.preview.txt": "ce4a71e524177f9d0c353e904b33ac620b221696e74c7bfacc4365c916e42f3b",
+    "downloads/stage4-browser-evidence/m0r0-492f87ba_p0.preview.txt": "f9eb31e596ea72245fdc2918fb137aa49d860fb41284405c3ebca9507e57a9d1",
+    "downloads/stage4-browser-evidence/ls20-9607627b_p2.preview.txt": "db70a3a76aa622f543119b1ea01b6fd66c5e82f9e68c89a98ce4b4c0c50000d9",
+    "downloads/stage4-browser-evidence/ft09-0d8bbf25_p0.preview.txt": "86bffe0c7106b4ad64531d5e88de8045d078a9fe64d4624bdf7d66021352ac85",
+    "downloads/stage4-browser-evidence/ar25-0c556536_p0.preview.txt": "6bbfd3c96bcdfa1445bf3bad99f65c449783142991621e0d527537603b81e752",
+    "downloads/stage4-browser-evidence/s5i5-18d95033_p2.preview.txt": "792f3d97280f5317e379957c41878447bbda1df6645a0a756e2cd304a132c504",
+    "downloads/stage4-browser-evidence/tu93-0768757b_p1.preview.txt": "33f7267dae241c9649e6b45fd3960f64d6c0e4c234b7f086fa4875fa2e39da63",
+    "downloads/stage4-browser-evidence/cn04-2fe56bfb_p0.preview.txt": "196e1c0a8feee11d91d67b8634911145c8e66a2c9c49128ba2e60320b92382d8",
+    "downloads/stage4-browser-evidence/sk48-d8078629_p3.preview.txt": "3c1a8e3f69b701879dc6a6bcb7272728d09593116a78e7fc85321f48e5a4c331",
+    "downloads/stage4-browser-evidence/g50t-5849a774_p2.preview.txt": "62e84a81ca75bb6bb6102326f1aea2d6fc29a771f10009b664aa4b78d892faaf",
+    "downloads/stage4-browser-evidence/bp35-0a0ad940_p0_events.preview.dom.txt": "116d255eeab2a057f254be49c216a925d92fff980259d7789c7072b43be869e8"
+  }
+}

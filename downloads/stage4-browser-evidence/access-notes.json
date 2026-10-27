@@ -1,0 +1,10 @@
+{
+  "script_version_id": 362506200,
+  "source": "https://www.kaggle.com/code/panxiyuan/franzen-m2-v3-baseline/output?scriptVersionId=362506200",
+  "transcript_preview_limit_characters": 102400,
+  "full_file_download_attempt": "BP35 p0 transcript Download button; no completed download after 20 seconds",
+  "observed_error": "Could not connect to the reCAPTCHA service. Please check your internet connection and reload to get a reCAPTCHA challenge.",
+  "event_preview": "Kaggle warns JSON items and individual items may be truncated; not an intact event stream",
+  "full_files_retrieved": 0,
+  "models_or_gpu_runs_started": 0
+}
