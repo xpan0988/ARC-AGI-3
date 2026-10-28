@@ -1,0 +1,25 @@
+{
+  "candidate": "Franzen V4 transient feedback A+B",
+  "v3_sha256": "589eaf393f416effe925c6830fc00fcdc0d6da91193b29ff0029282cbd6ee96e",
+  "v3_cell_sources_unchanged": true,
+  "overlay_cell_index": 5,
+  "flags": {
+    "ARC3_V4_TRANSIENT_FEEDBACK": true,
+    "ARC3_V4_ANIMATION_HISTORY": true,
+    "ARC3_PRESERVE_HELPERS_ON_HARD_TIMEOUT": false
+  },
+  "baseline_sha256": {
+    "framework/solver.py": "42b4794f0447e071ba118194c64d009f7fa59df0b84f3d9c35da4dd215824c52",
+    "agent/tool_agent.py": "1a36bda19859c55e9225fb52ce33ddad5f02bb57fbb384d37177795b4dbb25fc",
+    "agent/python_tool_sandbox.py": "c07b2dbaffdbf2a852f45c36d309146639d1c472e1ff72ce96d6369e40061ded"
+  },
+  "candidate_source_sha256": {
+    "framework/solver.py": "596c1d5a987bd24334a5fe69911a64218e878c8fdafeaa8e986787901ebe8d1e",
+    "agent/tool_agent.py": "256304060053e293d7f5a4af836c58bb62e64a2037711d4f2c7dded85a0df0ec",
+    "agent/python_tool_sandbox.py": "cace9f269f5754a05057a6d6e07dc26a8cbf0cec7d7089f604e4df1bbe23f878",
+    "utils/animation_history_v4.py": "82994735b543c0fd90caab9d28952431fc2b7b01ab908ec9a88beae333d01f3c"
+  },
+  "notebook_sha256": "13072aad5f56c6469f4b90c8ce6aca20a496380556e8fc881e4f7f82de16734f",
+  "diff_sha256": "b26c1d49c0b6f9b52416f9107c8828351ce4a9e9d926544c982d750d26028aa9",
+  "scope": "Built only; no GPU, model, or Kaggle execution"
+}

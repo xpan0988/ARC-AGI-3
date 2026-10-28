@@ -2,6 +2,8 @@
 
 28 October 2026 · Independent Track B investigation · Franzen M2 V3
 
+**Implementation update:** the user subsequently selected the isolated [V4 A+B candidate](../interventions/transient_feedback_v4/README.md): clarify transient feedback and retain bounded, retrievable animation history. It supersedes the interruption/latch design proposed below. V4 is CPU-tested and built for review; the submitted V3 remains unchanged. The original research and screen below are historical proposals, not evidence of V4 score improvement.
+
 **GO — implement and screen one bounded candidate: preserve unread transient feedback before another level-1 probe overwrites it.** A selective handoff in the Python sandbox can deliver evidence through Franzen’s existing animation tools and follow-up prompt. Do not adopt or submit it without a score-based experiment.
 
 **Status:** failure mechanism observed; isolated CPU prototype passed; model behavior, score improvement and hidden-game generalization **untested**. The submitted baseline and helper-timeout intervention remain unchanged. No GPU, submission, model download, commit or push was used.
@@ -108,4 +110,4 @@ Budget using the user-supplied approximately 21 hours: **2 h screen + up to 9 h 
 
 Local reproducibility artifacts are isolated under [local_output/high-impact-harness](../local_output/high-impact-harness/): `replay.py`, `replay-results.json`, `summary.json`, `prototype.py`, and `prototype-results.json`. They contain no model weights or extracted transcript copies. The [independent review bundle](claude-review/README.md) adds small diagnostic source/result snapshots and exact evidence excerpts; the full replay output and archive remain ignored.
 
-**Handoff:** create a separate default-off overlay for the unread-transient latch; wire its controlled exception through the existing sandbox error/export path; add the full-dispatch CPU checks; freeze the screen manifest and stop gates above. Do not combine it with helper retention, scheduler or prompt-framework changes.
+**Current handoff:** review the [V4 A+B source diff, CPU results and candidate](../interventions/transient_feedback_v4/README.md). No unread-transient latch or forced interruption was implemented. Any future score experiment must update the earlier mechanism criteria for voluntary historical retrieval and receive separate authorization.

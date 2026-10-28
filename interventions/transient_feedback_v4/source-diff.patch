@@ -1,0 +1,336 @@
+--- a/ARC3-Inference/inference/framework/solver.py
++++ b/ARC3-Inference/inference/framework/solver.py
+@@ -184,6 +184,14 @@
+ }
+ 
+ 
++from inference.utils.animation_history_v4 import (
++    HISTORY_FLAG as _V4_HISTORY_FLAG, enabled as _v4_enabled,
++    transient_verdict as _v4_transient_verdict, history_for as _v4_history_for,
++    GUIDANCE as _V4_ANIMATION_GUIDANCE,
++)
++from inference.utils.animation import build_animation_frames, build_animation_view
++
++
+ def _action_verdict(item: dict) -> str:
+     """The one-word account of what an executed action did.
+ 
+@@ -197,7 +205,7 @@
+         return "LEVEL COMPLETED"
+     changed = item.get("gameplay_changed")
+     if changed is False:
+-        return (
++        return _v4_transient_verdict(item) or (
+             "NO-OP (executed, no change inside the board area)"
+             if NEW_NOOP_WORDING
+             else "NO-OP (executed, changed nothing)"
+@@ -993,6 +1001,10 @@
+ 
+     def step_env(self, arguments: dict[str, Any]) -> dict[str, Any]:
+         if str(arguments.get("query") or "").strip() == "animation":
++            if _v4_enabled(_V4_HISTORY_FLAG) and arguments.get("history") is True:
++                return {"executed": False, "query": "animation", "history":
++                    _v4_history_for(self).query(arguments.get("kind"), arguments.get("animation_id"),
++                                                build_animation_frames, build_animation_view)}
+             # Routed through step_env so no analyzer-protocol signature has to
+             # change. Executes nothing and spends no action budget.
+             return {
+@@ -1222,6 +1234,14 @@
+                 "size - batching is still the right approach, and the stop is what keeps "
+                 "a wrong movement model from costing the whole sequence."
+             )
++        if stop_reason == "no_op_action" and _v4_transient_verdict(executed_payloads[-1]):
++            final_payload["stop_detail"] = (
++                f"Action {len(executed_payloads)} of {batch_size}: "
++                + _v4_transient_verdict(executed_payloads[-1])
++                + f". Remaining actions {final_payload.get('skipped_actions', [])!r} were SKIPPED "
++                  "under the existing batch no-op rule. Inspect the animation; "
++                  "an unchanged endpoint does not mean nothing happened."
++            )
+         self.write_viewer_payload()
+         return final_payload
+ 
+@@ -1243,6 +1263,7 @@
+     ) -> dict[str, Any]:
+         previous_grid = _grid_from_state(self.game.current_state)
+         previous_completed = int(self.game.current_state.levels_completed)
++        v4_previous_level = _level_number(self.game) if _v4_enabled(_V4_HISTORY_FLAG) else None
+         if generated_tokens is None:
+             current_tokens = _analyzer_reported_tokens(self.analyzer)
+             generated_tokens = max(0, current_tokens - self.token_baseline)
+@@ -1329,11 +1350,16 @@
+         # Store the individual action before step_env folds results into a batch.
+         # Keep only compact metadata, without grids, animation chains, or clocks.
+         payload["automatic"] = automatic
++        if _v4_enabled(_V4_HISTORY_FLAG):
++            animation_id = _v4_history_for(self).observe(
++                payload, self.animation_record if animation_summary else None, v4_previous_level)
++            if animation_id is not None:
++                payload["animation_id"] = animation_id
+         result_keys = (
+             "executed", "action_num", "level", "score", "state", "valid_actions",
+             "board_changed", "gameplay_changed", "no_op", "done", "level_completed",
+             "game_over", "run_complete", "action_name", "action_data", "action_display",
+-            "animation", "automatic",
++            "animation", "automatic", "animation_id",
+         )
+         individual_result = copy.deepcopy({k: payload[k] for k in result_keys if k in payload})
+         self.history_entries.append(
+--- a/ARC3-Inference/inference/agent/tool_agent.py
++++ b/ARC3-Inference/inference/agent/tool_agent.py
+@@ -72,6 +72,12 @@
+     assemble_streamed_chat_response,
+     build_chat_payload,
+     build_headers,
++)
++
++from inference.utils.animation_history_v4 import (
++    HISTORY_FLAG as _V4_HISTORY_FLAG, enabled as _v4_enabled,
++    transient_verdict as _v4_transient_verdict, history_for as _v4_history_for,
++    GUIDANCE as _V4_ANIMATION_GUIDANCE,
+ )
+ 
+ log = logging.getLogger(__name__)
+@@ -2667,6 +2673,8 @@
+         )
+     if _animation_enabled():
+         prompt += ANIMATION_ADDENDUM
++        if _v4_enabled(_V4_HISTORY_FLAG):
++            prompt += _V4_ANIMATION_GUIDANCE
+         if _animation_timeline_enabled():
+             prompt += ANIMATION_ADDENDUM_TIMELINE
+     if current_grid_image_enabled():
+@@ -3696,7 +3704,7 @@
+             elif item.get("level_completed"):
+                 verdict = "LEVEL COMPLETED"
+             elif item.get("gameplay_changed") is False:
+-                verdict = (
++                verdict = _v4_transient_verdict(item) or (
+                     "NO-OP (executed, no change inside the board area)"
+                     if _new_noop_wording()
+                     else "NO-OP (executed, changed nothing)"
+@@ -5692,7 +5700,7 @@
+             compact["stopped_early"] = bool(payload.get("stopped_early"))
+         # blocked_action names the refused action for the next turn's opener;
+         # without it the model was told "the sequence was stopped before None"
+-        for passthrough_key in ("no_op_action_index", "no_op_action", "skipped_actions", "gameplay_changed_per_action", "action_trace", "no_op", "fatal_action", "blocked_action", "action_echo", "animation"):
++        for passthrough_key in ("no_op_action_index", "no_op_action", "skipped_actions", "gameplay_changed_per_action", "action_trace", "no_op", "fatal_action", "blocked_action", "action_echo", "animation", "animation_id"):
+             if passthrough_key in payload:
+                 compact[passthrough_key] = payload.get(passthrough_key)
+         if payload.get("stop_reason"):
+@@ -5744,6 +5752,7 @@
+                 else self._last_action_call_result
+             )
+             return {
++                **({"animation_history_enabled": True} if _v4_enabled(_V4_HISTORY_FLAG) else {}),
+                 "current_frame": current_frame_payload,
+                 "history": _ascii_history_view_payload(refreshed_history),
+                 "valid_actions": sanitized_actions,
+@@ -5765,6 +5774,11 @@
+         def _handle_animation(request: dict[str, Any]) -> dict[str, Any]:
+             if self._step_env_callback is None:
+                 return {"error": "Animation frames are not available in this session."}
++            if (_v4_enabled(_V4_HISTORY_FLAG) and request.get("kind") in
++                    {"history", "history_frames", "history_timeline"}):
++                raw = self._step_env_callback({"query": "animation", "history": True,
++                    "kind": request["kind"], "animation_id": request.get("animation_id")})
++                return raw.get("history", {}) if isinstance(raw, dict) else {}
+             raw = self._step_env_callback({"query": "animation"})
+             record = raw.get("record") if isinstance(raw, dict) else None
+             record = record if isinstance(record, dict) else None
+--- a/ARC3-Inference/inference/agent/python_tool_sandbox.py
++++ b/ARC3-Inference/inference/agent/python_tool_sandbox.py
+@@ -567,14 +567,22 @@
+                     _stale_state.append(str(_name))
+             return action_result
+ 
+-        def _animation_fetch(kind):
+-            _send({"type": "animation", "request": {"kind": kind}})
++        def _animation_fetch(kind, animation_id=None):
++            request = {"kind": kind}
++            if animation_id is not None:
++                request["animation_id"] = animation_id
++            _send({"type": "animation", "request": request})
+             reply = _recv()
+             if reply.get("type") == "animation_error":
+                 raise RuntimeError(str(reply.get("error", "animation failed")))
+             if reply.get("type") != "animation_result":
+                 raise RuntimeError("Invalid animation response from sandbox host.")
+             payload = reply.get("animation")
++            if kind in {"history", "history_frames", "history_timeline"}:
++                payload = dict(payload or {})
++                if kind == "history_frames":
++                    payload["frames"] = [FrameView(**item) for item in payload.get("frames", [])]
++                return payload
+             if kind != "frames":
+                 return payload or {}
+             return [
+@@ -638,6 +646,12 @@
+             runtime_globals["last_animation_timeline"] = _LazyAnimation("timeline", {})
+             _animation_views.extend((runtime_globals["last_animation_frames"],
+                                      runtime_globals["last_animation_timeline"]))
++
++        if (initial.get("animation_enabled")
++                and (initial.get("state") or {}).get("animation_history_enabled")):
++            runtime_globals["animation_history"] = lambda: _animation_fetch("history")
++            runtime_globals["animation_frames"] = lambda animation_id: _animation_fetch("history_frames", animation_id)
++            runtime_globals["animation_timeline"] = lambda animation_id: _animation_fetch("history_timeline", animation_id)
+ 
+         _refresh_state(initial.get("state") or {})
+ 
+--- /dev/null
++++ b/ARC3-Inference/inference/utils/animation_history_v4.py
+@@ -0,0 +1,153 @@
++"""Bounded V4 observations; no game actions, model calls, or execution guards."""
++import json
++import os
++import uuid
++
++FEEDBACK_FLAG = "ARC3_V4_TRANSIENT_FEEDBACK"
++HISTORY_FLAG = "ARC3_V4_ANIMATION_HISTORY"
++MAX_RECORDS = 4
++MAX_FRAMES = 16  # post-action frames; one additional pre-action board
++MAX_RECORD_BYTES = 256 * 1024
++MAX_TOTAL_BYTES = 1024 * 1024
++MAX_SIDE = 64
++
++
++def enabled(name):
++    return os.environ.get(name, "").strip().lower() in {"1", "true", "yes", "on"}
++
++
++def transient_verdict(item):
++    animation = item.get("animation") or {}
++    if (enabled(FEEDBACK_FLAG) and item.get("executed")
++            and item.get("gameplay_changed") is False
++            and animation.get("transient_pixels", 0) > 0):
++        return (
++            "ENDPOINT UNCHANGED (executed; intermediate animation: "
++            f"{animation.get('frames', '?')} frames, "
++            f"{animation['transient_pixels']} transient pixels)"
++        )
++    return None
++
++
++GUIDANCE = (
++    " Historical transient animations: animation_history()['records'] lists up to "
++    "4 retained records with animation_id, action_num, level and truncation metadata. "
++    "animation_frames(animation_id) returns a dict with FrameView objects in ['frames']; "
++    "animation_timeline(animation_id) returns ['timeline']. Check ['truncated'] and "
++    "['frame_indices'] (original animation indices). Old IDs expire on eviction, RESET, "
++    "death or level change. Missing IDs return an explicit error, never another action. "
++    "last_animation_frames and last_animation_timeline still mean only the last action."
++)
++
++
++class AnimationHistory:
++    """At most four JSON byte strings, each <=256 KiB and total <=1 MiB.
++
++    Serialized storage avoids retaining references to the unbounded raw chain.
++    Fixed dimensions/frame counts bound encoding, decoding and response size.
++    """
++    def __init__(self):
++        self.scope = uuid.uuid4().hex
++        self.serial = 0
++        self.records = {}
++        self.bytes = 0
++        self.evicted = 0
++        self.level = None
++
++    def clear(self, level):
++        self.records.clear()
++        self.bytes = 0
++        self.level = level
++
++    def observe(self, payload, record, previous_level):
++        level = payload.get("level")
++        boundary = (payload.get("action_name") == "RESET"
++                    or level != previous_level
++                    or any(payload.get(k) for k in
++                           ("level_completed", "game_over", "run_complete", "done")))
++        if boundary or (self.level is not None and self.level != level):
++            self.clear(level)
++        self.level = level
++        if boundary or not record or not (record.get("summary") or {}).get("transient_pixels"):
++            return None
++        chain = record.get("chain") or ()
++        total = max(0, len(chain) - 1)
++        if total < 2:
++            return None
++        # Uniform deterministic sampling includes both endpoints and marks gaps.
++        indices = (list(range(total + 1)) if total <= MAX_FRAMES else
++                   sorted({i * total // MAX_FRAMES for i in range(MAX_FRAMES + 1)}))
++        grids = []
++        reason = "frame_limit" if total > MAX_FRAMES else None
++        for index in indices:
++            grid = chain[index]
++            if (not grid or len(grid) > MAX_SIDE
++                    or any(not row or len(row) > MAX_SIDE for row in grid)
++                    or any(type(c) is not int or not 0 <= c <= 15 for row in grid for c in row)):
++                grids = []
++                indices = []
++                reason = "unsupported_grid (requires <=64x64 ARC palette)"
++                break
++            grids.append([list(row) for row in grid])
++        self.serial += 1
++        animation_id = f"{self.scope}:{self.serial}:{payload['action_num']}"
++        data = {
++            "animation_id": animation_id, "action_num": payload["action_num"],
++            "level": level, "action": str(payload.get("action_display") or "")[:128],
++            "original_frames": total, "retained_frames": max(0, len(grids) - 1),
++            "frame_indices": indices[1:], "truncated": bool(reason),
++            "truncation_reason": reason, "chain": grids,
++        }
++        encoded = json.dumps(data, separators=(",", ":")).encode()
++        if len(encoded) > MAX_RECORD_BYTES:
++            # Fail visibly, retaining only metadata rather than exceeding a cap.
++            data.update(chain=[], frame_indices=[], retained_frames=0,
++                        truncated=True, truncation_reason="byte_limit")
++            encoded = json.dumps(data, separators=(",", ":")).encode()
++        while self.records and (len(self.records) >= MAX_RECORDS
++                                or self.bytes + len(encoded) > MAX_TOTAL_BYTES):
++            oldest = next(iter(self.records))
++            self.bytes -= len(self.records.pop(oldest))
++            self.evicted += 1
++        self.records[animation_id] = encoded
++        self.bytes += len(encoded)
++        return animation_id
++
++    def query(self, kind, animation_id, build_frames, build_timeline):
++        if kind == "history":
++            return {
++                "records": [self._metadata(json.loads(raw)) for raw in self.records.values()],
++                "max_records": MAX_RECORDS, "max_frames": MAX_FRAMES,
++                "stored_bytes": self.bytes, "max_bytes": MAX_TOTAL_BYTES,
++                "evicted_records": self.evicted, "level": self.level,
++            }
++        if not isinstance(animation_id, str) or animation_id not in self.records:
++            return {"error": "Animation ID unavailable (evicted, cleared, or another game).",
++                    "animation_id": animation_id}
++        data = json.loads(self.records[animation_id])
++        metadata = self._metadata(data)
++        record = {"chain": data["chain"], "step": data["action_num"],
++                  "level": data["level"], "action_display": data["action"]}
++        if kind == "history_frames":
++            return {**metadata, "frames": build_frames(record)}
++        if kind == "history_timeline":
++            timeline = build_timeline(record)
++            original = [0] + data["frame_indices"]
++            for step in timeline.get("steps", []):
++                position = step["step"]
++                step["from_frame_index"] = original[position - 1]
++                step["step"] = original[position]
++            return {**metadata, "timeline": timeline}
++        return {"error": "Unknown historical animation query.", "animation_id": animation_id}
++
++    @staticmethod
++    def _metadata(data):
++        return {key: value for key, value in data.items() if key != "chain"}
++
++
++def history_for(session):
++    history = getattr(session, "_animation_history_v4", None)
++    if history is None:
++        history = AnimationHistory()
++        session._animation_history_v4 = history
++    return history
