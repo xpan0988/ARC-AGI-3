@@ -1,0 +1,398 @@
+{
+  "scope": "Snapshot of previously completed CPU diagnostics; no model or GPU evaluation.",
+  "source_pins_sha256": {
+    "arc-agi-3-milestone-2-solution.ipynb": "589eaf393f416effe925c6830fc00fcdc0d6da91193b29ff0029282cbd6ee96e",
+    "local_output/research_refs/franzen/ARC3-Inference/inference/agent/python_tool_sandbox.py": "c07b2dbaffdbf2a852f45c36d309146639d1c472e1ff72ce96d6369e40061ded",
+    "local_output/research_refs/franzen/ARC3-Inference/inference/agent/tool_agent.py": "1a36bda19859c55e9225fb52ce33ddad5f02bb57fbb384d37177795b4dbb25fc"
+  },
+  "diagnostic_source_provenance": {
+    "prototype.py": {
+      "original": "local_output/high-impact-harness/prototype.py",
+      "original_sha256": "416890d3fcebdf0eb3de243f2262720e360a28f8d07a7c1badf9eca96e32d2e2",
+      "review_sha256": "0800fae90a6ed7b82ccebb40ff4a81c44e3272655c4f5d357c553b04b6f06b52"
+    },
+    "replay.py": {
+      "original": "local_output/high-impact-harness/replay.py",
+      "original_sha256": "017dfc8b7d70f6ba83833bac9b0e0171c3a7a11f4bd26e82ff4a387a3c542185",
+      "review_sha256": "6f9f1de4cc31f01a8a7e9aaf864ee2a1fe3df8a053c26e379efe0cf8e9c5e7bd"
+    }
+  },
+  "replay_summary": {
+    "scope": "CPU replay, not model evaluation",
+    "arc_agi_local": "0.9.9",
+    "arc_agi_archived": "0.9.8",
+    "replayed_episodes": 100,
+    "matched_action_endpoint_boards": 21078,
+    "matched_completed_level_values": 21078,
+    "complete_echo_maps": 68,
+    "incomplete_echo_maps_excluded": 32,
+    "confirmed_overwrites": [
+      {
+        "episode": "tn36-ef4dde99_p0",
+        "action": 5,
+        "display": "MOUSE(row=55, col=37)",
+        "analysis_step": 2,
+        "level": 1,
+        "frames": 7,
+        "pixels": 256,
+        "interior_pixels": 256,
+        "bbox": [
+          13,
+          19,
+          59,
+          43
+        ],
+        "endpoint_unchanged": true,
+        "terminal": false,
+        "call": {
+          "start": 3,
+          "end": 6,
+          "line": 699,
+          "reads_animation": false
+        },
+        "overwritten_before_model": true,
+        "lost_uninspected": true
+      },
+      {
+        "episode": "tn36-ef4dde99_p0",
+        "action": 56,
+        "display": "MOUSE(row=55, col=37)",
+        "analysis_step": 11,
+        "level": 1,
+        "frames": 7,
+        "pixels": 270,
+        "interior_pixels": 270,
+        "bbox": [
+          13,
+          19,
+          59,
+          43
+        ],
+        "endpoint_unchanged": true,
+        "terminal": false,
+        "call": {
+          "start": 56,
+          "end": 59,
+          "line": 3650,
+          "reads_animation": false
+        },
+        "overwritten_before_model": true,
+        "lost_uninspected": true
+      },
+      {
+        "episode": "tn36-ef4dde99_p1",
+        "action": 9,
+        "display": "MOUSE(row=55, col=36)",
+        "analysis_step": 5,
+        "level": 1,
+        "frames": 7,
+        "pixels": 242,
+        "interior_pixels": 242,
+        "bbox": [
+          13,
+          19,
+          59,
+          43
+        ],
+        "endpoint_unchanged": true,
+        "terminal": false,
+        "call": {
+          "start": 5,
+          "end": 11,
+          "line": 1398,
+          "reads_animation": false
+        },
+        "overwritten_before_model": true,
+        "lost_uninspected": true
+      },
+      {
+        "episode": "sc25-635fd71a_p1",
+        "action": 1,
+        "display": "UP",
+        "analysis_step": 1,
+        "level": 1,
+        "frames": 5,
+        "pixels": 36,
+        "interior_pixels": 30,
+        "bbox": [
+          49,
+          24,
+          61,
+          36
+        ],
+        "endpoint_unchanged": true,
+        "terminal": false,
+        "call": {
+          "start": 1,
+          "end": 2,
+          "line": 336,
+          "reads_animation": false
+        },
+        "overwritten_before_model": true,
+        "lost_uninspected": true
+      },
+      {
+        "episode": "sc25-635fd71a_p1",
+        "action": 9,
+        "display": "MOUSE(row=51, col=15)",
+        "analysis_step": 5,
+        "level": 1,
+        "frames": 5,
+        "pixels": 36,
+        "interior_pixels": 30,
+        "bbox": [
+          49,
+          24,
+          61,
+          36
+        ],
+        "endpoint_unchanged": true,
+        "terminal": false,
+        "call": {
+          "start": 9,
+          "end": 10,
+          "line": 1403,
+          "reads_animation": false
+        },
+        "overwritten_before_model": true,
+        "lost_uninspected": true
+      },
+      {
+        "episode": "sc25-635fd71a_p1",
+        "action": 22,
+        "display": "MOUSE(row=20, col=24)",
+        "analysis_step": 9,
+        "level": 1,
+        "frames": 4,
+        "pixels": 81,
+        "interior_pixels": 63,
+        "bbox": [
+          49,
+          24,
+          61,
+          36
+        ],
+        "endpoint_unchanged": true,
+        "terminal": false,
+        "call": {
+          "start": 22,
+          "end": 25,
+          "line": 2299,
+          "reads_animation": false
+        },
+        "overwritten_before_model": true,
+        "lost_uninspected": true
+      },
+      {
+        "episode": "sc25-635fd71a_p1",
+        "action": 23,
+        "display": "MOUSE(row=20, col=14)",
+        "analysis_step": 9,
+        "level": 1,
+        "frames": 4,
+        "pixels": 81,
+        "interior_pixels": 63,
+        "bbox": [
+          49,
+          24,
+          61,
+          36
+        ],
+        "endpoint_unchanged": true,
+        "terminal": false,
+        "call": {
+          "start": 22,
+          "end": 25,
+          "line": 2299,
+          "reads_animation": false
+        },
+        "overwritten_before_model": true,
+        "lost_uninspected": true
+      },
+      {
+        "episode": "sc25-635fd71a_p1",
+        "action": 24,
+        "display": "MOUSE(row=20, col=33)",
+        "analysis_step": 9,
+        "level": 1,
+        "frames": 4,
+        "pixels": 81,
+        "interior_pixels": 63,
+        "bbox": [
+          49,
+          24,
+          61,
+          36
+        ],
+        "endpoint_unchanged": true,
+        "terminal": false,
+        "call": {
+          "start": 22,
+          "end": 25,
+          "line": 2299,
+          "reads_animation": false
+        },
+        "overwritten_before_model": true,
+        "lost_uninspected": true
+      },
+      {
+        "episode": "tn36-ef4dde99_p2",
+        "action": 3,
+        "display": "MOUSE(row=55, col=37)",
+        "analysis_step": 3,
+        "level": 1,
+        "frames": 7,
+        "pixels": 256,
+        "interior_pixels": 256,
+        "bbox": [
+          13,
+          19,
+          59,
+          43
+        ],
+        "endpoint_unchanged": true,
+        "terminal": false,
+        "call": {
+          "start": 3,
+          "end": 4,
+          "line": 850,
+          "reads_animation": false
+        },
+        "overwritten_before_model": true,
+        "lost_uninspected": true
+      },
+      {
+        "episode": "sc25-635fd71a_p3",
+        "action": 36,
+        "display": "MOUSE(row=51, col=13)",
+        "analysis_step": 11,
+        "level": 1,
+        "frames": 5,
+        "pixels": 36,
+        "interior_pixels": 30,
+        "bbox": [
+          49,
+          24,
+          61,
+          36
+        ],
+        "endpoint_unchanged": true,
+        "terminal": false,
+        "call": {
+          "start": 35,
+          "end": 38,
+          "line": 3822,
+          "reads_animation": false
+        },
+        "overwritten_before_model": true,
+        "lost_uninspected": true
+      },
+      {
+        "episode": "sc25-635fd71a_p3",
+        "action": 37,
+        "display": "MOUSE(row=19, col=14)",
+        "analysis_step": 11,
+        "level": 1,
+        "frames": 4,
+        "pixels": 81,
+        "interior_pixels": 63,
+        "bbox": [
+          49,
+          24,
+          61,
+          36
+        ],
+        "endpoint_unchanged": true,
+        "terminal": false,
+        "call": {
+          "start": 35,
+          "end": 38,
+          "line": 3822,
+          "reads_animation": false
+        },
+        "overwritten_before_model": true,
+        "lost_uninspected": true
+      },
+      {
+        "episode": "sc25-635fd71a_p3",
+        "action": 56,
+        "display": "LEFT",
+        "analysis_step": 17,
+        "level": 1,
+        "frames": 5,
+        "pixels": 36,
+        "interior_pixels": 30,
+        "bbox": [
+          49,
+          24,
+          61,
+          36
+        ],
+        "endpoint_unchanged": true,
+        "terminal": false,
+        "call": {
+          "start": 56,
+          "end": 59,
+          "line": 5421,
+          "reads_animation": false
+        },
+        "overwritten_before_model": true,
+        "lost_uninspected": true
+      },
+      {
+        "episode": "sc25-635fd71a_p3",
+        "action": 108,
+        "display": "LEFT",
+        "analysis_step": 30,
+        "level": 1,
+        "frames": 5,
+        "pixels": 36,
+        "interior_pixels": 30,
+        "bbox": [
+          49,
+          24,
+          61,
+          36
+        ],
+        "endpoint_unchanged": true,
+        "terminal": false,
+        "call": {
+          "start": 108,
+          "end": 116,
+          "line": 8527,
+          "reads_animation": false
+        },
+        "overwritten_before_model": true,
+        "lost_uninspected": true
+      }
+    ],
+    "distinct_snippets": 10,
+    "prototype_checks_passed": 13
+  },
+  "prototype_result": {
+    "checks": [
+      "baseline executes both calls",
+      "candidate stops before overwrite",
+      "refusal preserves executed result and helper export",
+      "ordinary endpoint no-op",
+      "animation without transient",
+      "persistent endpoint change",
+      "level 2 unchanged",
+      "inspection unlocks list(last_animation_frames)",
+      "inspection unlocks dict(last_animation_timeline)",
+      "empty accessor does not unlock",
+      "terminal guard retains precedence",
+      "last-action flag used for batch",
+      "helper committed on controlled handoff"
+    ],
+    "passed": 13
+  },
+  "full_replay_local_path": "local_output/high-impact-harness/replay-results.json",
+  "full_replay_sha256": "4d01ee79494a12e7353d3aebb243665b6649be0d8fc9bbbd35ffe7afdd99afb3",
+  "limitations": [
+    "Local arc-agi 0.9.9 versus archived 0.9.8; all endpoints match but intermediate historical frames are reconstructed.",
+    "Only 68/100 transcript echo maps complete; 32 excluded from loss counts.",
+    "The 13 losses were manually checked; lexical animation-access detection is not data-flow analysis.",
+    "Prototype tests use real sandbox subprocesses and synthetic host responses; full agent dispatch, model behavior and score gains are untested."
+  ]
+}

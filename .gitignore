@@ -13,6 +13,7 @@ recordings/
 logs.log
 
 # Generated artefacts
+/downloads/results.zip
 notebooks/submission.ipynb
 reference/
 local_output/
